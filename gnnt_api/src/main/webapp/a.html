@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<script src="jquery-1.10.2.js"></script>
+<title></title>
+</head>
+<script type="text/javascript">
+		
+		var page = 0;
+		var url = "http://localhost:8080/platform-wjfw/rest/fileWS/uploadSplit";
+		var xhr = new XMLHttpRequest();
+		var fileId;
+		var t1; // 用来作超时处理
+		function upload() {
+			var upfile = document.querySelector('#upfile');
+			var resultFileList = upfile.files;
+			var fileAllSize = 0;
+			if (resultFileList.length > 0) {
+				for (var i = 0; i < resultFileList.length; i++) { //按文件循环
+					fileAllSize = resultFileList[i].size;
+					uploadFile(resultFileList[i], page, fileAllSize, "");
+				}
+			}
+		};
+
+		function uploadFile(file, page, fileAllSize, fileId) {
+			var packet;
+			if (page == 0) {
+				packet = file.slice(0, (page + 1) * 1000 * 1024);
+			} else {
+				packet = file.slice(page * 1000 * 1024, (page + 1) * 1000 * 1024);
+			}
+			xhr.open("POST", url, true);
+			xhr.setRequestHeader("POWERED-BY-MENGXIANHUI", "Approve");
+			xhr.onload = function(e) {
+				// 判断文件是否上传成功，如果成功继续上传下一块，如果失败重试该快
+			}
+			xhr.upload.onprogress = function(e) {
+				// 选用 如果文件分块大小较大 可以通过该方法判断单片文件具体的上传进度
+				// e.loaded  该片文件上传了多少
+				// e.totalSize 该片文件的总共大小
+			}
+			xhr.onreadystatechange = onReadyStateHandler;
+			var form = new FormData();
+			form["enctype"] = "multipart/form-data";
+			form.append("page", (page + 1))
+			form.append("fileId", fileId);
+			form.append("size", packet.size);
+			form.append("allsize", fileAllSize);
+			form.append("files", packet);
+			xhr.timeout=10000;
+			xhr.ontimeout = function(event){
+				t1 = setInterval(function(){
+					$("#opencount").val("1");
+					uploadFile(file, page, fileAllSize, fileId);
+					}, 10000);
+			};
+			xhr.send(form);
+
+			function onReadyStateHandler() {
+				/**if (parseInt($("#opencount").val()) > 3) {
+					page = 2;
+					$("#opencount").val("0");
+					if (t1) clearTimeout(t1);
+					uploadFile(file, page, fileAllSize, fileId);
+				}*/
+				if($("#opencount").val()=="1"){
+					page = 2;
+					$("#opencount").val("0")
+				}
+				if (xhr.readyState == 4 && xhr.status == 200) {
+					if (t1) clearInterval(t1);
+					//$("#opencount").val("0");
+					var resp = JSON.parse(xhr.responseText);
+					page = page + 1;
+					if (page * 1000 * 1024 < fileAllSize) {
+						fileId = resp.msgObj[0].fileId;
+						uploadFile(file, page, fileAllSize, fileId);
+					} else {
+						page = 0;
+						return;
+					}
+				} 
+				/**else if (xhr.readyState == 1 && xhr.status == 0) {
+					$("#opencount").val(parseInt($("#opencount").val()) + 1);
+					t1 = setTimeout(onReadyStateHandler, 5000);
+				}else if (xhr.readyState == 4 && xhr.status == 0){
+					page = 2;
+					uploadFile(file, page, fileAllSize, fileId);
+				}*/
+			}
+		};
+		 //		var xhr = new XMLHttpRequest();
+		 //		var onProgressHandler = function(event) {
+		 //			if (event.lengthComputable) {
+		 //				var howmuch = (event.loaded / event.total) * 100;
+		 //				document.querySelector('progress').value = Math.ceil(howmuch);
+		 //			} else {
+		 //				console.log("Can't determine the size of the file.");
+		 //			}
+		 //		}
+		 //		var onLoadHandler = function() {
+		 //			displayLoadedMessage();
+		 //		}
+		 //		var onErrorHandler = function() {
+		 //			displayErrorMesssage();
+		 //		}
+		 //		xhr.upload.addEventListener('progress', onProgressHandler, false);
+		 //		xhr.upload.addEventListener('load', onLoadHandler, false);
+		 //		xhr.upload.addEventListener('error', onErrorHandler, false);
+		 //		var onReadyStateHandler = function(event) {
+		 //			if (event.target.readyState == 4 && event.target.status == 200) {}
+		 //		}
+		 //		xhr.open('POST', '/path_to_data');
+		 //		xhr.onreadystatechange = onReadyStateHandler;
+		 //		xhr.send(dataToSend);
+	</script>
+
+<body style="background: #FFFFFF;">
+	<form id="form1" action="javascript:void(0)" method="post"
+		enctype="mutipart/form-data">
+		<input type="file" multiple="multiple" name="files" id="upfile">
+	</form>
+	<button onclick="upload()">上传</button>
+	<input id="opencount" value="0" />
+
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+1.项目技术框架使用springmvc+servlet+mybatis
+2.集成嵌入jetty服务器，手动启动模式。
+3.使用MAVEN统一管理JAR,统一打包
+       具体打包步骤如下：
+  a)在本地环境安装maven3.0，并配置maven环境变量。
+  b)本地安装eclipse,并安装maven插件
+  c)将项目文件夹gnnt_api通过eclipse导入存在的maven项目方式导入，并进行maven update,如果有些jar下载不下来（pom.xml会报错）就从gnnt_api_lib中复制到本地的maven仓库中，一般地址在C:\Users\Administrator\.m2\repository
+  d)如果需要eclipse执行项目，请修改api.properties中的api.server.webapp=./src/main/webapp
+              如果需要部署打包，则需要修改为api.server.webapp=./webapp
+  e)可在jdbc.properties中修改对应的oracle数据库链接信息
+  f)在pom.xml所在目录下使用mvn install进行编译打包。
+  g)在项目的工作目录下target目录中生成gnnt_api-0.0.1-SNAPSHOT-bin.tar.gz
+4.部署方式
+  a)将gnnt_api-0.0.1-SNAPSHOT-bin.tar.gz 复制到目录，执行命令tar -xvf gnnt_api-0.0.1-SNAPSHOT-bin.tar.gz解压
+  b)在解压的项目目录中创建logs目录,mkdir logs
+  c)对目录中的K,startup.sh,stop.sh进行用户执行授权
+    chmod +x K
+    chmod +x startup.sh
+    chmod +x stop.sh
+  d)执行./startup.sh 进行启动项目
+  e)执行./stop.sh 进行关闭应用
+  
