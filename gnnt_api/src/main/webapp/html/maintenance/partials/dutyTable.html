@@ -1,0 +1,35 @@
+<div class="form-group" style="margin-bottom: 12px">
+    <button class="btn btnOrange" on-click="addType">添加职务</button>
+</div>
+
+<div class="sdGrid sdGridB sdGridN">
+    <table>
+        <thead>
+        <tr>
+            <th>职务名称</th>
+            <th width="194">操作</th>
+        </tr>
+        </thead>
+        <tbody>
+        {{#each typeList:key}}
+        <tr>
+            <td>
+                {{#if ifNew}}
+                <input type="text" value="{{name}}">
+                {{else}}
+                <input type="text" disabled value="{{name}}">
+                {{/if}}
+            </td>
+            <td>
+                {{#if ifNew}}
+                <a on-click="saveType:{{key}}"><i class="iconfont sd-save- sdui-txt-blue"></i>保存</a>
+                {{else}}
+                <a on-click="editType:{{key}}"><i class="iconfont sd-edit1 sdui-txt-green"></i>修改</a>
+                {{/if}}
+                <a><i class="iconfont sd-delete1 sdui-txt-red"></i>删除</a>
+            </td>
+        </tr>
+        {{/each}}
+        </tbody>
+    </table>
+</div>

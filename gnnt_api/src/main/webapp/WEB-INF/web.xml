@@ -62,7 +62,7 @@
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>baseServlet</servlet-name>
-		<url-pattern>/api/*</url-pattern><!--如果直接访问jsp 不能使用/*,否则jsp无法解析 -->
+		<url-pattern>/web/*</url-pattern><!--如果直接访问jsp 不能使用/*,否则jsp无法解析 -->
 	</servlet-mapping>
 
 	<servlet>
@@ -71,7 +71,7 @@
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>apiServlet</servlet-name>
-		<url-pattern>/</url-pattern>
+		<url-pattern>/api/</url-pattern>
 	</servlet-mapping>
 	
 	<filter>

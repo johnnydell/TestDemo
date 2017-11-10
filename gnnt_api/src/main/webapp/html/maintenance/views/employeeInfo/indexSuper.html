@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <title>员工信息维护(超级管理员)</title>
+    <link rel="stylesheet" href="../../../global/css/base.css">
+    <link rel="stylesheet" href="../../../global/css/sdui.css">
+    <link rel="stylesheet" href="../../../global/font/iconfont.css">
+    <link rel="stylesheet" href="../../../global/css/base.css"/>
+    <style>
+        .marginR20{margin-right: 20px;}
+        td div{ width: 150px;}
+        .col-1{font-size: 16px;}
+      
+    </style>
+
+</head>
+<body style="min-width:1510px ;">
+<div id="Layout"></div>
+<div class="rightLayout">
+    <div class="titleBox">员工信息维护</div>
+    <div class="sdui-container searchBox ">
+        <div class="row">
+            <div class="col-1 ">企业名称：</div>
+            <div class="col-3">
+                <input type="text " class="sdui-input"/>
+            </div>
+            <div class="col-1 txt-align-right">部门名称：</div>
+            <div class="col-3">
+                <input type="text " class="sdui-input"/>
+            </div>
+
+
+        </div>
+        <div class="row">
+            <div class="col-1 ">手机号码：</div>
+            <div class="col-3">
+                <input type="text " class="sdui-input"/>
+            </div>
+            <div class="col-1 txt-align-right">员工姓名：</div>
+            <div class="col-3">
+                <input type="text " class="sdui-input"/>
+            </div>
+
+            <div class="col-1">
+                <button type="button" class="btn btnBlue">查询</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <div class="functionBtn">
+            <a href="add.html"><button type="button" class="btn btnOrange marginR20">新增员工</button></a>
+            <a href="#"><button type="button" class="btn btnOrange">批量导入</button></a>
+        </div>
+        <div class="sdGrid">
+            <table>
+                <thead>
+                <tr>
+                    <th width="10%">所属企业</th>
+                    <th width="10%">部门名称</th>
+                    <th width="10%">员工姓名</th>
+                    <th width="8%">职务</th>
+                    <th width="10%">手机号码</th>
+                    <th width="15%">入职时间</th>
+                    <th width="8%">在职状态</th>
+                    <th width="8%">操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td><div class="txt-ellipsis" title="山东大学苏州研究院">山东大学苏州研究院</div></td>
+                    <td>院长办公室</td>
+                    <td>吕明新</td>
+                    <td>院长</td>
+                    <td></td>
+                    <td>2017-10-30 &nbsp;&nbsp;09:30</td>
+                    <td>在职</td>
+                    <td>
+                        <a href="view.html"><i class="iconfont sd-view sdui-txt-blue"></i>查看</a>
+
+                    </td>
+
+                </tr>
+                <tr>
+                    <td><div class="txt-ellipsis" title="山东大学苏州研究院">山东大学苏州研究院</div></td>
+                    <td>教育培训中心</td>
+                    <td>孟昭敏</td>
+                    <td>院长助理</td>
+                    <td></td>
+                    <td>2017-10-22 &nbsp;&nbsp;10:30</td>
+                    <td>在职</td>
+                    <td>
+                        <a href="view.html"><i class="iconfont sd-view sdui-txt-blue"></i>查看</a>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td><div class="txt-ellipsis" title="山东大学苏州研究院">山东大学苏州研究院</div></td>
+                    <td>人力资源中心</td>
+                    <td>董慧敏</td>
+                    <td>主任</td>
+                    <td></td>
+                    <td>2017-10-21 &nbsp;&nbsp;15:22</td>
+                    <td>在职</td>
+                    <td>
+                        <a href="view.html"><i class="iconfont sd-view sdui-txt-blue"></i>查看</a>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td><div class="txt-ellipsis" title="山东大学苏州研究院">山东大学苏州研究院</div></td>
+                    <td>研发中心</td>
+                    <td>张倩</td>
+                    <td>产品经理</td>
+                    <td></td>
+                    <td>2017-10-20 &nbsp;&nbsp;13:44</td>
+                    <td>在职</td>
+                    <td>
+                        <a href="view.html"><i class="iconfont sd-view sdui-txt-blue"></i>查看</a>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td><div class="txt-ellipsis" title="山东大学苏州研究院">山东大学苏州研究院</div></td>
+                    <td>教育培训中心</td>
+                    <td>张杰</td>
+                    <td>UI设计</td>
+                    <td></td>
+                    <td>2017-10-19 &nbsp;&nbsp;14:36</td>
+                    <td class="sdui-txt-red">离职</td>
+                    <td>
+                        <a href="view.html"><i class="iconfont sd-view sdui-txt-blue"></i>查看</a>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td><div class="txt-ellipsis" title="山东大学苏州研究院">山东大学苏州研究院</div></td>
+                    <td>人力资源中心</td>
+                    <td>张金</td>
+                    <td>项目经理</td>
+                    <td></td>
+                    <td>2017-09-12 &nbsp;&nbsp;08:33</td>
+                    <td>在职</td>
+                    <td>
+                        <a href="view.html"><i class="iconfont sd-view sdui-txt-blue"></i>查看</a>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td><div class="txt-ellipsis" title="山东大学苏州研究院">山东大学苏州研究院</div></td>
+                    <td>研发中心</td>
+                    <td>高辉</td>
+                    <td>产品经理</td>
+                    <td></td>
+                    <td>2017-09-10 &nbsp;&nbsp;09:32</td>
+                    <td>在职</td>
+                    <td>
+                        <a href="view.html"><i class="iconfont sd-view sdui-txt-blue"></i>查看</a>
+                    </td>
+
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</div>
+<script src="../../../global/js/lib/jquery.js"></script>
+<script src="../../../global/js/lib/ractive-legacy.js"></script>
+<script src="../../../global/js/lib/base.js"></script>
+</body>
+</html>

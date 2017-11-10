@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <title>新增考评</title>
+    <link rel="stylesheet" href="../../../global/js/modules/sdui/sdui.css">
+    <link rel="stylesheet" href="../../../global/js/modules/sdui/layer/skin/layer.css"/>
+    <link rel="stylesheet" href="../../../global/js/modules/sdui/css/fonts/iconfont.css"/>
+    <link rel="stylesheet" href="../../../global/font/iconfont.css">
+    <link rel="stylesheet" href="../../../global/css/base.css"/>
+    <link rel="stylesheet" href="../../css/assessInfo.css"/>
+    <link rel="stylesheet" href="../../css/assessInfo-add.css"/>
+
+    <style>
+        .popuptxl {
+            position: fixed;
+            top: 0;
+            right: 0;
+            height: 0;
+            left: 0;
+            z-index: 1000;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<div id="Layout"></div>
+
+<div class="rightLayout">
+    <div class="titleBox"><a href="javascript:window.history.go(-1);">返回</a>新增考评</div>
+    <div class="sdui-container searchBox ">
+        <div class="row">
+            <div class="col-1  text-align-right">
+                <lable class="sdui-text-danger">*</lable>
+                考评名称：
+            </div>
+            <div class="col-3">
+                <input type="text" class="sdui-input"/>
+            </div>
+            <div class="col-2 text-align-right">
+                <lable class="sdui-text-danger">*</lable>
+                考评类型：
+            </div>
+            <div class="col-3">
+                <select class="select-box">
+                    <option value="1">全部</option>
+                    <option value="2">全部</option>
+                    <option value="3">全部</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-1 text-align-right">
+                <lable class="sdui-text-danger">*</lable>
+                考评区间类型：
+            </div>
+            <div class="col-3">
+                <select class="select-box" id="chooseDu">
+                    <option value="1">月度</option>
+                    <option value="2">季度</option>
+                    <option value="3">年度</option>
+                </select>
+            </div>
+
+            <div class="col-2 text-align-right">
+                <lable class="sdui-text-danger">*</lable>
+                考评区间：
+            </div>
+            <div class="col-1">
+                <select class="select-box">
+                    <option value="1">2015</option>
+                    <option value="2">2016</option>
+                    <option value="3">2017</option>
+                </select>
+            </div>
+
+            <div class="col-1 width">年</div>
+            <div class="col-1 ">
+                <select class="select-box monthCH">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+
+                <select class="select-box quarterCH none">
+                    <option value="1">第一季度</option>
+                    <option value="2">第二季度</option>
+                    <option value="3">第三季度</option>
+                    <option value="3">第四季度</option>
+                </select>
+            </div>
+            <div class="col-1 width monthCH">月</div>
+        </div>
+
+        <div class="row">
+            <div class="col-1 text-align-right">
+                <lable class="sdui-text-danger">*</lable>
+                考评开始日期：
+            </div>
+            <div class="col-3"><input type="text" class="Wdate" readonly="readonly" onClick="WdatePicker()"></div>
+            <div class="col-2 text-align-right">
+                <lable class="sdui-text-danger">*</lable>
+                考评结束日期：
+            </div>
+            <div class="col-3"><input type="text" class="Wdate" readonly="readonly" onClick="WdatePicker()"></div>
+        </div>
+
+        <div class="row">
+            <div class="col-1 text-align-right">
+                <lable class="sdui-text-danger">*</lable>
+                考评试卷：
+            </div>
+            <div class="addAge addAgexz">
+                <button type="button" class="btn btnBlue sd-btn-small openPopup">选择</button>
+
+            </div>
+            <!--<div class="col-1"><a class="sdui-txt-blue" target="_blank" href="../test/view.html">开发人员考评试卷</a></div>
+            <div class="addAge">
+                <button type="button" class="btn btnGreen sd-btn-small openPopup">替换</button>
+                <button type="button" class="btn btnOrange sd-btn-small">删除</button>
+            </div>-->
+
+            <div class="col-2">&nbsp;</div>
+            <div class="col-3 text-align-right width24">
+                <button type="button" class="btn btnBlue sd-btn-small saveBtn">保存</button>
+                <button type="button" class="btn btnBlue sd-btn-small editBtn none">修改</button>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="wrapper none">
+        <div class="functionBtn">
+            <button type="button" class="btn btnBlue addPersonnel">添加被考评人</button>
+            <button type="button" class="btn btnOrange addPersonnel">批量分配</button>
+        </div>
+
+        <div class="sdGrid sdGridB sdGridN" style="min-width: 1000px">
+            <table>
+                <thead>
+                <tr>
+                    <th width="10%">
+                        <label class="labelBlue"><input type="checkbox"/><i></i></label>被考评人
+                    </th>
+
+                    <th width="50%">考评人</th>
+                    <th width="15%">操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td><label class="labelBlue"><input type="checkbox"><i></i></label>邵培</td>
+                    <td>
+
+                        <div class="kpr kprList">
+                            <span class="click-show"><i class="iconfont sd-arrowDown sdui-txt-blue"
+                                                        title="展开"></i></span>
+                            <li><span class="name-width">张金</span><i title="删除" class="iconfont sd-cancel sdui-txt-red"></i></li>
+                            <li><span class="name-width">张金</span><i title="删除" class="iconfont sd-cancel sdui-txt-red"></i></li>
+                            <li><span class="name-width">张金</span><i title="删除" class="iconfont sd-cancel sdui-txt-red"></i></li>
+                            <li><span class="name-width">张金</span><i title="删除" class="iconfont sd-cancel sdui-txt-red"></i></li>
+                            <li><span class="name-width">张金</span><i title="删除" class="iconfont sd-cancel sdui-txt-red"></i></li>
+                            <li><span class="name-width">张金</span><i title="删除" class="iconfont sd-cancel sdui-txt-red"></i></li>
+                            <li><span class="name-width">张金</span><i title="删除" class="iconfont sd-cancel sdui-txt-red"></i></li>
+                            <li><span class="name-width">张金</span><i title="删除" class="iconfont sd-cancel sdui-txt-red"></i></li>
+                            <li><span class="name-width">张金</span><i title="删除" class="iconfont sd-cancel sdui-txt-red"></i></li>
+                            <li><span class="name-width">张金</span><i title="删除" class="iconfont sd-cancel sdui-txt-red"></i></li>
+                            <li><span class="name-width">张金</span><i title="删除" class="iconfont sd-cancel sdui-txt-red"></i></li>
+                            <li><span class="name-width">张金</span><i title="删除" class="iconfont sd-cancel sdui-txt-red"></i></li>
+                            <li><span class="name-width">张金</span><i title="删除" class="iconfont sd-cancel sdui-txt-red"></i></li>
+                            <li><span class="name-width">张金</span><i title="删除" class="iconfont sd-cancel sdui-txt-red"></i></li>
+                        </div>
+                    </td>
+                    <td>
+                        <a class="addPersonnel" href="#"><i class="iconfont sd-distribution sdui-txt-yellow"></i>分配</a>
+                        <a><i class="iconfont sd-delete1 sdui-txt-red"></i>删除</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label class="labelBlue"><input type="checkbox"><i></i></label>邵培</td>
+                    <td>
+
+                        <div class="kprList">
+
+                            <li><span class="name-width">张金</span><i title="删除" class="iconfont sd-cancel sdui-txt-red"></i></li>
+                            <li><span class="name-width">张金</span><i title="删除" class="iconfont sd-cancel sdui-txt-red"></i></li>
+                            <li><span class="name-width">张金</span><i title="删除" class="iconfont sd-cancel sdui-txt-red"></i></li>
+                            <li><span class="name-width">张金</span><i title="删除" class="iconfont sd-cancel sdui-txt-red"></i></li>
+
+                            <li><span class="name-width">张金</span><i class="iconfont sd-cancel sdui-txt-red"></i></li>
+                        </div>
+                    </td>
+                    <td>
+                        <a class="addPersonnel" href="#"><i class="iconfont sd-distribution sdui-txt-yellow"></i>分配</a>
+                        <a><i class="iconfont sd-delete1 sdui-txt-red"></i>删除</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label class="labelBlue"><input type="checkbox"><i></i></label>邵培</td>
+                    <td>
+
+                        <div class="kprList">
+
+                            <li><span class="name-width">张金</span><i title="删除" class="iconfont sd-cancel sdui-txt-red"></i></li>
+                            <li><span class="name-width">张金</span><i title="删除" class="iconfont sd-cancel sdui-txt-red"></i></li>
+                            <li><span class="name-width">张金</span><i title="删除" class="iconfont sd-cancel sdui-txt-red"></i></li>
+                            <li><span class="name-width">张金</span><i title="删除" class="iconfont sd-cancel sdui-txt-red"></i></li>
+                            <li><span class="name-width">张金</span><i title="删除" class="iconfont sd-cancel sdui-txt-red"></i></li>
+                            <li><span class="name-width">张金</span><i title="删除" class="iconfont sd-cancel sdui-txt-red"></i></li>
+                        </div>
+                    </td>
+                    <td>
+                        <a class="addPersonnel" href="#"><i class="iconfont sd-distribution sdui-txt-yellow"></i>分配</a>
+                        <a><i class="iconfont sd-delete1 sdui-txt-red"></i>删除</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label class="labelBlue"><input type="checkbox"><i></i></label>邵培</td>
+                    <td>
+
+                        <div class="kprList">
+
+                            <li><span class="name-width">张金</span><i title="删除" class="iconfont sd-cancel sdui-txt-red"></i></li>
+                            <li><span class="name-width">张金</span><i title="删除" class="iconfont sd-cancel sdui-txt-red"></i></li>
+                            <li><span class="name-width">张金</span><i title="删除" class="iconfont sd-cancel sdui-txt-red"></i></li>
+                            <li><span class="name-width">张金</span><i title="删除" class="iconfont sd-cancel sdui-txt-red"></i></li>
+                            <li><span class="name-width">张金</span><i title="删除" class="iconfont sd-cancel sdui-txt-red"></i></li>
+                        </div>
+                    </td>
+                    <td>
+                        <a class="addPersonnel" href="#"><i class="iconfont sd-distribution sdui-txt-yellow"></i>分配</a>
+                        <a><i class="iconfont sd-delete1 sdui-txt-red"></i>删除</a>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+<div class="popup">
+    <div class="modal">
+        <h1>添加考评试卷<span class="iconfont sd-exit close close1"></span></h1>
+
+        <div class="modalMain">
+            <div class="sdoa-form">
+                <div class="form-group">
+                    <label class="w70">考评试卷名称:</label>
+
+                    <div class="cel">
+                        <input type="text">
+                        <button class="btn btnBlue">查询</button>
+                    </div>
+                </div>
+                <div class="sdGrid sdGridB sdGridN">
+                    <table>
+                        <thead>
+                        <tr>
+                            <th width="62"></th>
+                            <th width="">考评试卷名称</th>
+                            <th width="105">试卷总分</th>
+                            <th width="105">指标项数</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td><label class="labelBlue"><input name="radio" type="radio"/><i></i></label></td>
+                            <td><a class="sdui-txt-blue" target="_blank" href="../test/view.html">开发人员考评试卷</a></td>
+                            <td>100</td>
+                            <td>13</td>
+                        </tr>
+                        <tr>
+                            <td><label class="labelBlue"><input name="radio" type="radio"/><i></i></label></td>
+                            <td><a class="sdui-txt-blue" target="_blank" href="../test/view.html">测试人员考评试卷</a></td>
+                            <td>100</td>
+                            <td>13</td>
+
+                        </tr>
+                        <tr>
+                            <td><label class="labelBlue"><input name="radio" type="radio"/><i></i></label></td>
+                            <td><a class="sdui-txt-blue" target="_blank" href="../test/view.html">需求人员考评试卷</a></td>
+                            <td>100</td>
+                            <td>13</td>
+                        </tr>
+                        <tr>
+                            <td><label class="labelBlue"><input name="radio" type="radio"/><i></i></label></td>
+                            <td><a class="sdui-txt-blue" target="_blank" href="../test/view.html">管理人员考评试卷</a></td>
+                            <td>100</td>
+                            <td>10</td>
+                        </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+                <div class="btn-group">
+                    <button class="btn btnBlue" style="margin-right: 80px">确定</button>
+                    <button class="btn btnOrange close1">取消</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="popuptxl">
+
+</div>
+<script src="../../../global/js/lib/jquery.js"></script>
+<script src="../../../global/js/modules/wdatePicker/wdatePicker.js"></script>
+<script src="../../../global/js/lib/ractive-legacy.js"></script>
+<script src="../../../global/js/modules/sdui/layer/layer.js"></script>
+<script src="../../../global/js/modules/sdui/sdui.js"></script>
+<script src="../../../global/js/lib/base.js"></script>
+<script src="../../js/assessInfo-add.js"></script>
+</body>
+</html>

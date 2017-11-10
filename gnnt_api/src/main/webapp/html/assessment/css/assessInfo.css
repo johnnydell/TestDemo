@@ -1,0 +1,25 @@
+.sdui-container input.Wdate {
+    width: 138px;
+    box-shadow: 2px 0 0 #e6e7e7, 0 1px 2px 0 #cfcfcf, 0 1px 0 transparent, 2px 0 0 #e6e7e7;
+    border: none;
+}
+.txt-right {
+    text-align: right !important;
+}
+.rightLayout .sdui-container {
+    background-color: #fff;
+    color: #595757;
+}
+.sdGrid table tr td:last-child a {
+    display: inline-block;
+    min-width: 50px;
+}
+.plist {
+    overflow: hidden;
+    height: 40px;
+    line-height: 40px;
+}
+.plist span {
+    display: inline-block;
+    width: 70px;
+}

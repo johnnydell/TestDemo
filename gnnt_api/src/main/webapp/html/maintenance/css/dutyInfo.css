@@ -1,0 +1,67 @@
+.sdoa-form {
+    width: 460px;
+    margin: 30px auto;
+}
+.sdoa-form .form-group {
+    overflow: hidden;
+    line-height: 30px;
+    margin-bottom: 5px;
+    padding: 5px 0;
+    font-size: 14px;
+}
+.sdoa-form .form-group label {
+    float: left;
+    width: 120px;
+    text-align: right;
+    margin-right: 15px;
+    letter-spacing: 2px;
+    word-break: keep-all;
+}
+.sdoa-form .form-group label > span {
+    color: #da5c5e;
+    margin-right: 10px;
+}
+.sdoa-form .form-group .cel {
+    margin-left: 100px;
+    text-align: left;
+}
+.sdoa-form .form-group .cel > input {
+    height: 38px;
+    line-height: 38px;
+    width: 280px;
+    border-radius: 4px;
+    box-shadow: -2px 0 0 #e6e7e7, 0 -2px 0 #c0c1c1, 0 2px 0 transparent, 2px 0 0 #e6e7e7;
+    background-color: #f8fafa;
+}
+.sdoa-form .form-group .smallBtn {
+    min-width: 60px;
+    padding: 5px 0;
+}
+.sdoa-form .btn-group {
+    text-align: center;
+    margin-top: 30px;
+}
+.sdoa-form .sdGrid {
+    margin-top: 15px;
+}
+.sdoa-form .sdGridB td input[type='text'] {
+    width: 100%;
+    color: #000;
+    line-height: 24px;
+    padding: 0 10px;
+}
+.sdoa-form .sdGridB td input[type='text']:disabled {
+    width: 100%;
+    color: #000;
+    line-height: 24px;
+    padding: 0;
+    border: none;
+}
+.plist {
+    overflow: hidden;
+    height: 40px;
+    line-height: 40px;
+}
+.plist span{
+    display: block;
+}

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<title>山东大学自学考试服务平台</title>
+		<link href="css/fonts/iconfont.css" rel="stylesheet" type="text/css"/>
+		<link href="layer/skin/layer.css" rel="stylesheet" type="text/css"/>
+		<link href="sdui.css" rel="stylesheet" type="text/css"/>
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="layer/layer.js"></script>
+		<script type="text/javascript" src="sdui.js"></script>
+	</head>
+
+<body >
+	<div style="margin: 50px 0px;border:1px solid red;">
+	
+	</div>
+	<div id="treeContainer" style="float:left; width:600px; border:1px dotted red;">
+	
+	</div>
+	<div style="float:left; width:500px; border:1px solid #000;">xxx</div>
+	
+	<script type="text/javascript">
+	
+	$(function(){
+		
+		/* alert('警告提示框，也能自动关闭',function(){
+			message('呕吼，警告提示框自动关闭了');
+		},true);  */
+		
+		/* success('成功提示框，也能自动关闭',function(){
+			message('呕吼，成功提示框自动关闭了');
+		},true); */
+		
+		/* error('错误提示框，也能自动关闭',function(){
+			message('呕吼，错误提示框自动关闭了');
+		},true); */
+		
+		
+		var  nodes = [
+		              {
+							id:'一',
+							title:'一',
+							date:'2016年度',
+							nodes:[{
+								data:'1',
+								title:'1',
+								date:'2016年9月'
+							}
+							,{
+								id:'2',
+								title:'2',
+								date:'2016年10月',
+								nodes:[{
+									id:'a',
+									title:'a',
+									date:'2016-10-1'
+								}
+								,{
+									id:'b',
+									title:'b',
+									date:'2016-10-2'
+								}
+								,{
+									id:'c',
+									title:'c',
+									date:'2016-10-3',
+									nodes:[{
+										id:'①',
+										title:'①',
+										date:'2016-10-3 12:00',
+									}
+									,{
+										id:'②',
+										title:'②',
+										date:'2016-10-3 13:00'
+									}
+									,{
+										id:'③',
+										title:'③',
+										date:'2016-10-3 14:00'
+									}
+									,{
+										id:'④',
+										title:'④',
+										date:'2016-10-3 15:00'
+									}]
+								}
+								,{
+									id:'d',
+									title:'d',
+									date:'2016-10-4'
+								}]
+							}
+							,{
+								id:'3',
+								title:'3',
+								date:'2016年11月'
+							}
+							,{
+								id:'4',
+								title:'4',
+								date:'2016年12月'
+							}]
+				}
+				,{
+				id:'二',
+				title:'二',
+				date:'2015年度',
+				}
+				,{
+				id:'三',
+				title:'三',
+				date:'2014年度',
+				}
+				,{
+				id:'四',
+				title:'四',
+				date:'2013年度',
+				}
+				];
+		
+		var currentNode;
+		$('#treeContainer').sdTree({
+			isExpandable:true,
+			style:{
+				icon:{
+					show:true
+				}
+				,select:{
+					show:false,
+					multiple:false
+				}
+				,hover:{
+					pointer:true
+					,show:true
+				}
+			},
+			defaultBtnText: '添加章',
+			childName:'nodes',
+			toolbar:2,
+			isEditable: true, // tree是否可编辑, isEditable与fields必须配合使用
+			isNodeClickable: true,  //树的节点内容是否可点击，默认为false
+			level:5,   // 表示树最多层次
+			fields:[{name:'title',width:'100px',required:true,length:10},{name:'date',width:'200px'}], // 指定可编辑的属性
+			requiredMsg:{
+				msg:'内容不能为空！',
+				type:0  // 0：吐司， 1: alert框
+			},
+			fieldKeyup:function(node,val){
+				
+				console.log(node);
+				currentNode=node;
+				
+				console.log('fieldKeyup：'+val);
+			},
+			fieldFocusin:function(node,val){
+				
+				
+				currentNode = node;
+				if(!currentNode.haha){
+					currentNode.haha = Math.random();
+				}
+				
+				console.log(node);
+				
+				console.log('fieldFocusin：'+val);
+			},
+			nodeInnerHtml:function(data) {
+				// 覆写此方法，用于渲染tree的显示
+				// console.log(data);
+				// return的内容作为页面显示
+				return '<span>名字1fdafd: </span><span style="font-weight:bold;" field="title">'+data.title+'</span> 内容: <small style="color:red" field="date">'+data.date+'</small><span style="">（2）</span>';
+			},
+			nodeClick:function(data,selectedNodes) {
+				// 覆写此方法，用于渲染tree结点的点击回调，使用者可以直接操作此条记录
+				/* console.log('nodeClick'); */
+				console.log(data);
+				console.log(selectedNodes);
+				
+			}
+			,complete: function(datas,isEdit) { // 只要涉及到修改树型结构数据，此方法都会被调用，返回整个tree的数据集合
+				/* console.log('complete');
+				console.log(datas); */
+				// console.log(isEdit);
+			}
+			,saveNode: function(node,pNode,successCallback) {  // saveNode一旦设置，表明你采用外部保存结点方式，则必须手动调用 successCallback，将更新过的值回传给tree，否则sdTree无法刷新数据
+				/* console.log('saveNode');
+				console.log(node);
+				console.log(pNode); */
+				
+				// successCallback.call(this,node);
+			}
+		},nodes);
+		
+		
+	});
+	
+	
+	
+	</script>
+</body>
+
+</html>

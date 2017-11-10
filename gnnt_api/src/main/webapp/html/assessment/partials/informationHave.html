@@ -1,0 +1,115 @@
+
+<div class="sdui-container ">
+    <div class="editBox" style="display: none">
+        <div class="row">
+            <div class="col-1 "><lable class="sdui-text-danger" >*</lable>指标名称：</div>
+            <div class="col-2"><input type="text" class="sdui-input"  value="需求分析能力"></div>
+            <div class="col-1">
+                <lable class="sdui-text-danger" >*</lable>
+                是否区间：</div>
+            <div class="col-2">
+                <select class="select-box">
+                    <option value="" selected="">是</option>
+                    <option value="">否</option>
+                </select>
+            </div>
+            <div class="col-3">&nbsp;</div>
+            <div class="col-2 pull-right addzbx">
+                <div on-click="addBXList" class="txt-align-right txt-green add-detail">
+                    <span class=" sdui-txt-blue"><i class="iconfont sd-add1"></i>添加指标项</span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-1 ">
+                <lable class="sdui-text-danger" >*</lable>
+                指标分值：
+            </div>
+            <div class="col-2"><input type="text" class="sdui-input"  value="12"></div>
+            <div class="col-2">&nbsp;</div>
+            <div class="col-3 txt-align-right">
+                <button type="button" class="btn btnGreen " id="saveBtn" >保存</button>
+
+            </div>
+        </div>
+    </div>
+    <div class="viewBox">
+        <div class="row">
+            <div class="col-1 ">指标名称：</div>
+            <div class="col-2"><input type="text" class="sdui-input" disabled value="需求分析能力"></div>
+            <div class="col-1">是否区间：</div>
+            <div class="col-2">是</div>
+            <div class="col-3">&nbsp;</div>
+            <div class="col-2 pull-right addzbx">
+                <div on-click="addBXList" class="txt-align-right txt-green add-detail">
+                    <span class=" sdui-txt-blue"><i class="iconfont sd-add1"></i>添加指标项</span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-1 ">
+                <lable class="sdui-text-danger" style="display: none">*</lable>
+                指标分值：
+            </div>
+            <div class="col-2"><input type="text" class="sdui-input" disabled value="12"></div>
+            <div class="col-2">&nbsp;</div>
+            <div class="col-3 txt-align-right">
+                <button type="button" class="btn btnGreen " id="modifyBtn" >修改</button>
+                <button type="button" class="btn btnBlue ">提交</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+{{#each bxsq:k}}
+<div class="sdui-container" id="listZbx">
+    <div class="row txt-align-center lineEditor">
+        <h3>
+            指标项（{{k+1}}）
+
+        </h3>
+    </div>
+    <div class="row">
+        <div class="col-1 "><lable class="sdui-text-danger">*</lable>指标项描述：</div>
+        <div class="col-7 ">
+            <textarea name="" id="" cols="" rows=""></textarea><span class="tips">还可输入<lable class="sdui-text-danger">12</lable>个字</span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-1 sdui-txt-right"><lable class="sdui-text-danger">*</lable>最高分：</div>
+        <div class="col-2">
+            <input type="text " class="sdui-input"/>
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col-1 sdui-txt-right"><lable class="sdui-text-danger">*</lable>最低分：</div>
+        <div class="col-2">
+            <input type="text " class="sdui-input"/>
+        </div>
+
+        <div class="col-2 ">&nbsp;</div>
+        <div class="col-3 txt-align-right">
+
+
+            <button type="button" class="btn  btnBlue">保存</button>
+            <button type="button"  on-click="delCCList" data-id="" class="btn  btnOrange">删除</button>
+
+            <!--<button type="button" class="btn sd-btn-small btnOrange">删除</button>-->
+
+        </div>
+    </div>
+
+</div>
+{{/each}}
+
+<div id="bxlist"></div>
+<script>
+    $('#modifyBtn').click(function(){
+        $('.editBox').show() && $('.viewBox').hide();
+    })
+    $('#saveBtn').click(function(){
+        $('.editBox').hide() && $('.viewBox').show();
+    })
+</script>
+

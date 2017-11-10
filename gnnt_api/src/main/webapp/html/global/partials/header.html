@@ -1,0 +1,62 @@
+<link rel="stylesheet" href="/gnnt/html/global/font/iconfont.css"/>
+<div class="topLayout">
+    <div class="userOpera">
+        <div class="user">
+            <img src="/gnnt/html/global/img/user.png">
+        </div>
+        退出
+    </div>
+</div>
+<div class="leftLayout">
+    <div class="topLogo"> 
+        后台管理
+    </div>
+    <ul class="sd-nav">
+        <li class="sd-nav-item">
+            <a href="#none" class="{{maintenance?'current':''}}"><em class="iconfont sd-jcsjwh1"></em>基础数据维护<i></i></a>
+            <ul class="sd-nav-child none {{maintenance}}">
+                <li class="{{admin}}">
+                    <a href="/gnnt/html/maintenance/views/admin/index.html">管理员维护</a>
+                </li>
+                <li class="{{config}}">
+                    <a href="/gnnt/html/maintenance/views/config/add.html">考勤配置</a>
+                </li>
+                <li class="{{taskType}}">
+                    <a href="/gnnt/html/maintenance/views/taskType/index.html">类型任务维护</a>
+                </li>
+                <li class="{{enterpriseInfo}}">
+                    <a href="/gnnt/html/maintenance/views/enterpriseInfo/index.html">企业信息维护</a>
+                </li>
+                <li class="{{departmentInfo}}">
+                    <a href="/gnnt/html/maintenance/views/departmentInfo/index.html">部门信息维护</a>
+                </li>
+                <li class="{{employeeInfo}}">
+                    <a href="/gnnt/html/maintenance/views/employeeInfo/index.html">员工信息维护</a>
+                </li>
+                <li class="{{dutyInfo}}">
+                    <a href="/gnnt/html/maintenance/views/dutyInfo/index.html">职务维护</a>
+                </li>
+            </ul>
+        </li>
+        <li class="sd-nav-item">
+            <a href="#none" class="{{assessment?'current':''}}"><em class="iconfont sd-kpgl1"></em>考评管理<i></i></a>
+            <ul class="sd-nav-child none {{assessment}}">
+                <li class="{{type}}">
+                    <a href="/gnnt/html/assessment/views/type/index.html">考评类型维护</a>
+                </li>
+                <li class="{{normInfo}}">
+                    <a href="/gnnt/html/assessment/views/normInfo/index.html">指标信息维护</a>
+                </li>
+                <li class="{{test}}">
+                    <a href="/gnnt/html/assessment/views/test/index.html">考评试卷维护</a>
+                </li>
+                <li class="{{assessInfo}}">
+                    <a href="/gnnt/html/assessment/views/assessInfo/index.html">考评信息维护</a>
+                </li>
+                <li>
+                    <a href="#">考评查询</a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>

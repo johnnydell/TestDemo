@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <title>管理员维护</title>
+    <link rel="stylesheet" href="../../../global/css/base.css">
+    <link rel="stylesheet" href="../../../global/css/sdui.css">
+    <link rel="stylesheet" href="../../../global/font/iconfont.css">
+    <link rel="stylesheet" href="../../../global/css/base.css"/>
+    <link rel="stylesheet" href="../../css/baseInfo.css"/>
+    <style>
+        .sdGrid {
+            overflow-x: scroll;
+            overflow-y: hidden;
+        }
+        .sdGrid table {
+            min-width: 1100px;
+        }
+        .col-1{
+            font-size: 16px;
+            text-align: right;
+        }
+
+        td div{
+            width: 150px;
+        }
+        .widthsmall{
+            width: 3%;
+            text-align: left!important;
+        }
+        .marginR20 {
+            margin-right: 20px;
+        }
+        .sdui-container div.row {
+            padding: 0px;
+        }
+        .labelBlue{
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+<div id="Layout"></div>
+<div class="rightLayout">
+    <div class="titleBox">管理员维护</div>
+    <div class="sdui-container searchBox ">
+        <div class="row">
+            <div class="col-1 widthsmall ">姓名：</div>
+            <div class="col-2">
+                <input type="text " class="sdui-input"/>
+            </div>
+            <div class="col-1  ">企业名称：</div>
+            <div class="col-3">
+                <input type="text " class="sdui-input"/>
+            </div>
+            <div class="col-1">
+                <button type="button" class="btn btnBlue">查询</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <div class="functionBtn">
+            <a href="add.html" class="btn btnOrange marginR20">新增</a>
+            <a href="#" class="btn btnOrange marginR20">启用</a>
+            <a href="#" class="btn btnOrange marginR20">停用</a>
+            <a href="#" class="btn btnOrange marginR20">删除</a>
+        </div>
+        <div class="sdGrid">
+            <table>
+                <thead>
+                <tr>
+                    <th width="15%">
+                        <label class="labelBlue">
+                            <input type="checkbox">
+                            <i></i>
+                        </label>姓名</th>
+                    <th width="20%">企业名称</th>
+                    <th width="15%">手机号码</th>
+                    <th width="15%">创建时间</th>
+                    <th width="10%">状态</th>
+                    <th width="35%">操作</th>
+
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>
+                        <label class="labelBlue">
+                            <input type="checkbox">
+                            <i></i>
+                        </label>张杰</td>
+                    <td><div class="txt-ellipsis" title="山东大学苏州研究院">山东大学苏州研究院</div></td>
+                    <td>15658794563</td>
+                    <td>2017-09-16 13:34</td>
+                    <td class="sdui-txt-red">已停用</td>
+                    <td>
+                        <a href="#"><i class="iconfont sd-resetPassword sdui-txt-blue"></i>重置密码</a>
+                        <a href="javascript:;"><i class="iconfont sd-start sdui-txt-orange"></i>启用</a>
+                        <a href="javascript:;"><i class="iconfont sd-delete1 sdui-txt-red"></i>删除</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td> <label class="labelBlue">
+                        <input type="checkbox">
+                        <i></i>
+                    </label>张金</td>
+                    <td><div class="txt-ellipsis" title="苏州新电信息">苏州新电信息</div></td>
+                    <td>18796543258</td>
+                    <td>2017-09-15 13:35</td>
+                    <td class="sdui-txt-green">已启用</td>
+                    <td>
+                        <a href="#"><i class="iconfont sd-resetPassword sdui-txt-blue"></i>重置密码</a>
+                        <a href="javascript:;"><i class="iconfont sd-jinyong sdui-txt-gray"></i>停用</a>
+                        <a href="javascript:;"><i class="iconfont sd-delete1 sdui-txt-red"></i>删除</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td> <label class="labelBlue">
+                        <input type="checkbox">
+                        <i></i>
+                    </label>张倩</td>
+                    <td><div class="txt-ellipsis" title="苏州新电信息">苏州新电信息</div></td>
+                    <td>18796543258</td>
+                    <td>2017-09-15 13:35</td>
+                    <td class="sdui-txt-green">已停用</td>
+                    <td>
+                        <a href="#"><i class="iconfont sd-resetPassword sdui-txt-blue"></i>重置密码</a>
+                        <a href="javascript:;"><i class="iconfont sd-start sdui-txt-orange"></i>启用</a>
+                        <a href="javascript:;"><i class="iconfont sd-delete1 sdui-txt-red"></i>删除</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td> <label class="labelBlue">
+                        <input type="checkbox">
+                        <i></i>
+                    </label>高辉</td>
+                    <td><div class="txt-ellipsis" title="无锡中软">无锡中软</div></td>
+                    <td>15789561254</td>
+                    <td>2017-09-13 13:33</td>
+                    <td class="sdui-txt-green">已启用</td>
+                    <td>
+                        <a href="#"><i class="iconfont sd-resetPassword sdui-txt-blue"></i>重置密码</a>
+                        <a href="javascript:;"><i class="iconfont sd-jinyong sdui-txt-gray"></i>停用</a>
+                        <a href="javascript:;"><i class="iconfont sd-delete1 sdui-txt-red"></i>删除</a>
+                    </td>
+                </tr>
+
+
+
+                <tr>
+                    <td> <label class="labelBlue">
+                        <input type="checkbox">
+                        <i></i>
+                    </label>帅帅</td>
+                    <td><div class="txt-ellipsis" title="山东浩然">山东浩然</div></td>
+                    <td>15066899999</td>
+                    <td>2017-09-12 13:34</td>
+                    <td class="sdui-txt-red">已停用</td>
+                    <td>
+                        <a href="#"><i class="iconfont sd-resetPassword sdui-txt-blue"></i>重置密码</a>
+                        <a href="javascript:;"><i class="iconfont sd-start  sdui-txt-orange"></i>启用</a>
+                        <a href="javascript:;"><i class="iconfont sd-delete1 sdui-txt-red"></i>删除</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td> <label class="labelBlue">
+                        <input type="checkbox">
+                        <i></i>
+                    </label>李鹏</td>
+                    <td><div class="txt-ellipsis" title="苏州云母">苏州云母</div></td>
+                    <td>15554478962</td>
+                    <td>2017-09-11 13:35</td>
+                    <td class="sdui-txt-red">已停用</td>
+                    <td>
+                        <a href="#"><i class="iconfont sd-resetPassword sdui-txt-blue"></i>重置密码</a>
+                        <a href="javascript:;"><i class="iconfont sd-start  sdui-txt-orange"></i>启用</a>
+                        <a href="javascript:;"><i class="iconfont sd-delete1 sdui-txt-red"></i>删除</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td> <label class="labelBlue">
+                        <input type="checkbox">
+                        <i></i>
+                    </label>正泉泉</td>
+                    <td><div class="txt-ellipsis" title="北京云端">北京云端</div></td>
+                    <td>15877779654</td>
+                    <td>2017-09-10 13:37</td>
+                    <td class="sdui-txt-red">已停用</td>
+                    <td>
+                        <a href="#"><i class="iconfont sd-resetPassword sdui-txt-blue"></i>重置密码</a>
+                        <a href="javascript:;"><i class="iconfont sd-start sdui-txt-orange"></i>启用</a>
+                        <a href="javascript:;"><i class="iconfont sd-delete1 sdui-txt-red"></i>删除</a>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</div>
+<script src="../../../global/js/lib/jquery.js"></script>
+<script src="../../../global/js/lib/ractive-legacy.js"></script>
+<script src="../../../global/js/lib/base.js"></script>
+</body>
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <title>新增员工</title>
+    <link rel="stylesheet" href="../../../global/css/sdui.css">
+    <link rel="stylesheet" href="../../../global/css/base.css">
+    <link rel="stylesheet" href="../../../global/font/iconfont.css">
+    <link rel="stylesheet" href="../../css/baseInfo.css"/>
+    <script src="../../../global/js/lib/jquery.js"></script>
+    <script src="../../../global/js/lib/ractive-legacy.js"></script>
+    <script src="../../../global/js/lib/base.js"></script>
+</head>
+<body style="min-width: 1280px">
+<div id="Layout"></div>
+<div class="rightLayout" style="background-color: #fff">
+    <h1 class="titleBox"><a href="javascript:window.history.go(-1);">返回</a>新增员工</h1>
+
+    <div class="infoListL">
+        <dl>
+            <dt>所属企业：</dt>
+            <dd>山东大学苏州研究院</dd>
+        </dl>
+        <dl>
+            <dt><span>*</span>员工姓名：</dt>
+            <dd class="spec">
+                <input type="text"/>
+                <div>
+                    <label class="labelBlue">
+                        <input type="radio" checked /><i></i>
+                    </label>
+                    <span>部门负责人</span>
+                </div>
+            </dd>
+        </dl>
+        <dl>
+            <dt><span>*</span>所属部门：</dt>
+            <dd>
+                <select class="select-box">
+                    <option value="">院长办公室</option>
+                </select>
+            </dd>
+        </dl>
+        <dl>
+            <dt><span>*</span>职务：</dt>
+            <dd>
+                <select class="select-box">
+                    <option value="">院长助理</option>
+                </select>
+            </dd>
+        </dl>
+        <dl>
+            <dt>上级领导：</dt>
+            <dd><input type="text" pattern="联想输入" /></dd>
+        </dl>
+        <dl>
+            <dt>入职日期：</dt>
+            <dd><input type="text" class="Wdate" readonly="readonly" onclick="WdatePicker()"></dd>
+        </dl>
+        <dl>
+            <dt>员工工号：</dt>
+            <dd><input type="text"/></dd>
+        </dl>
+        <dl>
+            <dt>考勤编号：</dt>
+            <dd><input type="text"/></dd>
+        </dl>
+        <dl>
+            <dt><span>*</span>手机号码：</dt>
+
+            <dd><input type="text"/></dd>
+        </dl>
+        <dl>
+            <dt><span>*</span>电子邮箱：</dt>
+
+            <dd><input type="text"/></dd>
+        </dl>
+        <dl>
+            <dt>固话号码：</dt>
+            <dd><input type="text"/></dd>
+        </dl>
+        <dl>
+            <dt><span>*</span>出生日期：</dt>
+            <dd><input type="text" class="Wdate" readonly="readonly" onclick="WdatePicker()"></dd>
+        </dl>
+        <dl>
+            <dt><span>*</span>性别：</dt>
+            <dd>
+                <label class="labelBlue">
+                    <input name="sex" type="radio"/><i></i>
+                </label>
+                <span class="infoSpan">男</span>
+
+                <label class="labelBlue ml40">
+                    <input name="sex" type="radio" checked/><i></i>
+                </label>
+                <span class="infoSpan">女</span>
+            </dd>
+        </dl>
+        <dl>
+            <dt><span>*</span>身份证号码：</dt>
+            <dd><input type="text"/></dd>
+        </dl>
+        <dl>
+            <dt>身份证有效期：</dt>
+            <dd><input type="text" class="Wdate" readonly="readonly" onclick="WdatePicker()"></dd>
+        </dl>
+        <dl>
+            <dt><span>*</span>民族：</dt>
+            <dd><input type="text"/></dd>
+        </dl>
+        <dl>
+            <dt><span>*</span>籍贯：</dt>
+            <dd><input type="text"/></dd>
+        </dl>
+        <dl>
+            <dt><span>*</span>户籍性质：</dt>
+            <dd>
+                <select class="select-box">
+                    <option value="">城镇</option>
+                </select>
+            </dd>
+        </dl>
+        <dl>
+            <dt><span>*</span>户籍地址：</dt>
+            <dd><input type="text"/></dd>
+        </dl>
+        <dl>
+            <dt><span>*</span>家庭地址：</dt>
+            <dd><input type="text"/></dd>
+        </dl>
+        <dl>
+            <dt><span>*</span>婚育状况：</dt>
+            <dd>
+                <label class="labelBlue">
+                    <input name="marry" type="radio"/><i></i>
+                </label>
+                <span class="infoSpan">已婚</span>
+
+                <label class="labelBlue ml40">
+                    <input name="marry" type="radio" checked/><i></i>
+                </label>
+                <span class="infoSpan">未婚</span>
+            </dd>
+        </dl>
+        <dl>
+            <dt><span>*</span>学历：</dt>
+            <dd><input type="text"/></dd>
+        </dl>
+        <dl>
+            <dt><span>*</span>毕业院校：</dt>
+            <dd><input type="text"/></dd>
+        </dl>
+        <dl>
+            <dt><span>*</span>所学专业：</dt>
+            <dd><input type="text"/></dd>
+        </dl>
+        <dl>
+            <dt><span>*</span>毕业时间：</dt>
+            <dd><input type="text" class="Wdate" readonly="readonly" onclick="WdatePicker()"></dd>
+        </dl>
+        <dl>
+            <dt><span>*</span>是否启用：</dt>
+            <dd>
+                <label class="labelBlue">
+                    <input name="isfor" type="radio"/><i></i>
+                </label>
+                <span class="infoSpan">是</span>
+
+                <label class="labelBlue ml40">
+                    <input name="isfor" type="radio" checked/><i></i>
+                </label>
+                <span class="infoSpan">否</span>
+            </dd>
+        </dl>
+        <dl>
+            <dt>在职状态：</dt>
+            <dd>
+                <select class="select-box">
+                    <option value="">在职</option>
+                </select>
+            </dd>
+        </dl>
+    </div>
+    <div class="infoListR">
+        <div class="infoListRLogo">
+           员工头像
+        </div>
+        <p><a href="javascript:;">上传</a></p>
+    </div>
+
+    <div class="infoListBtn">
+        <a class="btn btnBlue" href="javascript:;">保存</a>
+        <a class="btn btnOrange ml40" href="javascript:;">取消</a>
+    </div>
+
+</div>
+<script src="../../../global/js/modules/wdatePicker/wdatePicker.js"></script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <title>新增指标信息</title>
+    <link rel="stylesheet" href="../../../global/css/sdui.css">
+    <link rel="stylesheet" href="../../../global/font/iconfont.css">
+    <link rel="stylesheet" href="../../../global/css/base.css"/>
+    <link rel="stylesheet" href="../../css/normInfo.css">
+</head>
+<body>
+<div id="Layout"></div>
+<div class="rightLayout">
+    <div class="titleBox"><a href="javascript:window.history.go(-1);">返回</a>新增指标信息</div>
+    <div class="sdui-container wrapper yincang">
+        <div class="row " >
+            <div class="col-1 "><lable class="sdui-text-danger">*</lable>指标名称：</div>
+            <div class="col-2">
+                <input type="text " class="sdui-input"/>
+            </div>
+            <div class="col-1"><lable class="sdui-text-danger">*</lable>是否区间：</div>
+            <div class="col-2">
+                <select class="select-box" id="qujian">
+                    <option value="1" selected="">是</option>
+                    <option value="2">否</option>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-1 "><lable class="sdui-text-danger">*</lable>指标分值：</div>
+            <div class="col-2">
+                <input type="text " class="sdui-input"/>
+            </div>
+            <div class="col-1">&nbsp;</div>
+            <div class="col-1">
+                <button type="button" class="btn btnBlue" onclick="saveBtn()">保存</button>
+            </div>
+        </div>
+    </div>
+<div id="addqujian1"></div>
+</div>
+<script src="../../../global/js/lib/jquery.js"></script>
+<script src="../../../global/js/lib/ractive-legacy.js"></script>
+<script src="../../../global/js/lib/base.js"></script>
+<script src="../../js/addNor.js"></script>
+
+<script>
+
+
+
+</script>
+</body>
+</html>

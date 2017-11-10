@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <title>考勤配置(初始化)</title>
+    <link rel="stylesheet" href="../../../global/css/sdui.css">
+    <link rel="stylesheet" href="../../../global/font/iconfont.css">
+    <link rel="stylesheet" href="../../../global/css/base.css"/>
+    <link rel="stylesheet" href="../../css/config.css"/>
+</head>
+<body>
+<div id="Layout"></div>
+<div class="rightLayout">
+    <div class="titleBox">考勤配置</div>
+
+
+    <div class="wrapper">
+        <!-- 初始化-->
+        <div class="sdui-container panel1">
+            <div class="row">
+                <div class="col-2 text">&nbsp;</div>
+                <div class="col-2 txt-align-right">所属企业：</div>
+                <div class="col-3">山东大学苏州研究院</div>
+            </div>
+            <div class="row">
+                <div class="col-2 ">&nbsp;</div>
+                <div class="col-2 txt-align-right"><lable class="sdui-text-danger">*</lable>上班时间：</div>
+                <div class="col-3"><input type="text" class="Wdate" readonly="readonly" onClick="WdatePicker()"></div>
+            </div>
+            <div class="row">
+                <div class="col-2 ">&nbsp;</div>
+                <div class="col-2 txt-align-right"><lable class="sdui-text-danger">*</lable>下班时间：</div>
+                <div class="col-3"><input type="text" class="Wdate" readonly="readonly" onClick="WdatePicker()"></div>
+
+            </div>
+            <div class="row">
+                <div class="col-2 ">&nbsp;</div>
+                <div class="col-2 txt-align-right"><lable class="sdui-text-danger">*</lable>工作时长（小时）：</div>
+                <div class="col-3"><input type="text" ></div>
+            </div>
+            <div class="row">
+                <div class="col-2 ">&nbsp;</div>
+                <div class="col-2 txt-align-right"><lable class="sdui-text-danger">*</lable>加班开始时间：</div>
+                <div class="col-3"><input type="text" ></div>
+            </div>
+            <div class="row">
+                <div class="col-2 ">&nbsp;</div>
+                <div class="col-4  txt-align-right">
+                    <button type="button" class="btn btnBlue saveFir" onclick="saveFir()">保存</button>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!--查看-->
+        <div class="sdui-container panel2" style="display: none">
+            <div class="row">
+                <div class="col-2 text">&nbsp;</div>
+                <div class="col-2 txt-align-right">所属企业：</div>
+                <div class="col-3">山东大学苏州研究院</div>
+            </div>
+            <div class="row">
+                <div class="col-2 ">&nbsp;</div>
+                <div class="col-2 txt-align-right">上班时间：</div>
+                <div class="col-3">09:00</div>
+            </div>
+            <div class="row">
+                <div class="col-2 ">&nbsp;</div>
+                <div class="col-2 txt-align-right">下班时间：</div>
+                <div class="col-3"> 18:00</div>
+
+            </div>
+            <div class="row">
+                <div class="col-2 ">&nbsp;</div>
+                <div class="col-2 txt-align-right">工作时长（小时）：</div>
+                <div class="col-3">8</div>
+            </div>
+            <div class="row">
+                <div class="col-2 ">&nbsp;</div>
+                <div class="col-2 txt-align-right">加班开始时间：</div>
+                <div class="col-3">18:00</div>
+            </div>
+            <div class="row">
+                <div class="col-2 ">&nbsp;</div>
+                <div class="col-4  txt-align-right">
+                    <button type="button" class="btn btnGreen" onclick="editView()">修改</button>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!--编辑-->
+
+        <div class="sdui-container panel3" style="display: none">
+            <div class="row">
+                <div class="col-2 text">&nbsp;</div>
+                <div class="col-2 txt-align-right">所属企业：</div>
+                <div class="col-3">山东大学苏州研究院</div>
+            </div>
+            <div class="row">
+                <div class="col-2 ">&nbsp;</div>
+                <div class="col-2 txt-align-right"><lable class="sdui-text-danger">*</lable>上班时间：</div>
+                <div class="col-3"><input type="text" class="Wdate" readonly="readonly" onClick="WdatePicker()"></div>
+            </div>
+            <div class="row">
+                <div class="col-2 ">&nbsp;</div>
+                <div class="col-2 txt-align-right"><lable class="sdui-text-danger">*</lable>下班时间：</div>
+                <div class="col-3"><input type="text" class="Wdate" readonly="readonly" onClick="WdatePicker()"></div>
+
+            </div>
+            <div class="row">
+                <div class="col-2 ">&nbsp;</div>
+                <div class="col-2 txt-align-right"><lable class="sdui-text-danger">*</lable>工作时长（小时）：</div>
+                <div class="col-3"><input type="text" ></div>
+            </div>
+            <div class="row">
+                <div class="col-2 ">&nbsp;</div>
+                <div class="col-2 txt-align-right"><lable class="sdui-text-danger">*</lable>加班开始时间：</div>
+                <div class="col-3"><input type="text" ></div>
+            </div>
+            <div class="row">
+                <div class="col-4 ">&nbsp;</div>
+                <div class="col-3  txt-align-center">
+                    <button type="button" class="btn btnBlue marginR20" onclick="saveEdit()">保存</button>
+                    <button type="button" class="btn btnOrange" onclick="saveEdit()">取消</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../../../global/js/lib/jquery.js"></script>
+<script src="../../../global/js/lib/ractive-legacy.js"></script>
+<script src="../../../global/js/modules/wdatePicker/wdatePicker.js"></script>
+<script src="../../../global/js/lib/base.js"></script>
+
+<script>
+    function saveFir(){
+        $(".panel1").hide() && $(".panel2").show();
+    };
+    function editView(){
+        $(".panel2").hide() && $(".panel3").show();
+    };
+    function saveEdit(){
+        $(".panel3").hide() && $(".panel2").show();
+    };
+
+</script>
+</body>
+</html>

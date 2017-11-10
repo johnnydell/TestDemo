@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <title>指标信息维护</title>
+    <link rel="stylesheet" href="../../../global/css/base.css">
+    <link rel="stylesheet" href="../../../global/css/sdui.css">
+    <link rel="stylesheet" href="../../../global/font/iconfont.css">
+    <link rel="stylesheet" href="../../../global/css/base.css"/>
+    <style>
+        .col-2 {
+            text-align: right !important;
+        }
+
+    </style>
+</head>
+<body style="min-width: 1380px">
+<div id="Layout"></div>
+<div class="rightLayout">
+    <div class="titleBox">指标信息维护</div>
+    <div class="sdui-container searchBox ">
+        <div class="row">
+            <div class="col-1 ">指标名称：</div>
+            <div class="col-3">
+                <input type="text " class="sdui-input"/>
+            </div>
+            <div class="col-2">是否区间：</div>
+            <div class="col-3">
+                <select class="select-box">
+                    <option value="1" selected="">是</option>
+                    <option value="2">否</option>
+                </select>
+            </div>
+            <div class="col-2">
+                <button type="button" class="btn btnBlue">查询</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <div class="functionBtn">
+            <a href="add.html">
+                <button type="button" class="btn btnOrange">新增指标信息</button>
+            </a>
+        </div>
+        <div class="sdGrid">
+            <table>
+                <thead>
+                <tr>
+                    <th width="25%">指标名称</th>
+                    <th width="10%">是否区间</th>
+                    <th width="10%">指标分值</th>
+                    <th width="15%">创建时间</th>
+                    <th width="10%">状态</th>
+                    <th width="30%">操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>需求分析能力</td>
+                    <td>是</td>
+                    <td>12</td>
+                    <td>2017-09-05 10:30</td>
+                    <td>已停用</td>
+                    <td>
+                        <a href="view.html"><i class="iconfont sd-view sdui-txt-blue"></i>查看</a>
+                        <a href="edit.html"><i class="iconfont sd-edit1 sdui-txt-green"></i>修改</a>
+                        <a><i class="iconfont sd-start sdui-txt-yellow"></i>启用</a>
+                        <a><i class="iconfont sd-delete1 sdui-txt-red"></i>删除</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>沟通能力</td>
+                    <td>是</td>
+                    <td>10</td>
+                    <td>2017-09-04 09:30</td>
+                    <td>已启用</td>
+                    <td>
+                        <a href="view.html"><i class="iconfont sd-view sdui-txt-blue"></i>查看</a>
+                        <a href="edit.html"><i class="iconfont sd-edit1 sdui-txt-green"></i>修改</a>
+                        <a><i class="iconfont sd-jinyong sdui-txt-warm"></i>停用</a>
+                        <a><i class="iconfont sd-delete1 sdui-txt-red"></i>删除</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>文档质量</td>
+                    <td>是</td>
+                    <td>8</td>
+                    <td>2017-09-03 16:30</td>
+                    <td>已启用</td>
+                    <td>
+                        <a href="view.html"><i class="iconfont sd-view sdui-txt-blue"></i>查看</a>
+                        <a href="edit.html"><i class="iconfont sd-edit1 sdui-txt-green"></i>修改</a>
+                        <a><i class="iconfont sd-start sdui-txt-yellow"></i>启用</a>
+                        <a><i class="iconfont sd-delete1 sdui-txt-red"></i>删除</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>数据库质量</td>
+                    <td>是</td>
+                    <td>10</td>
+                    <td>2017-09-02 12:30</td>
+                    <td>已启用</td>
+                    <td>
+                        <a href="view.html"><i class="iconfont sd-view sdui-txt-blue"></i>查看</a>
+                        <a href="edit.html"><i class="iconfont sd-edit1 sdui-txt-green"></i>修改</a>
+                        <a><i class="iconfont sd-jinyong sdui-txt-warm"></i>停用</a>
+                        <a><i class="iconfont sd-delete1 sdui-txt-red"></i>删除</a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>沟通能力</td>
+                    <td>是</td>
+                    <td>10</td>
+                    <td>2017-09-01 14:30</td>
+                    <td>已停用</td>
+                    <td>
+                        <a href="view.html"><i class="iconfont sd-view sdui-txt-blue"></i>查看</a>
+                        <a href="edit.html"><i class="iconfont sd-edit1 sdui-txt-green"></i>修改</a>
+                        <a><i class="iconfont sd-start sdui-txt-yellow"></i>启用</a>
+                        <a><i class="iconfont sd-delete1 sdui-txt-red"></i>删除</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>文档质量</td>
+                    <td>是</td>
+                    <td>8</td>
+                    <td>2017-08-22 07:30</td>
+                    <td>已停用</td>
+                    <td>
+                        <a href="view.html"><i class="iconfont sd-view sdui-txt-blue"></i>查看</a>
+                        <a href="edit.html"><i class="iconfont sd-edit1 sdui-txt-green"></i>修改</a>
+                        <a><i class="iconfont sd-start sdui-txt-yellow"></i>启用</a>
+                        <a><i class="iconfont sd-delete1 sdui-txt-red"></i>删除</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>数据库质量</td>
+                    <td>是</td>
+                    <td>10</td>
+                    <td>2017-08-21 11:30</td>
+                    <td>已停用</td>
+                    <td>
+                        <a href="view.html"><i class="iconfont sd-view sdui-txt-blue"></i>查看</a>
+                        <a href="edit.html"><i class="iconfont sd-edit1 sdui-txt-green"></i>修改</a>
+                        <a><i class="iconfont sd-start sdui-txt-yellow"></i>启用</a>
+                        <a><i class="iconfont sd-delete1 sdui-txt-red"></i>删除</a>
+                    </td>
+                </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</div>
+<script src="../../../global/js/lib/jquery.js"></script>
+<script src="../../../global/js/lib/ractive-legacy.js"></script>
+<script src="../../../global/js/lib/base.js"></script>
+</body>
+</html>

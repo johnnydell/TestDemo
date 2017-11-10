@@ -1,0 +1,210 @@
+<style>
+    .companyMain {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        min-width: 670px;
+        min-height: 630px;
+        margin-left: -335px;
+        margin-top: -315px;
+        background: #fff;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+</style>
+<div class="companyMain">
+    <h2>添加单位通讯录人员<a class="iconfont sd-exit" on-click="close" href="javascript:;"></a></h2>
+
+    <div class="companyMainL">
+        <div class="companyMainSearch">
+            <div style=" position: relative;">
+                <div style="display: none;"  class="input_clear"><img src="../../../global/img/ic_close.png" alt=""/></div>
+                <input type="text" class="input ">
+            </div>
+            <button type="button" class="searchBtn"></button>
+        </div>
+        <div class="companyMainTree">
+            <!--<div id="treeContainer" style="float:left; width:100%;"></div>-->
+            <div id="tree" style="overflow: auto;"></div>
+            <div class="zwsj" style="display: none;  text-align: center;margin-top: 100px;"><img src="../../../global/img/zwsj.png" alt=""/><p style="color:#898989;">未搜索到相关部门与人员</p></div>
+        </div>
+
+        <div class="companyMainTree" style="display: none;">
+            <div id="mailList" style="float:left; width:100%;"></div>
+        </div>
+        <div class="zwsj" style="display: none;  text-align: center;margin-top: 100px;"><img src="../../../global/img/zwsj.png" alt=""/><p style="color:#898989;">未搜索到相关部门与人员</p></div>
+    </div>
+    <div class="companyMainR">
+        <ul>
+            <li>张杰<i></i></li>
+            <li>张倩<i></i></li>
+            <li>胡雨晴<i></i></li>
+        </ul>
+    </div>
+    <div class="companyMainB">
+        <button type="button" on-click="close" class="btn btnBlue addPersonnel">确定</button>
+        <button type="button" on-click="close" class="btn btnOrange">取消</button>
+
+    </div>
+</div>
+<!--input清除按钮-->
+<script>
+    $("input").keyup(function(){
+
+        if($(this).val()=='')
+        {
+            $(this).parent().children(".input_clear").hide();
+
+        }else{
+            $(this).parent().children(".input_clear").show();
+        }
+    });
+
+    $(".input_clear").click(function(){
+        $(this).parent().find('input').val('');
+        $(this).hide();
+    });
+</script>
+
+<script type="text/javascript">
+
+    $(function () {
+
+        var nodes = [
+            {
+                id: '一',
+                title: '一',
+                date: '山东大学苏州研究院',
+                nodes: [{
+                    data: '1',
+                    title: '1',
+                    date: '合作发展事业部'
+                }
+                    , {
+                        id: '2',
+                        title: '2',
+                        date: '互联网技术研究开发中心',
+                        nodes: [{
+                                id: 'c',
+                                title: 'c',
+                                date: '研究所',
+                                nodes: [{
+                                    id: '①',
+                                    title: '①',
+                                    date: '研究五所',
+                                    nodes: [{
+                                        id: '5',
+                                        title: '5',
+                                        date: '张金',
+                                        checked: true
+                                    }
+                                        , {
+                                            id: '6',
+                                            title: '6',
+                                            date: '汪彬彬'
+                                        }
+                                        , {
+                                            id: '7',
+                                            title: '7',
+                                            date: '王正'
+                                        }
+                                        , {
+                                            id: '8',
+                                            title: '8',
+                                            date: '陈旭'
+                                        }]
+                                }
+                                    , {
+                                        id: '②',
+                                        title: '②',
+                                        date: '研究一所'
+                                    }
+                                    , {
+                                        id: '③',
+                                        title: '③',
+                                        date: '研究二所'
+                                    }
+                                    , {
+                                        id: '④',
+                                        title: '④',
+                                        date: '研究三所'
+                                    }]
+                            }]
+                    }
+                    , {
+                        id: '3',
+                        title: '3',
+                        date: '综合服务中心'
+                    }
+                    , {
+                        id: '4',
+                        title: '4',
+                        date: '科研与人才发展中心'
+                    }]
+            }
+        ];
+
+        var currentNode;
+        var mytree = $('#tree').sdTree({
+            isExpandable: true,
+            style: {
+                icon: {
+                    show: true
+                }
+                , select: {
+                    show: true,
+                    multiple: true
+                }
+            },
+            defaultBtnText: '添加章',
+            childName: 'nodes',
+            isEditable: false, // tree是否可编辑, isEditable与fields必须配合使用
+            isNodeClickable: true,  //树的节点内容是否可点击，默认为false
+            level: 5,   // 表示树最多层次
+            fields: [{name: 'title', width: '100px', required: true, length: 10}, {name: 'date', width: '200px'}], // 指定可编辑的属性
+            requiredMsg: {
+                msg: '内容不能为空！',
+                type: 0  // 0：吐司， 1: alert框
+            }
+            , nodeId: function (data) {
+                // 此方法用于生成每一个节点的id， 如果需要外部调用(删除/选择 等操作)，请务必设置，以便操作对应业务数据节点
+                // 返回唯一标识
+                // 比如：return data.id;
+                return data.id;
+            }
+            , nodeInnerHtml: function (data) {
+                // 覆写此方法，用于渲染tree的显示
+                // console.log(data);
+                // return的内容作为页面显示
+                return '<span class="countNum">(01)</span><div class="txt-ellipsis ">' + data.date + '</div>';
+            },
+            nodeClick: function (type, data, nodes, selectedNodes) {
+                // type: 0  表示选中， 1表示取消选中  ， data： 当前结点数据，  nodes： 选中的节点数据/被取消选中的节点数据, selectedNodes: 当前tree当中所有选中的节点数据
+                // 覆写此方法，用于渲染tree结点的点击回调，使用者可以直接操作此条记录
+                /* console.log('nodeClick'); */
+                console.log('----------------------------------  new click ----------------------------------');
+                console.log(type);
+                console.log(data);
+                console.log(nodes);
+                console.log(selectedNodes);
+            }
+            , complete: function (datas, selectedNodes, isEdit) { // 只要涉及到修改树型结构数据，此方法都会被调用，返回整个tree的数据集合
+                console.log('complete');
+                console.log(selectedNodes);
+                console.log(datas);
+                console.log(isEdit);
+            }
+            , saveNode: function (node, pNode, successCallback) {  // saveNode一旦设置，表明你采用外部保存结点方式，则必须手动调用 successCallback，将更新过的值回传给tree，否则sdTree无法刷新数据
+                console.log('saveNode');
+                console.log(node);
+                console.log(pNode);
+
+                node.id = '666';
+
+                successCallback.call(this, node);
+            }
+        }, nodes);
+
+    });
+
+</script>

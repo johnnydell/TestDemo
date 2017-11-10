@@ -1,0 +1,31 @@
+assessment---考评管理
+    *css---样式表
+    *img---图片
+    *js---js文件
+    *partials---模板代码片段
+    *views---页面
+        *assessInfo---考评信息维护
+        *inquiry---考评查询
+        *normInfo---指标信息维护
+        *test---考评试卷维护
+        *type---考评类型维护
+global---公共样式、组件、插件
+    *css---样式表
+    *img---图片
+    *js---js文件
+        *lib---公共js
+        *modules--组件
+    *partials---模板代码片段
+    *views---页面
+maintenance---基础数据维护
+    *css---样式表
+    *img---图片
+    *js---js文件
+    *partials---模板代码片段
+    *views---页面
+        *config---考勤配置
+        *departmentInfo---部门信息维护
+        *dutyInfo---职务维护
+        *employeeInfo---员工信息维护
+        *enterpriseInfo---企业信息维护
+        *taskType---任务类型维护

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <title>修改考评试卷</title>
+    <link rel="stylesheet" href="../../../global/font/iconfont.css">
+    <link rel="stylesheet" href="../../../global/css/sdui.css">
+    <link rel="stylesheet" href="../../../global/css/base.css">
+    <link rel="stylesheet" href="../../css/test.css">
+    <script src="../../../global/js/lib/jquery.js"></script>
+    <script src="../../../global/js/lib/ractive-legacy.js"></script>
+    <script src="../../../global/js/lib/base.js"></script>
+</head>
+<body>
+<div id="Layout"></div>
+<div class="rightLayout">
+    <h1 class="titleBox"><a href="javascript:window.history.go(-1);">返回</a>修改考评试卷</h1>
+    <div class="sdoa-form">
+        <div class="form-group">
+            <label><span>*</span>考评试卷名称:</label>
+
+            <div class="cel">
+                <input class="sdui-input" type="text" value="开发人员考评试卷">
+            </div>
+        </div>
+        <div class="form-group">
+            <label><span>*</span>试卷总分:</label>
+
+            <div class="cel">
+                <input class="sdui-input" type="text" value="100">
+            </div>
+        </div>
+        <div class="form-group">
+            <label><span>*</span>考评指标:</label>
+
+            <div class="cel">
+                <button class="btn btnBlue smallBtn openPopup">添加</button>
+            </div>
+        </div>
+        <div class="sdGrid sdGridB">
+            <table>
+                <thead>
+                <tr>
+                    <th>考评指标</th>
+                    <th width="152">指标分值</th>
+                    <th width="135">操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td><a target="_blank" href="../../../assessment/views/normInfo/view.html" class="sdui-txt-blue">遵守规章制度</a></td>
+                    <td>8</td>
+                    <td>
+                        <a><i class="iconfont sd-delete1 sdui-txt-red"></i>删除</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td><a target="_blank" href="../../../assessment/views/normInfo/view.html" class="sdui-txt-blue" href="#">主动性</a></td>
+                    <td>8</td>
+                    <td>
+                        <a><i class="iconfont sd-delete1 sdui-txt-red"></i>删除</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td><a target="_blank" href="../../../assessment/views/normInfo/view.html" class="sdui-txt-blue" href="#">计划性</a></td>
+                    <td>10</td>
+                    <td>
+                        <a><i class="iconfont sd-delete1 sdui-txt-red"></i>删除</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td><a target="_blank" href="../../../assessment/views/normInfo/view.html" class="sdui-txt-blue" href="#">执行力</a></td>
+                    <td>10</td>
+                    <td>
+                        <a><i class="iconfont sd-delete1 sdui-txt-red"></i>删除</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td><a  target="_blank" href="../../../assessment/views/normInfo/view.html"class="sdui-txt-blue" href="#">工作完成度</a></td>
+                    <td>10</td>
+                    <td>
+                        <a><i class="iconfont sd-delete1 sdui-txt-red"></i>删除</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td><a target="_blank" href="../../../assessment/views/normInfo/view.html" class="sdui-txt-blue" href="#">成本意识</a></td>
+                    <td>10</td>
+                    <td>
+                        <a><i class="iconfont sd-delete1 sdui-txt-red"></i>删除</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td><a target="_blank" href="../../../assessment/views/normInfo/view.html" class="sdui-txt-blue" href="#">工作质量</a></td>
+                    <td>10</td>
+                    <td>
+                        <a><i class="iconfont sd-delete1 sdui-txt-red"></i>删除</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td><a target="_blank" href="../../../assessment/views/normInfo/view.html" class="sdui-txt-blue" href="#">服务意识</a></td>
+                    <td>10</td>
+                    <td>
+                        <a><i class="iconfont sd-delete1 sdui-txt-red"></i>删除</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>指标总分</td>
+                    <td>76</td>
+                    <td>
+                    </td>
+                </tr>
+
+                </tbody>
+            </table>
+        </div>
+        <div class="btn-group">
+            <button class="btn btnBlue">保存</button>
+            <button class="btn btnGreen">提交</button>
+            <button class="btn btnOrange">取消</button>
+        </div>
+    </div>
+</div>
+<div class="popup">
+    <div class="modal">
+        <h1>添加考评指标<span class="iconfont sd-exit close"></span></h1>
+
+        <div class="modalMain">
+            <div class="sdoa-form">
+                <div class="form-group">
+                    <label class="w70">指标名称:</label>
+
+                    <div class="cel">
+                        <input type="text">
+                        <button class="btn btnBlue">查询</button>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="w70">指标总分:</label>
+
+                    <div class="cel sdui-txt-red">
+                        8
+                    </div>
+                </div>
+                <div class="sdGrid sdGridB sdGridN">
+                    <table>
+                        <thead>
+                        <tr>
+                            <th width="46">
+                                <label class="labelBlue"><input type="checkbox"/><i></i></label>
+                            </th>
+                            <th>考评指标</th>
+                            <th width="125">指标分值</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td><label class="labelBlue"><input type="checkbox"/><i></i></label></td>
+                            <td><a target="_blank" href="../../../assessment/views/normInfo/view.html" class="sdui-txt-blue" href="#">遵守规章制度</a></td>
+                            <td>8</td>
+                        </tr>
+                        <tr>
+                            <td><label class="labelBlue"><input type="checkbox"/><i></i></label></td>
+                            <td><a target="_blank" href="../../../assessment/views/normInfo/view.html" class="sdui-txt-blue" href="#">主动性</a></td>
+                            <td>8</td>
+
+                        </tr>
+                        <tr>
+                            <td><label class="labelBlue"><input type="checkbox"/><i></i></label></td>
+                            <td><a target="_blank" href="../../../assessment/views/normInfo/view.html" class="sdui-txt-blue" href="#">勤奋程度</a></td>
+                            <td>12</td>
+                        </tr>
+                        <tr>
+                            <td><label class="labelBlue"><input type="checkbox"/><i></i></label></td>
+                            <td><a target="_blank" href="../../../assessment/views/normInfo/view.html" class="sdui-txt-blue" href="#">工作服从</a></td>
+                            <td>12</td>
+                        </tr>
+                        <tr>
+                            <td><label class="labelBlue"><input type="checkbox"/><i></i></label></td>
+                            <td><a target="_blank" href="../../../assessment/views/normInfo/view.html" class="sdui-txt-blue" href="#">计划性</a></td>
+                            <td>12</td>
+                        </tr>
+                        <tr>
+                            <td><label class="labelBlue"><input type="checkbox"/><i></i></label></td>
+                            <td><a class="sdui-txt-blue" href="#">执行力</a></td>
+                            <td>12</td>
+                        </tr>
+                        <tr>
+                            <td><label class="labelBlue"><input type="checkbox"/><i></i></label></td>
+                            <td><a target="_blank" href="../../../assessment/views/normInfo/view.html" class="sdui-txt-blue" href="#">工作完成度</a></td>
+                            <td>10</td>
+                        </tr>
+                        <tr>
+                            <td><label class="labelBlue"><input type="checkbox"/><i></i></label></td>
+                            <td><a class="sdui-txt-blue" href="#">成本意识</a></td>
+                            <td>10</td>
+                        </tr>
+                        <tr>
+                            <td><label class="labelBlue"><input type="checkbox"/><i></i></label></td>
+                            <td><a target="_blank" href="../../../assessment/views/normInfo/view.html" class="sdui-txt-blue" href="#">工作质量</a></td>
+                            <td>10</td>
+                        </tr>
+                        <tr>
+                            <td><label class="labelBlue"><input type="checkbox"/><i></i></label></td>
+                            <td><a target="_blank" href="../../../assessment/views/normInfo/view.html" class="sdui-txt-blue" href="#">服务意识</a></td>
+                            <td>10</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="btn-group">
+                    <button class="btn btnBlue" style="margin-right: 80px">确定</button>
+                    <button class="btn btnOrange close">取消</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $(function(){
+        $(".close").click(function(){
+            $(".popup").hide();
+        });
+        $(".openPopup").click(function(){
+            $(".popup").show();
+        });
+    })
+</script>
+</body>
+</html>

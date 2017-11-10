@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <title>企业信息维护</title>
+    <link rel="stylesheet" href="../../../global/font/iconfont.css">
+    <link rel="stylesheet" href="../../../global/css/sdui.css">
+    <link rel="stylesheet" href="../../../global/css/base.css">
+    <link rel="stylesheet" href="../../css/baseInfo.css"/>
+    <script src="../../../global/js/lib/jquery.js"></script>
+    <script src="../../../global/js/lib/ractive-legacy.js"></script>
+    <script src="../../../global/js/lib/base.js"></script>
+    <style>
+        .sdGrid {
+            overflow-x: scroll;
+            overflow-y: hidden;
+        }
+        .sdGrid table {
+            min-width: 1060px;
+        }
+    </style>
+</head>
+<body>
+<div id="Layout"></div>
+<div class="rightLayout">
+    <h1 class="titleBox">企业信息维护</h1>
+
+    <div class="searchBox">
+        <span>企业名称：</span>
+        <input type="text" class="searchBoxIpt"/>
+        <button type="button" class="btn btnBlue">查询</button>
+    </div>
+
+    <div class="wrapper">
+        <a href="add.html" class="btn btnOrange">新增企业</a>
+    </div>
+
+    <div class="wrapper">
+        <div class="sdGrid">
+            <table>
+                <thead>
+                <tr>
+                    <th width="18%">企业名称</th>
+                    <th width="10%">联系人</th>
+                    <th width="14%">联系电话</th>
+                    <th width="14%">详细地址</th>
+                    <th width="15%">创建时间</th>
+                    <th width="28%">操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>山东大学苏州研究院</td>
+                    <td>张杰</td>
+                    <td>0512-65663235</td>
+                    <td>若水路388号</td>
+                    <td>2017-09-16 13:34</td>
+                    <td>
+                        <a href="view.html"><i class="iconfont sd-view sdui-txt-blue"></i>查看</a>
+                        <a href="edit.html"><i class="iconfont sd-edit1 sdui-txt-green"></i>修改</a>
+                        <a href="javascript:;"><i class="iconfont sd-start sdui-txt-orange"></i>启用</a>
+                        <a href="javascript:;"><i class="iconfont sd-delete1 sdui-txt-red"></i>删除</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>苏州新电信息</td>
+                    <td>张金</td>
+                    <td>0512-65663235</td>
+                    <td>若水路388号</td>
+                    <td>2017-09-15 13:35</td>
+                    <td>
+                        <a href="view.html"><i class="iconfont sd-view sdui-txt-blue"></i>查看</a>
+                        <a href="edit.html"><i class="iconfont sd-edit1 sdui-txt-green"></i>修改</a>
+                        <a href="javascript:;"><i class="iconfont sd-jinyong sdui-txt-gray"></i>停用</a>
+                        <a href="javascript:;"><i class="iconfont sd-delete1 sdui-txt-red"></i>删除</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>苏州同程旅游</td>
+                    <td>张倩</td>
+                    <td>0512-65663236</td>
+                    <td>若水路388号</td>
+                    <td>2017-09-14 13:34</td>
+                    <td>
+                        <a href="view.html"><i class="iconfont sd-view sdui-txt-blue"></i>查看</a>
+                        <a href="edit.html"><i class="iconfont sd-edit1 sdui-txt-green"></i>修改</a>
+                        <a href="javascript:;"><i class="iconfont sd-start sdui-txt-orange"></i>启用</a>
+                        <a href="javascript:;"><i class="iconfont sd-delete1 sdui-txt-red"></i>删除</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>无锡中软</td>
+                    <td>高辉</td>
+                    <td>0512-65663237</td>
+                    <td>若水路388号</td>
+                    <td>2017-09-13 13:33</td>
+                    <td>
+                        <a href="view.html"><i class="iconfont sd-view sdui-txt-blue"></i>查看</a>
+                        <a href="edit.html"><i class="iconfont sd-edit1 sdui-txt-green"></i>修改</a>
+                        <a href="javascript:;"><i class="iconfont sd-jinyong sdui-txt-gray"></i>停用</a>
+                        <a href="javascript:;"><i class="iconfont sd-delete1 sdui-txt-red"></i>删除</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>山东浩然</td>
+                    <td>帅帅</td>
+                    <td>0512-65663238</td>
+                    <td>若水路388号</td>
+                    <td>2017-09-12 13:34</td>
+                    <td>
+                        <a href="view.html"><i class="iconfont sd-view sdui-txt-blue"></i>查看</a>
+                        <a href="edit.html"><i class="iconfont sd-edit1 sdui-txt-green"></i>修改</a>
+                        <a href="javascript:;"><i class="iconfont sd-start sdui-txt-orange"></i>启用</a>
+                        <a href="javascript:;"><i class="iconfont sd-delete1 sdui-txt-red"></i>删除</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>苏州云母</td>
+                    <td>李鹏</td>
+                    <td>0512-65663239</td>
+                    <td>若水路388号</td>
+                    <td>2017-09-11 13:35</td>
+                    <td>
+                        <a href="view.html"><i class="iconfont sd-view sdui-txt-blue"></i>查看</a>
+                        <a href="edit.html"><i class="iconfont sd-edit1 sdui-txt-green"></i>修改</a>
+                        <a href="javascript:;"><i class="iconfont sd-jinyong sdui-txt-gray"></i>停用</a>
+                        <a href="javascript:;"><i class="iconfont sd-delete1 sdui-txt-red"></i>删除</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>北京云瑞</td>
+                    <td>正泉泉</td>
+                    <td>0512-65663234</td>
+                    <td>若水路388号</td>
+                    <td>2017-09-10 13:37</td>
+                    <td>
+                        <a href="view.html"><i class="iconfont sd-view sdui-txt-blue"></i>查看</a>
+                        <a href="edit.html"><i class="iconfont sd-edit1 sdui-txt-green"></i>修改</a>
+                        <a href="javascript:;"><i class="iconfont sd-start sdui-txt-orange"></i>启用</a>
+                        <a href="javascript:;"><i class="iconfont sd-delete1 sdui-txt-red"></i>删除</a>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+</body>
+</html>

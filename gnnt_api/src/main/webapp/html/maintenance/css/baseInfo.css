@@ -1,0 +1,130 @@
+.infoListL {
+    width: 74%;
+    margin: 20px 0;
+    float: left;
+    overflow: hidden;
+}
+.infoListL dl {
+    width: 100%;
+    padding: 5px 0;
+    overflow: hidden;
+}
+.infoListL dt {
+    width: 50%;
+    float: left;
+    color: #000;
+    font-size: 14px;
+    text-align: right;
+    line-height: 56px;
+}
+.infoListL dt > span {
+    color: #da5c5e;
+    padding-right: 10px;
+    vertical-align: sub;
+}
+.infoListL dd {
+    width: 50%;
+    float: left;
+    padding-left: 5px;
+    color: #000;
+    font-size: 14px;
+    text-align: left;
+    line-height: 56px;
+}
+.infoListL input {
+    width: 70%;
+    min-width: 180px;
+    height: 38px;
+    padding: 0 10px;
+    margin: 10px 30px 0 0;
+    line-height: 38px;
+    border-radius: 5px;
+    cursor: auto;
+    border: none;
+    box-shadow: -2px 0 0 #e6e7e7, 0 -2px 0 #c0c1c1, 0 2px 0 transparent, 2px 0 0 #e6e7e7;
+    background-color: #f5f6f6;
+}
+.infoListL select {
+    width: 70%;
+    min-width: 180px;
+}
+.infoSpan {
+    padding: 0 5px;
+}
+.infoListL .spec {
+    position: relative;
+}
+.infoListL .spec > div {
+    position: absolute;
+    left: 72%;
+    top: 0;
+    width: 96px;
+}
+/* 企业logo */
+.infoListR {
+    width: 25%;
+    margin: 25px 0;
+    float: right;
+}
+.infoListRLogo {
+    width: 130px;
+    height: 130px;
+    line-height: 130px;
+    text-align: center;
+    margin: 0 auto;
+    background-color: #fcfcfc;
+    border: 1px solid #ebeced;
+    font-size: 15px;
+    border-radius: 3px;
+    overflow: hidden;
+    position: relative;
+}
+.infoListRLogo button {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 20;
+    width: 100%;
+    color: #fff;
+    line-height: 30px;
+    background: rgba(0, 0, 0, .6);
+}
+.infoListRLogo:hover button {
+    display: block;
+}
+.infoListR p {
+    margin-top: 16px;
+    text-align: center;
+    letter-spacing: 2px;
+}
+.infoListR p > a {
+    color: #dc5a5a;
+    text-decoration: underline;
+}
+/* 下方按钮 */
+.infoListBtn {
+    width: 100%;
+    padding-bottom: 30px;
+    text-align: center;
+    overflow: hidden;
+}
+.searchBox {
+    width: 100%;
+    padding: 10px 26px;
+    background: #eff3f3;
+}
+.searchBox span {
+    font-size: 16px;
+}
+.searchBoxIpt {
+    width: 300px;
+    padding: 0 10px;
+    margin: 10px 30px 0 0;
+    line-height: 38px;
+    border-radius: 5px;
+    cursor: auto;
+    border: none;
+    box-shadow: -2px 0 0 #e6e7e7, 0 -2px 0 #c0c1c1, 0 2px 0 transparent, 2px 0 0 #e6e7e7;
+}

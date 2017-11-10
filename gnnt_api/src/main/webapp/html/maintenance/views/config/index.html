@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <title>考勤配置</title>
+    <link rel="stylesheet" href="../../../global/css/base.css">
+    <link rel="stylesheet" href="../../../global/css/sdui.css">
+    <link rel="stylesheet" href="../../../global/font/iconfont.css">
+    <link rel="stylesheet" href="../../../global/css/base.css"/>
+    <style>
+        .col-1{
+            font-size: 16px;
+        }
+
+        td div{
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+<div id="Layout"></div>
+<div class="rightLayout">
+    <div class="titleBox">考勤配置</div>
+    <div class="sdui-container searchBox ">
+        <div class="row">
+            <div class="col-1 widthsmall ">企业名称：</div>
+            <div class="col-3">
+                <input type="text " class="sdui-input"/>
+            </div>
+            <div class="col-1">
+                <button type="button" class="btn btnBlue">查询</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <!--<div class="functionBtn">-->
+            <!--<a href="add.html"><button type="button" class="btn btnOrange">新增</button></a>-->
+        <!--</div>-->
+        <div class="sdGrid">
+            <table>
+                <thead>
+                <tr>
+                    <th width="35%">所属企业</th>
+                    <th width="15%">上班时间</th>
+                    <th width="15%">下班时间</th>
+                    <th width="15%">开始加班时间</th>
+                    <th width="15%">工作时长(小时)</th>
+
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td><div class="txt-ellipsis">山东大学苏州研究院</div></td>
+                    <td>09:00</td>
+                    <td>17:30</td>
+                    <td>17:30</td>
+                    <td>8</td>
+                </tr>
+                <tr>
+                    <td><div class="txt-ellipsis">云锐集团</div></td>
+                    <td>10:00</td>
+                    <td>19:00</td>
+                    <td>19:00</td>
+                    <td>8</td>
+                </tr>
+                <tr>
+                    <td><div class="txt-ellipsis">科羊云牧科技有限公司</div></td>
+                    <td>09:00</td>
+                    <td>17:30</td>
+                    <td>17:30</td>
+                    <td>8</td>
+                </tr>
+                <tr>
+                    <td>木屋烧烤有限公司</td>
+                    <td>09:00</td>
+                    <td>18:00</td>
+                    <td>18:00</td>
+                    <td>8</td>
+                </tr>
+
+                <tr>
+                    <td>中原地产</td>
+                    <td>09:00</td>
+                    <td>18:00</td>
+                    <td>18:00</td>
+                    <td>8</td>
+                </tr>
+                <tr>
+                    <td>火星时代</td>
+                    <td>09:00</td>
+                    <td>18:00</td>
+                    <td>18:00</td>
+                    <td>8</td>
+                </tr>
+                <tr>
+                    <td>腾讯</td>
+                    <td>09:00</td>
+                    <td>18:00</td>
+                    <td>18:00</td>
+                    <td>8</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</div>
+<script src="../../../global/js/lib/jquery.js"></script>
+<script src="../../../global/js/lib/ractive-legacy.js"></script>
+<script src="../../../global/js/lib/base.js"></script>
+</body>
+</html>

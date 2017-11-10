@@ -1,0 +1,40 @@
+.docs-nav {
+    overflow: hidden;
+    border-right: 1px solid #dcdcdc;
+}
+.docs-nav ul {
+    list-style: none;
+    padding: 0;
+}
+.docs-nav li {
+    padding: 5px 10px;
+    border-left: 2px solid #FFFFFF;
+    transition: .2s ease-out;
+}
+.docs-nav li:hover {
+    background: #eee;
+    border-left: 2px solid #EE5F5B;
+}
+.docs-nav li a{
+    color: #333;
+    text-decoration: none;
+}
+figure {
+    overflow: auto;
+}
+b {
+    font-weight: 900;
+    color: red;
+}
+.grid-demo {
+    padding: 10px;
+    line-height: 50px;
+    text-align: center;
+    background-color: #79C48C;
+    color: #fff;
+}
+.site-demo-button{
+    margin-bottom: 30px;
+    border: 1px solid #e2e2e2;
+    font-size: 20px;
+}

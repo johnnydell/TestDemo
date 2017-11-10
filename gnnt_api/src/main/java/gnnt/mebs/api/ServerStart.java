@@ -28,6 +28,8 @@ public class ServerStart {
             context.setResourceBase(webappPath);
             // 设置上下文路径
             String ctxPath = PropertyXmlMgr.getString(Constants.CFG_LIST_API, "api.server.ctxPath");
+            // 设定加载 jetty 服务的默认描述器，这里修改了是否使用配置缓存，这样服务启动的时候也能修改静态页面
+            context.setDefaultsDescriptor(webappPath+"/WEB-INF/webdefault.xml");
             logger.info("ctxPath:"+ctxPath);
             context.setContextPath("/"+ctxPath);
             context.setParentLoaderPriority(true);

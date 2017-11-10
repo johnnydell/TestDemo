@@ -1,0 +1,117 @@
+.sdui-container div.row{
+    width: 99%;
+
+    min-width: 1280px!important;
+}
+.sdui-container {
+    padding: 0;
+    margin-top: 20px;
+}
+.sdui-container div.row {
+
+    padding: 0px;
+}
+.row input{
+
+    height: 38px;
+    line-height: 38px;
+    padding: 0 10px;
+    border: 1px solid #dcdcdc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+}
+.row textarea {
+    width: 100%;
+    height: 156px;
+    background-color: #f8f8f8;
+    border: 1px solid #dcdcdc;
+    border-radius: 4px;
+    resize: none;
+    padding: 10px;
+}
+.lineEditor{
+    display: inline-block;
+    width: 1159px;
+    padding-bottom: 80px;
+    background: url("../img/line.png") top center no-repeat;
+
+}
+.row.lineEditor{
+    height: 80px !important;
+}
+.row.lineEditor h3{
+    font-size: 18px;
+    text-align: center!important;
+    line-height: 80px;
+    margin-bottom :0
+}
+.sdui-container .row.lineEditor > *:first-child {
+    text-align:justify;
+}
+
+.col-1 {
+    width: 8.33%;
+    text-align: right;
+
+}
+
+
+
+.sdui-txt-right{
+    text-align: right!important;
+}
+.sdui-txt-blue:hover{
+    cursor: pointer
+}
+.sd-add1{
+    margin-right: 5px;
+    font-size: 22px;
+}
+.sdui-txt-blue {
+    vertical-align: top;
+}
+.tips{
+    margin-left: 10px;
+}
+.col-12 {
+    text-align: center;
+}
+
+
+
+.sdui-container div.row {
+    margin: 10px 0;
+}
+.rightLayout {
+    background-color: #ffffff!important;
+}
+
+
+
+
+input.sdui-input[type='text'] {
+    width: 100%;
+    color: #000;
+    line-height: 24px;
+    padding: 0 10px;
+
+}
+input.sdui-input[type='text']:disabled{
+    border: 0;
+    box-shadow: none;
+    background-color: #fff;
+    cursor: auto;
+}
+
+.col-3.width29{
+    width: 17%;
+}
+button {
+    margin-left: 20px;
+}
+.addzbx{
+    height: 50px;
+}
+.txt-align-right{
+    text-align: right;
+}

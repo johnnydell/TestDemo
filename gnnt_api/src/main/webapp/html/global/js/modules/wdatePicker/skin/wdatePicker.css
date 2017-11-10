@@ -1,0 +1,24 @@
+.Wdate{
+	border:#999 1px solid;
+	height:20px;
+	background:#fff url(datePicker.gif) no-repeat right;
+}
+.WdateRed{
+	width: 385px;
+	height: 37px;
+	line-height: 37px;
+	border: 1px solid #dcdcdc;
+	border-radius: 5px;
+	outline: none;
+	padding: 5px;
+	background:#fff url(data02.png) no-repeat right;
+	background-color: #f7f7f7;
+}
+.WdateFmtErr{
+	font-weight:bold;
+	color:red;
+}
+
+.WdateRed-information{
+	background:#fff url(data02.png) no-repeat right;
+}

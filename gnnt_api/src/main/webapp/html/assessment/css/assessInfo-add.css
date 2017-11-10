@@ -1,0 +1,596 @@
+.rightLayout .sdui-container {
+    background-color: #eff3f3;
+}
+.rightLayout .sdui-container input[type="text"] £¬
+.rightLayout .sdui-container select {
+    padding: 0 15px;
+}
+.rightLayout .sdui-container input[type="text"]:disabled,
+.rightLayout .sdui-container select:disabled {
+    border: none !important;
+    box-shadow: none !important;
+    background: none !important;
+}
+.text-align-right {
+    text-align: right !important;
+}
+.col-1 {
+    width: 9%;
+}
+.addAge {
+    float: left;
+    padding-left: 0;
+}
+.sdGrid {
+    border: 1px solid #c1c1c1;
+}
+.addAge .btn {
+    margin: 0 9px;
+}
+.addAgexz .btn {
+    margin-left: 0;
+}
+.width24{
+    width: 24.6%;
+}
+.sdui-container input.Wdate {
+    width: 100%;
+}
+.width {
+    width: 2%;
+}
+.sdui-txt-blue {
+    cursor: pointer;
+}
+.sdGrid table td {
+    border-right: 1px solid #DCDEDE;
+}
+.name-width {
+    width: 60px;
+    display: block;
+    float: left;
+}
+.sdGrid table tr td {
+    position: relative;
+}
+.kprList {
+    float: left;
+    margin-right: 20px;
+    height: 40px;
+    width: 100%;
+    overflow: hidden;
+    line-height: 40px;
+}
+.kprList li {
+    float: left;
+    margin-right: 20px;
+}
+.kprList p {
+    width: 600px;
+}
+.modal {
+    min-height: 480px;
+    margin-top: -240px;
+}
+.sdGridN .labelBlue {
+    line-height: inherit;
+    vertical-align: middle;
+}
+.popup .labelBlue i {
+    border-radius: 50%;
+}
+.wrapper .labelBlue {
+    margin-right: 20px;
+}
+.sdoa-form {
+    width: 480px;
+    margin: 30px auto;
+}
+.sdoa-form .form-group {
+    overflow: hidden;
+    line-height: 30px;
+    margin-bottom: 15px;
+    padding: 5px 0;
+    font-size: 14px;
+}
+.w70 {
+    width: 95px !important;
+    float: left;
+    margin-right: 10px;
+}
+.sdoa-form .form-group .cel {
+    margin-left: 100px;
+    text-align: left;
+}
+.w70 + div.cel {
+    margin-left: 95px !important;
+}
+.w70 + div.cel input {
+    width: 258px !important;
+    margin-right: 10px;
+}
+.sdoa-form .form-group .cel > input {
+    height: 38px;
+    line-height: 38px;
+    width: 280px;
+    border-radius: 4px;
+    box-shadow: -2px 0 0 #e6e7e7, 0 -2px 0 #c0c1c1, 0 2px 0 transparent, 2px 0 0 #e6e7e7;
+    background-color: #f8fafa;
+}
+.sd-arrowDown, .sd-arrowUp {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-size: 22px;
+}
+.sdoa-form .btn-group {
+    text-align: center;
+    margin-top: 30px;
+}
+.content {
+    width: 1200px;
+    margin: 0 auto;
+    padding-top: 18px;
+}
+.operaWork .title {
+    padding-left: 24px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 16px;
+    color: #595757;
+    background-color: #eae9ea;
+}
+.operaWork .ocontent {
+    padding: 44px 0 40px;
+    background-color: #fff;
+}
+.ocontent .ogroup {
+    min-height: 38px;
+    font-size: 14px;
+    line-height: 38px;
+    color: #595757;
+    margin-bottom: 21px;
+    clear: both;
+}
+.ocontent .ogroup:last-child {
+    margin-bottom: 0;
+}
+.ocontent .ogroup label {
+    display: block;
+    float: left;
+    width: 140px;
+    margin-right: 10px;
+    text-align: right;
+}
+.smallw .ogroup label {
+    width: 100px;
+}
+.ocontent .ogroup label > span {
+    line-height: 38px;
+    color: #da5c5e;
+    margin-right: 10px;
+}
+.ocontent .ogroupDiv {
+    width: 1000px;
+    float: left;
+}
+.ogroup > input {
+    width: 386px;
+    height: 38px;
+    line-height: 38px;
+    padding-left: 14px;
+    border: 1px solid #dcdcdc;
+    border-radius: 4px;
+    background-color: #f7f7f7;
+    color: #595757;
+}
+.selectbox {
+    display: inline-table;
+    width: 386px;
+    height: 38px;
+    border-radius: 4px;
+    border: 1px solid #dcdcdc;
+    vertical-align: middle;
+    background: #f8f8f8 url("../../global/img/selectbtn.png") no-repeat 344px center;
+}
+.selectbox select {
+    width: 100%;
+    height: 100%;
+    padding-left: 10px;
+    color: #595757;
+    background: transparent;
+    border: none;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+}
+.ogroup .area {
+    width: 678px;
+    height: 155px;
+    padding: 10px 15px;
+    border-color: #dcdcdc;
+    border-radius: 4px;
+    resize: none;
+    color: #595757;
+    background-color: #f7f7f7;
+}
+.ogroup .areaDiv {
+    width: 678px;
+    height: 155px;
+    float: left;
+    padding: 0 10px;
+    border: 1px solid #dcdcdc;
+    border-radius: 4px;
+    resize: none;
+    color: #595757;
+    background-color: #f7f7f7;
+    overflow-y: scroll;
+}
+.ogroup .editorbox {
+    width: 678px;
+    height: 155px;
+    display: inline-table;
+}
+.ogroup .area:disabled {
+    width: 678px;
+    height: 155px;
+    padding: 10px 15px;
+    border-color: #dcdcdc;
+    border-radius: 4px;
+    resize: none;
+    background-color: #f7f7f7;
+}
+.ogroup .icon-download {
+    margin-left: 50px;
+}
+.ogroup > a {
+    text-decoration: underline;
+}
+.added {
+    margin-left: 150px;
+}
+.personnelAdd {
+    display: inline-block;
+    width: 660px;
+}
+.personnelAdd ul {
+    padding-left: 0;
+}
+.personnelAdd li,
+.ogroupA {
+    cursor: pointer;
+    text-decoration: underline;
+}
+.txt-align-center {
+    margin-top: 60px;
+}
+.ogroupPL {
+    overflow: hidden;
+    padding-left: 150px;
+    line-height: 30px;
+}
+.ogroupLi {
+    padding-left: 150px;
+}
+.ogroupLi li {
+    width: auto;
+    float: left;
+    overflow: hidden;
+    line-height: 30px;
+    margin-right: 10px;
+}
+.ogroupPL span,
+.ogroupLi span {
+    float: left;
+}
+.ogroupPL i,
+.ogroupLi i {
+    display: block;
+    width: 30px;
+    height: 30px;
+    float: left;
+    margin-left: 5px;
+    background: url(../../global/img/delete-icon.png) center no-repeat;
+    cursor: pointer;
+}
+/*??????????*/
+.popup {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+}
+/*??????¦Ë???*/
+.companyMain,
+.workerMain,
+.otherMain {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 876px;
+    height: 600px;
+    margin-left: -438px;
+    margin-top: -300px;
+    border-radius: 5px;
+    background: #fff;
+}
+.companyMain h2,
+.workerMain h2,
+.otherMain h2 {
+    width: 100%;
+    padding-left: 20px;
+    color: #717171;
+    font-size: 16px;
+    line-height: 50px;
+    border-bottom: 1px solid #d9d9d9;
+}
+.companyMain h2 a,
+.workerMain h2 a,
+.otherMain h2 a {
+    display: block;
+    float: right;
+    width: 30px;
+    color: #000;
+    font-size: 26px;
+    line-height: 1;
+    height: 26px;
+    margin: 12px;
+}
+.companyMainL {
+    width: 50%;
+    height: 470px;
+    float: left;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+.companyMainSearch {
+    width: 320px;
+    height: 40px;
+    margin: 20px auto;
+    overflow: hidden;
+    border: 1px solid #d9d9d9;
+    border-radius: 5px;
+}
+.companyMainSearch input {
+    width: 275px;
+    float: left;
+    padding: 0 10px;
+    line-height: 36px;
+    border: none;
+    border-radius: 5px;
+}
+.companyMainSearch button {
+    width: 42px;
+    float: right;
+    height: 38px;
+    border: none;
+    background: url("../../global/img/icon_search.png") left 6px no-repeat;
+    cursor: pointer;
+}
+.companyMainTree {
+    padding: 20px;
+    min-height: 390px;
+    padding-top: 0;
+    padding-left: 45px;
+}
+.companyMainR {
+    width: 50%;
+    height: 470px;
+    float: left;
+    border-left: 1px solid #d9d9d9;
+    overflow-y: scroll;
+}
+.companyMainR ul {
+    padding: 0 8px;
+}
+.companyMainR li {
+    width: 114px;
+    float: left;
+    margin: 5px 10px;
+    padding: 0 8px;
+    line-height: 34px;
+}
+.companyMainR li i {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    float: right;
+    margin-top: 7px;
+    margin-left: 5px;
+    margin-right: 10px;
+    background: url(../../global/img/delete-icon.png) center no-repeat;
+    cursor: pointer;
+}
+.companyMainB,
+.workerMainB,
+.otherMainB {
+    width: 100%;
+    padding-top: 25px;
+    text-align: center;
+    overflow: hidden;
+    border-top: 1px solid #d9d9d9;
+    height: 70px;
+}
+.companyMainB button,
+.workerMainB button,
+.otherMain button {
+    margin: 0 50px !important;
+    display: inline-block !important;
+}
+/*???????????*/
+.workerMain {
+    width: 650px;
+    height: 500px;
+    margin-top: -250px;
+    margin-left: -325px;
+}
+.workerMainSearch {
+    width: 490px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.workerMainSearch input {
+    width: 303px;
+    float: left;
+    padding: 0 10px;
+    margin: 20px 5px 10px;
+    line-height: 38px;
+    border: 1px solid #d9d9d9;
+    border-radius: 5px;
+}
+.workerMainSearch button {
+    width: 92px;
+    float: left;
+    margin: 20px 5px 10px;
+    line-height: 40px;
+    border: none;
+}
+.workerMainSearch a {
+    line-height: 40px;
+    display: block;
+    float: left;
+    margin: 20px 5px 10px;
+    width: 64px;
+}
+.workerMainTable {
+    width: 580px;
+    margin: 0 auto;
+}
+.workerMainTable table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #d2d2d2;
+}
+.workerMainTable table th {
+    color: #595757;
+    padding: 0 20px;
+    line-height: 48px;
+    text-align: left;
+    font-weight: normal;
+    background: #e7e5e7;
+    border: 1px solid #d2d2d2;
+}
+.workerMainTable table td {
+    color: #000;
+    padding: 0 20px;
+    text-align: left;
+    line-height: 48px;
+    border-left: 1px solid #d2d2d2;
+    border-right: 1px solid #d2d2d2;
+}
+.workerMainTable .workerMainY {
+    display: block;
+    max-height: 250px;
+    overflow-y: scroll;
+    border: 0px;
+    border-bottom: 1px solid #d2d2d2;
+    border-right: 1px solid #d2d2d2;
+}
+.workerMainTable .workerMainY td {
+    border-right: 0;
+}
+.workerMainB {
+    border: none;
+}
+/*???????????*/
+.otherMain {
+    width: 540px;
+    height: 370px;
+    margin-left: -270px;
+    margin-top: -185px;
+}
+.otherMainDiv {
+    width: 100%;
+    padding: 0 40px;
+    margin: 10px auto 0;
+    overflow: hidden;
+}
+.otherMainDiv label {
+    display: block;
+    float: left;
+    width: 100px;
+    line-height: 38px;
+    margin-right: 10px;
+    text-align: right;
+}
+.otherMainDiv label > i {
+    line-height: 38px;
+    color: #da5c5e;
+    margin-right: 10px;
+}
+.otherMainDiv input {
+    width: 300px;
+    float: left;
+    color: #595757;
+    line-height: 38px;
+    padding-left: 14px;
+    border: 1px solid #dcdcdc;
+    border-radius: 4px;
+    background-color: #f7f7f7;
+}
+.otherMain p {
+    padding-left: 150px;
+    line-height: 34px;
+}
+.otherMainB {
+    padding-top: 10px;
+    border: none;
+}
+.companyMainTree {
+    padding: 20px;
+    min-height: 390px;
+    padding-top: 0;
+    padding-left: 45px;
+}
+.color-gray {
+    color: #898989;
+}
+/*sdTree ???????*/
+.sdTree .tree-title-hover-pointer {
+    cursor: auto !important;
+
+}
+.sdTree {
+    width: 320px;
+    margin-left: 5px;
+}
+/*.sdTree li div:hover{
+    background-color: #eee !important;
+}*/
+
+.sdTree .tree-title:hover {
+    background-color: #eee !important;
+}
+/*.sdTree li ul.ul-bg {*/
+/*margin-left: 0px!important;*/
+/*padding-left: 0px!important;*/
+
+/*}*/
+.input_clear {
+    position: absolute;
+    right: 45px;
+    top: 7px;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 24PX;
+    color: #bebebe;
+}
+.uploadtips {
+    padding-left: 150px;
+    color: #898989;
+}
+.rlist {
+    margin-left: 178px;
+}
+.kprList .iconfont {
+    font-size: 18px;
+    cursor: pointer;
+}

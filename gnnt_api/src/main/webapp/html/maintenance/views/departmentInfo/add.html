@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <title>新增部门</title>
+    <link rel="stylesheet" href="../../../global/css/sdui.css">
+    <link rel="stylesheet" href="../../../global/font/iconfont.css">
+    <link rel="stylesheet" href="../../../global/css/base.css"/>
+    <style>
+        .rightLayout {
+            background-color: #fff;
+        }
+        .marginR20{
+            margin-right:100px
+        }
+
+    </style>
+</head>
+<body>
+<div id="Layout"></div>
+<div class="rightLayout panel1">
+    <div class="titleBox">新增部门</div>
+    <div class="wrapper">
+
+        <div class="sdui-container">
+            <div class="row">
+                <div class="col-2 text">&nbsp;</div>
+                <div class="col-2 txt-align-right">所属企业：</div>
+                <div class="col-3">山东大学苏州研究院</div>
+            </div>
+            <div class="row">
+                <div class="col-2 ">&nbsp;</div>
+                <div class="col-2 txt-align-right">上级部门：</div>
+                <div class="col-3">
+                    <select class="select-box" name="" id="">
+                        <option value="1">研究一所</option>
+                        <option value="2">研究二所</option>
+                        <option value="3">研究三所</option>
+                        <option value="3">研究四所</option>
+
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-2 ">&nbsp;</div>
+                <div class="col-2 txt-align-right"><lable class="sdui-text-danger">*</lable>部门名称：</div>
+                <div class="col-3"><input type="text" ></div>
+            </div>
+            <div class="row">
+                <div class="col-4 ">&nbsp;</div>
+                <div class="col-3  txt-align-center">
+                    <button type="button" class="btn btnBlue marginR20" onclick="window.history.go(-1);">保存</button>
+                    <button type="button" class="btn btnOrange" onclick="window.history.go(-1);">取消</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="../../../global/js/lib/jquery.js"></script>
+<script src="../../../global/js/lib/ractive-legacy.js"></script>
+<script src="../../../global/js/modules/wdatePicker/wdatePicker.js"></script>
+<script src="../../../global/js/lib/base.js"></script>
+
+</body>
+</html>
