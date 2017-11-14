@@ -1,0 +1,86 @@
+<!-- "mtc-tskType-index" -->
+<link rel="stylesheet" href="../css/mtc/taskType.css">
+<h1 class="titleBox">任务类型维护</h1>
+<div class="sdui-container searchBox">
+    <div class="row">
+        <div class="col-1">企业名称:</div>
+        <div class="col-3"><input type="text" class="sdui-input"/></div>
+        <div class="col-1">
+            <button type="button" class="btn btnBlue">查询</button>
+        </div>
+    </div>
+</div>
+<div class="wrapper" style="width: 620px">
+    <div class="sdGrid">
+        <table>
+            <thead>
+            <tr>
+                <th>所属企业</th>
+                <th width="220">任务类型名称</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>山东大学苏州研究院</td>
+                <td>
+                    <div class="plist" data-status="down">
+                        <span class="pull-right click-show"><i class="iconfont sd-arrowDown sdui-txt-blue"
+                                                               title="展开"></i></span>
+                        <span>设计</span>
+                        <span>开发</span>
+                        <span>销售</span>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>木屋烧烤有限公司</td>
+                <td>
+                    <div class="plist">
+                        <span>管理</span>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>中原地产</td>
+                <td>
+                    <div class="plist">
+                        <span>需求</span>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>火星时代</td>
+                <td>
+                    <div class="plist">
+                     <span>财务</span>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>腾讯</td>
+                <td>
+                    <div class="plist">
+                     <span>行政</span>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<script>
+    //展开显示隐藏
+    $(function () {
+        $(".click-show").click(function () {
+            var Obj=$(this).parent();
+            var flag=Obj.attr('data-status');
+            if (flag==='down') {
+                Obj.css('height', 'auto') && $(this).html('<i class="iconfont sd-arrowUp sdui-txt-blue" title="收起"></i>');
+                Obj.attr('data-status','up');
+            } else {
+                Obj.css('height', '40px') && $(this).html('<i class="iconfont sd-arrowDown sdui-txt-blue" title="展开"></i>');
+                Obj.attr('data-status','down');
+            }
+        })
+    });
+</script>

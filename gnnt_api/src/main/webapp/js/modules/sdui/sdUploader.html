@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<title>山东大学自学考试服务平台</title>
+		<link href="css/fonts/iconfont.css" rel="stylesheet" type="text/css"/>
+		<link href="layer/skin/layer.css" rel="stylesheet" type="text/css"/>
+		<link href="sdui.css" rel="stylesheet" type="text/css"/>
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="layer/layer.js"></script>
+		<script type="text/javascript" src="sdui.js"></script>
+	</head>
+
+<body>
+	
+	<div id="uploader">
+		
+		<input id="fileUploader" type="file" multiple="multiple" accept="image/*">
+		
+	</div>
+	
+	
+	<script type="text/javascript">
+	
+		$(function(){
+			
+			$('#fileUploader').sdUploader({
+				uploadUrl:'http://up.sdusz.com.cn/ptwjfw/rest/fileWS/upload',
+				downUrl:'http://dl.sdusz.com.cn/',
+				text:'请选择图片',
+				barStyle:'button',  // 工具条样式, button: 按钮样式 , link : 链接样式
+				type: {
+					name:'image'  // 定义上传类型,  image: 表示只上传图片,  file: 上传各种类型文件
+					,ext:''  // 对于 file类型，目前不做扩展名限制， image类型，目前只支持：BMP、GIF、JPEG、JPG、PNG
+				},
+				isAuto:false, // 是否自动上传
+				isEditable:true, // 默认可执行上传,删除等操作,否则只作为渲染插件
+				//num: 6,	// 最多上传数量
+				//size: 126476,//5000, // 文件最大大小
+				files:['{"fileSize":154510,"fileId":"group3/M00/00/32/rBEKEFmwsbmAfs03AAJbjgLrq30930.jpg","fileName":"591441b8N8b274b75.jpg","fileExtName":"JPG"}','{"fileSize":154510,"fileId":"group3/M00/00/32/rBEKEFmwsbmAfs03AAJbjgLrq30930.jpg","fileName":"591441b8N8b274b75.jpg","fileExtName":"JPG"}'], // 初始文件数组 , 提供基本文件路径即可，比如 ['group3/M00/00/33/rBEKEFmw4amADzKcAAHA0OptiFg771.jpg','group3/M00/00/33/rBEKEFmw4a-AKnL7AAMF606P0VU545.jpg','group3/M00/00/33/rBEKEFmw4bWAdnpKAATY_SsHKxw676.jpg','group3/M00/00/33/rBEKEFmw45eAJFxiAARPnV0X5RM476.gif']
+				uploadedCB: function(pathCallback,response){
+					// 数据加载成功后，希望执行的操作
+					
+					// {"errorCode":null,"errorMsg":null,"msgObj":[{"fileSize":154510,"fileId":"group3/M00/00/32/rBEKEFmwsbmAfs03AAJbjgLrq30930.jpg","fileName":"591441b8N8b274b75.jpg","fileExtName":"JPG"}],"res":"abc","successFlg":true}
+					
+					var response = eval('(' + response + ')');
+					
+					if(response && response.successFlg==true) {
+						pathCallback(response.msgObj[0]);
+					}
+					
+				}
+				,completeCB: function(successFiles, isEnd){
+					// 返回所有成功文件
+					console.log('================ 是否已经结束： ' + isEnd);
+					console.log(successFiles);
+				}
+			});
+			
+			
+		});
+		
+	</script>
+</body>
+
+</html>

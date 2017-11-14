@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <title>后台管理</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../font/iconfont.css"/>
+    <link rel="stylesheet" href="../css/sdui.css">
+    <link rel="stylesheet" href="../css/jq22.css">
+    <script src="../js/lib/jquery.js"></script>
+    <script src="../js/lib/ractive-legacy.js"></script>
+    <script src="../js/lib/constants.js"></script>
+    <script src="../js/modules/wdatePicker/wdatePicker.js"></script>
+</head>
+<body>
+<div id="Layout">
+<div class="topLayout">
+    <div class="userOpera">
+        <div class="user">
+            <img src="../img/user.png">
+        </div>
+        退出
+    </div>
+</div>
+<div class="leftLayout">
+    <div class="topLogo"> 
+        后台管理
+    </div>
+    <ul class="sd-nav">
+        <li class="sd-nav-item">
+            <a href="#none"><em class="iconfont sd-jcsjwh1"></em>基础数据维护</a><!-- class="current" -->
+            <ul class="sd-nav-child none"><!-- block -->
+                <li><!-- class="on" -->
+                    <a class="mtc-cfg-add" href="#">考勤配置</a>
+                </li>
+                <li>
+                    <a class="mtc-tskType-index" href="#">类型任务维护</a>
+                </li>
+            </ul>
+        </li>
+        <li class="sd-nav-item">
+            <a href="#none"><em class="iconfont sd-kpgl1"></em>考评管理</a>
+            <ul class="sd-nav-child none">
+                <li>
+                    <a class="ast-type-index" href="#">考评类型维护</a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>
+</div>
+<div class="rightLayout">
+	<ul id="tabs">
+	  <li id="current"><a href="#" title="desk">桌面</a></li>	  
+	</ul>
+	<div id="content">
+	  <div id="desk" style="display: block;">
+	    <h2>welcome to 后台管理系统</h2>
+	  </div>
+	</div>
+	<br>
+	<br>
+	<script>
+	$(document).ready(function() {
+		//init menu event
+		$(".sd-nav .sd-nav-item>a").click(function () {
+            $(this).addClass('current')   //给当前元素添加"current"样式
+                .next().slideDown('slow')  //下一个元素显示
+                .parent().siblings().children('a').removeClass('current')//父元素的兄弟元素的子元素去除"current"样式
+                .next().slideUp('slow');//隐藏
+            return false;
+        });
+		
+		$(".sd-nav .sd-nav-item>ul a").click(function(){			
+			var evtCls = $(this).attr("class");
+			var evtTxt = $(this).text();
+			var evtObj = $(".rightLayout #tabs a[title='"+evtCls+"']");
+			var cnt = $(evtObj).size();
+			if(cnt == 0){
+				var addLi = $('<li><a href="#" title="'+evtCls+'">'+evtTxt+'</a></li>');
+				$(".rightLayout #tabs").append(addLi);
+				$(".rightLayout #content").append('<div id="'+evtCls+'" style="display: none;"></div>');
+				var evtClsArr = evtCls.split("-") ;
+				var url = Constants.root+'/partials/'+evtClsArr[0]+'/'+evtClsArr[1]+'/'+evtClsArr[2]+'.html';
+				console.log(url);
+				$.get(url, function (data) {
+			        var ractive = new Ractive({
+			            el: "#"+evtCls,
+			            template: data,
+			            data:{"ctx":Constants.root},
+			            oncomplete: function () {
+			               
+			            }
+			        });
+			    });
+			}
+			$(".sd-nav .sd-nav-item .sd-nav-child>li").removeClass("on");			
+			$(this).parent().removeClass("on").addClass("on");
+			$(".rightLayout #tabs a[title='"+evtCls+"']").click();			
+		});		
+		
+		$("#content div").hide(); // Initially hide all content
+		$("#tabs li:first").attr("id","current"); // Activate first tab
+		$("#content div:first").fadeIn(); // Show first tab content		
+		
+		$('#tabs').on("click","a",function(e) {
+	        e.preventDefault();        
+	        $("#content > div").hide(); //Hide all content
+	        $("#tabs li").attr("id",""); //Reset id's
+	        $(this).parent().attr("id","current"); // Activate this
+	        $('#' + $(this).attr('title')).fadeIn(); // Show content for current tab
+	    });
+	});
+	</script>
+</div>
+</body>
+</html>

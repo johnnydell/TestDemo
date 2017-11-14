@@ -1,0 +1,113 @@
+@charset "utf-8";
+*{
+	font-family: "微软雅黑";
+	font-size: 14px;
+	outline: none;
+    margin:0;
+    padding: 0;
+    border-collapse: collapse;    
+    border-spacing: 0px;
+    box-sizing: border-box;
+}
+img{border:0;}
+html, body{
+	height: 100%;
+	/* overflow: hidden; */
+  	/* overflow-y: scroll; */
+	/* background-color: #fff; */
+}
+html,body,ul,li,p,h1,h2,h3,h4,h5{
+	margin: 0;
+	padding: 0;
+}
+a{
+	text-decoration: none;
+}
+em,i{
+	font-style: normal;
+}
+li{
+	list-style: none;
+}
+img{
+	border-style: none;
+}
+*{border:0;margin:0;padding:0;outline: none;}
+body{font-family:'微软雅黑'; margin:0 auto; /* background-color: #fefefe; */}
+ul{display:block;margin:0;padding:0;list-style:none;}
+li{display:block;margin:0;padding:0;list-style: none;}
+img{border:0;}
+dl,dt,dd,span{margin:0;padding:0;display:/* inline-block;*/}
+a,a:focus{text-decoration:none;color:#000;outline:none;blr:expression(this.onFocus=this.blur());}
+a:hover{text-decoration:none;}
+table{border-collapse:collapse;border-spacing: 0;}
+cite{font-style:normal;}
+h2{font-weight:normal;}
+input{vertical-align: middle;}
+
+
+button,
+input[type="button"] {
+	cursor: pointer;
+}
+
+.hp-login{
+	width: 100%;
+	height: 100%;
+	background: url(../img/login_bg.jpg) no-repeat;
+	background-size: cover;
+}
+.hp-login-box{
+	position: fixed;
+	top: 50%;
+	margin-top: -216px;
+	right: 350px;
+	padding: 40px 30px 0px;
+	width: 370px;
+	height: 435px;
+	border: solid 3px rgba(255, 255, 255, .6);
+	background: rgba(255, 255, 255, .3);
+	background-size: cover;
+	border-radius: 10px;
+	text-align: center;
+}
+.hp-login-box h1{
+	padding-bottom: 40px;
+	color: #fff;
+	font-size: 60px;
+	text-align: center;
+	font-weight: normal;
+}
+.hp-login-input{
+	padding: 10px 0px;
+	background: #fff;
+	border-radius: 5px;
+	text-align: left;
+}
+.hp-login-input input{
+	width: 100%;
+	height: 40px;
+	padding: 5px 5px 5px 55px;
+	font-size: 16px;
+	color: #6f7278;
+}
+.hp-login-input input.hp-login-user{
+	margin-bottom: 10px;
+	height: 50px;
+	background: url(../img/user.png) 15px center no-repeat !important;
+	border-bottom: solid 1px #cccccc;
+}
+.hp-login-input input.hp-login-password{
+	margin-bottom: 5px;
+	background: url(../img/password.png) 15px center no-repeat !important;
+}
+.hp-login-btn{
+	margin: 40px auto 0px;
+	width: 297px;
+	height: 63px;
+	background: url(../img/login_btn_bg.png) no-repeat;
+	color: #fff;
+	font-size: 32px;
+	letter-spacing: 5px;
+	text-shadow: 1px 1px 1px #666;
+}

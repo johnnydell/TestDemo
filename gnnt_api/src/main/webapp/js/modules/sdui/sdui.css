@@ -1,0 +1,3201 @@
+/*  sdui全局共通样式  */
+/*body {
+	font: 14px/18px "Microsoft Yahei", Tahoma, Helvetica, Arial, Verdana, "\5b8b\4f53", sans-serif;
+}*/
+
+*,:after, :before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* ----------------------------- sdui栅格系统 start ------------------------------ */
+/* 设置栅格系统容器样式 */
+.sdui-container {
+	margin: 0 auto;
+	padding: 0 0 0 1%;
+}
+
+.sdui-container:after { /* 最后清除浮动 */
+	content:""; 
+	display: block; 
+	clear: both; 
+}
+
+/* 设置行样式   */
+.sdui-container .row {
+	clear: both;
+	padding: 0 10px;
+	margin: 10px 0;
+}
+.sdui-container .row:after {
+	content:""; 
+	display: block; 
+	visibility:hidden;
+	clear: both; 
+}
+
+
+/* 设置列样式  */
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12 {
+	float: left;
+	display:inline-block;
+	margin: 0 1% 0 0;
+	word-break:keep-all;
+	white-space:nowrap; 
+}
+
+.col-1:after, .col-2:after, .col-3:after, .col-4:after, .col-5:after, .col-6:after, .col-7:after, .col-8:after, .col-9:after, .col-10:after, .col-11:after, .col-12:after {
+	content:""; 
+	display: block;
+	visibility: hidden;
+}
+
+/* 当有多列时，最后一列需要设置last样式 */
+/* .col-1.last, .col-2.last, .col-3.last, .col-4.last, .col-5.last, .col-6.last, .col-7.last, .col-8.last, .col-9.last, .col-10.last, .col-11.last, .col-12 {
+	margin: 0;
+}
+ */
+ 
+.sdui-container .row>*:first-child {
+	text-align: left;
+}
+ 
+.sdui-container .row>*:last-child {
+	margin: 0;
+}
+
+/* 设置列样式  */
+.col-1 { width: 7.33%; }
+.col-2 { width: 15.7%; }
+.col-3 { width: 24.03%; }
+.col-4 { width: 32.36%; }
+.col-5 { width: 40.69%; }
+.col-6 { width: 49.02%; }
+.col-7 { width: 57.35%; }
+.col-8 { width: 65.68%; }
+.col-9 { width: 74.01%; }
+.col-10 { width: 82.34%; }
+.col-11 { width: 90.67%; }
+.col-12 { width: 99%; margin: 0; }
+
+/* 设置列样式下的图片样式  */
+/* .col-1 img, .col-2 img, .col-3 img, .col-4 img, .col-5 img, .col-6 img, .col-7 img, .col-8 img, .col-9 img, .col-10 img, .col-11 img, .col-12 img {
+	width: 100%;
+	height: auto;
+	display: block;
+} */
+
+/* 对于 1024分辨率 */
+@media all and (min-width: 1024px) {
+	.sdui-container {
+		/*max-width: 1000px;*/
+	}
+
+	.sdui-container .row {
+		padding: 0;
+	}
+}
+
+/* 对于768分辨率  */
+/**
+@media all and (max-width: 768px) {
+	.row {
+	}
+
+	.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11 {
+		float: none;
+		width: 99%;
+	}
+}
+*/
+
+/* ----------------------------- sdui栅格系统 end ------------------------------ */
+
+/* ----------------------------- sdui按钮样式  start ------------------------------ */
+
+/* 默认按钮样式  */
+.sdui-btn {
+	display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 18px;
+    background-color: #555;
+    outline:none;
+    color: #fff;
+    white-space: nowrap;
+    text-align: center;
+    text-decoration: none;
+    font-size: 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    opacity: 1;
+}
+
+.sdui-btn:focus {
+	color: #fff;
+}
+
+/* primary按钮样式  */
+.sdui-btn-primary {
+	border: 1px solid #C9C9C9;
+    background-color: #fff;
+    color: #555;
+}
+
+/* normal按钮样式  */
+.sdui-btn-normal {
+	background-color: #1E9FFF;
+}
+
+/* warm按钮样式  */
+.sdui-btn-warm {
+	background-color: #ff9900;
+}
+
+/* danger按钮样式  */
+.sdui-btn-danger {
+	background-color: #FF5722;
+}
+
+/* disabled按钮样式  */
+.sdui-btn-disabled {
+	border: 1px solid #e6e6e6;
+    background-color: #FBFBFB;
+    color: #C9C9C9;
+    cursor: not-allowed;
+    opacity: 1;
+}
+/*btn按钮背景色*/
+/*绿色*/
+.sdui-btn-green{
+	background-color: #5bad59;
+}
+/*dangger*/
+/*.sdui-btn-bg-dangger{
+	background-color: #e95c48;
+}*/
+/*字和边框带颜色的按钮*/
+/*绿色*/
+.sdui-color-green {
+  color: #84bf1c;
+}
+/*圆角边框*/
+.sdui-border-green{
+	color: #84bf1c;
+	border: 1px solid #84bf1c;
+  	background-color: #fff;
+}
+/*警告、提交*/
+.sdui-border-dangger{
+	color: #FF5722;
+	border: 1px solid #FF5722;
+  	background-color: #fff;
+}
+/*橘黄色*/
+.sdui-border-warm{
+	color: #ff9900;
+	border: 1px solid #ff9900;
+  	background-color: #fff;
+}
+/*蓝色*/
+.sdui-border-blue{
+	color: #7dbbc6;
+	border: 1px solid #7dbbc6;
+  	background-color: #fff;
+}
+.sdui-border-purple{
+	color: #bf75e5;
+	border: 1px solid #bf75e5;
+  	background-color: #fff;
+}
+/*圆角*/
+.sdui-radius-circle {
+	border-radius: 5rem;
+}
+/*  hover颜色样式    */
+/* sdui按钮默认hover样式   */
+.sdui-btn:hover {
+	opacity: .8;
+}
+
+/* 暖色hover */
+.sdui-btn-hover-warm:hover {
+	background-color: #ff9900;
+	opacity: 1;
+}
+
+/* 警告色hover */
+.sdui-btn-hover-danger:hover {
+	background-color: #FF5722;
+	opacity: 1;
+}
+
+/* normal色hover */
+.sdui-btn-hover-normal:hover {
+	background-color: #1E9FFF;
+	opacity: 1;
+}
+
+/* default色hover */
+.sdui-btn-hover-default:hover {
+	background-color: #2D97DF;
+	opacity: 1;
+}
+
+
+/* 按钮size对应样式   */
+/*  大号按钮  */
+
+.sdui-btn-big {
+	height: 44px;
+	line-height: 44px;
+	padding: 0 25px;
+	font-size: 16px;
+}
+
+
+/* 中号按钮 */
+
+.sdui-btn-middle {
+	height: 38px;
+	line-height: 38px;
+	padding: 0 16px;
+	font-size: 14px;
+}
+
+
+/*  小号按钮  */
+
+.sdui-btn-small {
+	height: 30px;
+	line-height: 30px;
+	padding: 0 18px;
+	font-size: 12px;
+}
+
+
+/*  mini按钮  */
+
+.sdui-btn-mini {
+	height: 22px;
+	line-height: 22px;
+	padding: 0 8px;
+	font-size: 12px;
+}
+
+/*  大号按钮  */
+.sdui-btn-big-circle {
+	height: 44px;
+    line-height: 44px;
+    border-radius: 22px;
+    padding: 0 25px;
+    font-size: 16px;
+}
+
+/* 中号按钮 */
+.sdui-btn-middle-circle {
+	height: 38px;
+    line-height: 38px;
+    border-radius: 19px;
+    padding: 0 21px;
+    font-size: 14px;
+}
+
+/*  小号按钮  */
+.sdui-btn-small-circle {
+	height: 30px;
+    line-height: 30px;
+    border-radius: 15px;
+    padding: 0 18px;
+    font-size: 12px;
+}
+
+/*  mini按钮  */
+.sdui-btn-mini-circle {
+	height: 22px;
+    line-height: 22px;
+    border-radius: 11px;
+    padding: 0 5px;
+    font-size: 12px;
+}
+
+
+.sdui-btn {
+	margin-right: 10px;
+}
+
+.sdui-btn-add,
+.sdui-btn-delete,
+.sdui-btn-edit,
+.sdui-btn-view,
+.sdui-btn-tingyong,
+.sdui-btn-qiyong,
+.sdui-btn-setting,
+.sdui-btn-tongji,
+.sdui-btn-tongguo:before,
+.sdui-btn-shenhe:before,
+.sdui-btn-jinqian,
+.sdui-btn-ren-add,
+.sdui-btn-daoru,
+.sdui-btn-daochu,
+.sdui-btn-weihu,
+.sdui-btn-suoding,
+.sdui-btn-jiesuo,
+.sdui-btn-xiazai,
+.sdui-btn-baocun,
+.icon-gouxuan
+ {
+	font-family: "iconfont" !important;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/** 新增  */
+.sdui-btn-add {
+	background-color: #23B7E5;
+}
+.sdui-btn-add:before {
+	content:'\e603';
+}
+
+/** 删除  */
+.sdui-btn-delete {
+	background-color: #A6AEC1;
+}
+.sdui-btn-delete:before {
+	content:'\e654';
+}
+
+/** 编辑  */
+.sdui-btn-edit {
+	background-color: #24B8E6;
+}
+.sdui-btn-edit:before {
+	content: '\e66e';
+}
+
+/** 查看  */
+.sdui-btn-view {
+	background-color: #7266BC;
+}
+.sdui-btn-view:before {
+	content: '\e61b';
+}
+
+/** 停用  */
+.sdui-btn-tingyong {
+	background-color: #EB6100;
+}
+.sdui-btn-tingyong:before {
+	content: '\e643';
+}
+
+/** 启用 */
+.sdui-btn-qiyong {
+	background-color: #8FC320;
+}
+.sdui-btn-qiyong:before {
+	content: '\e65a';
+}
+
+/** 设置 */
+.sdui-btn-setting {
+	background-color: #7266B8;
+}
+.sdui-btn-setting:before {
+	content: '\e604';
+}
+
+/** 统计 */
+.sdui-btn-tongji {
+	background-color: #7266B8;
+}
+.sdui-btn-tongji:before {
+	content: '\e615';
+}
+
+/** 通过 */
+.sdui-btn-tongguo {
+	background-color: #8FC320;
+}
+.sdui-btn-tongguo:before {
+	content: '\e67f';
+}
+
+/** 维护 */
+.sdui-btn-weihu {
+	background-color: #23B7E5;
+}
+.sdui-btn-weihu:before {
+	content: '\e640';
+}
+
+/** 审核 */
+.sdui-btn-shenhe {
+	background-color: #23B7E5;
+}
+.sdui-btn-shenhe:before {
+	content: '\e640';
+}
+
+/** 金钱图标  */
+.sdui-btn-jinqian {
+	background-color: #ff9900;
+}
+.sdui-btn-jinqian:before {
+	content: '\e640';
+}
+
+/** 添加人员图标  */
+.sdui-btn-ren-add {
+	background-color: #23B7E5;
+}
+.sdui-btn-ren-add:before {
+	content: '\e85f';
+}
+
+/** 导出图标  */
+.sdui-btn-daoru {
+	background-color: #23B7E5;
+}
+.sdui-btn-daoru:before {
+	content: '\e66f';
+}
+
+/** 导出图标  */
+.sdui-btn-daochu {
+	background-color: #23B7E5;
+}
+.sdui-btn-daochu:before {
+	content: '\e618';
+}
+
+/** 锁定图标  */
+.sdui-btn-suoding {
+	background-color: #EB6100;
+}
+.sdui-btn-suoding:before {
+	content: '\e60d';
+}
+
+/** 解锁图标  */
+.sdui-btn-jiesuo {
+	background-color: #8FC320;
+}
+.sdui-btn-jiesuo:before {
+	content: '\e644';
+}
+
+/** 下载图标  */
+.sdui-btn-xiazai {
+	background-color: #8FC320;
+}
+.sdui-btn-xiazai:before {
+	content: '\e621';
+}
+
+/** 保存图标  */
+.sdui-btn-baocun {
+	background-color: #23B7E5;
+}
+.sdui-btn-baocun:before {
+	content: '\e644';
+}
+
+.sdui-btn-add:before,
+.sdui-btn-delete:before,
+.sdui-btn-edit:before,
+.sdui-btn-view:before,
+.sdui-btn-tingyong:before,
+.sdui-btn-qiyong:before,
+.sdui-btn-setting:before,
+.sdui-btn-tongji:before,
+.sdui-btn-tongguo:before,
+.sdui-btn-shenhe:before,
+.sdui-btn-jinqian:before,
+.sdui-btn-ren-add:before,
+.sdui-btn-daoru:before,
+.sdui-btn-daochu:before,
+.sdui-btn-weihu:before,
+.sdui-btn-suoding:before,
+.sdui-btn-jiesuo:before,
+.sdui-btn-xiazai:before,
+.sdui-btn-baocun:before
+ {
+	vertical-align:middle;
+  	display:inline-block;
+  	height: 30px;
+  	margin-right: 5px;
+}
+
+.notice_icon1{
+	display:inline-block;
+	height:30px;
+	line-height:30px;
+	font-size:15px;
+	color:#fff;
+	-webkit-border-radius:15px;
+	-moz-border-radius:15px;
+	border-radius:15px;
+	background:url("../../images/message_notice_green.png") no-repeat 10px center;
+	background-color:#98c73b;
+	padding:0 10px 0 35px; 
+}
+.notice_icon{
+	display:inline-block;
+	color:#98c73b;
+	background:url("../../images/message_notice.png") no-repeat 0 center;
+	padding-left:22px; 
+}
+
+.sdui-link {
+	font-family: "iconfont" !important;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin:0 5px;
+    position: relative;
+    padding-left: 18px;
+}
+
+.sdui-link:hover {
+	text-decoration: underline;
+	cursor:pointer;
+}
+
+/** 新增  */
+.sdui-link-add,.sdui-link-add:focus {
+	color: #23B7E5;
+}
+.sdui-link-add:before {
+	content:'\e603';
+}
+
+/** 删除  */
+.sdui-link-delete,.sdui-link-delete:focus {
+	color: #A6AEC1;
+}
+.sdui-link-delete:before {
+	content:'\e654';
+}
+
+/** 编辑  */
+.sdui-link-edit,.sdui-link-edit:focus {
+	color: #24B8E6;
+}
+.sdui-link-edit:before {
+	content: '\e66e';
+}
+
+/** 查看  */
+.sdui-link-view,.sdui-link-view:focus {
+	color: #7266BC;
+}
+.sdui-link-view:before {
+	content: '\e61b';
+}
+
+/** 停用  */
+.sdui-link-tingyong,.sdui-link-tingyong:focus {
+	color: #EB6100;
+}
+.sdui-link-tingyong:before {
+	content: '\e643';
+}
+
+/** 启用 */
+.sdui-link-qiyong,.sdui-link-qiyong:focus {
+	color: #8FC320;
+}
+.sdui-link-qiyong:before {
+	content: '\e65a';
+}
+
+/** 设置 */
+.sdui-link-setting,.sdui-link-setting:focus {
+	color: #7266B8;
+}
+.sdui-link-setting:before {
+	content: '\e604';
+}
+
+/** 统计 */
+.sdui-link-tongji,.sdui-link-tongji:focus {
+	color: #7266B8;
+}
+.sdui-link-tongji:before {
+	content: '\e615';
+}
+
+/** 通过 */
+.sdui-link-tongguo,.sdui-link-tongguo:focus {
+	color: #8FC320;
+}
+.sdui-link-tongguo:before {
+	content: '\e67f';
+}
+
+/** 维护 */
+.sdui-link-weihu,.sdui-link-weihu:focus {
+	color: #23B7E5;
+}
+.sdui-link-weihu:before {
+	content: '\e640';
+}
+
+/** 审核 */
+.sdui-link-shenhe,.sdui-link-shenhe:focus {
+	color: #23B7E5;
+}
+.sdui-link-shenhe:before {
+	content: '\e640';
+}
+
+/** 金钱图标  */
+.sdui-link-jinqian,.sdui-link-jinqian:focus {
+	color: #ff9900;
+}
+.sdui-link-jinqian:before {
+	content: '\e640';
+}
+
+/** 添加人员图标  */
+.sdui-link-ren-add,.sdui-link-ren-add:focus {
+	color: #23B7E5;
+}
+.sdui-link-ren-add:before {
+	content: '\e85f';
+}
+
+/** 导出图标  */
+.sdui-link-daoru,.sdui-link-daoru:focus {
+	color: #23B7E5;
+}
+.sdui-link-daoru:before {
+	content: '\e66f';
+}
+
+/** 导出图标  */
+.sdui-link-daochu,.sdui-link-daochu:focus {
+	color: #23B7E5;
+}
+.sdui-link-daochu:before {
+	content: '\e618';
+}
+
+/** 锁定图标  */
+.sdui-link-suoding,.sdui-link-suoding:focus {
+	color: #EB6100;
+}
+.sdui-link-suoding:before {
+	content: '\e60d';
+}
+
+/** 解锁图标  */
+.sdui-link-jiesuo,.sdui-link-jiesuo:focus {
+	color: #8FC320;
+}
+.sdui-link-jiesuo:before {
+	content: '\e644';
+}
+
+/** 下载图标  */
+.sdui-link-xiazai,.sdui-link-xiazai:focus {
+	color: #8FC320;
+}
+.sdui-link-xiazai:before {
+	content: '\e621';
+}
+
+/** 保存图标  */
+.sdui-link-baocun,.sdui-link-baocun:focus {
+	color: #23B7E5;
+}
+.sdui-link-baocun:before {
+	content: '\e644';
+}
+
+.sdui-link-add:before,
+.sdui-link-delete:before,
+.sdui-link-edit:before,
+.sdui-link-view:before,
+.sdui-link-tingyong:before,
+.sdui-link-qiyong:before,
+.sdui-link-setting:before,
+.sdui-link-tongji:before,
+.sdui-link-tongguo:before,
+.sdui-link-shenhe:before,
+.sdui-link-jinqian:before,
+.sdui-link-ren-add:before,
+.sdui-link-daoru:before,
+.sdui-link-daochu:before,
+.sdui-link-weihu:before,
+.sdui-link-suoding:before,
+.sdui-link-jiesuo:before,
+.sdui-link-xiazai:before,
+.sdui-link-baocun:before,
+.sdui-link-gouxuan:before
+ {
+ 	position:absolute;
+ 	top:0;
+ 	left:0;
+	vertical-align:middle;
+  	display:inline-block;
+  	line-height: 18px;
+  	font-size:14px;
+  	margin-right: 5px;
+}
+
+/* ----------------------------- sdui按钮样式  end   ------------------------------ */
+
+/* ----------------------------- sdui form表单样式  start   ------------------------------ */
+/*  checkbox 样式  */
+
+.sdui-checkbox + label:hover ,.sdui-radio + label:hover {
+	border: 1px solid #79CE79;
+}
+
+.sdui-checkbox {
+	display: none;
+}
+
+.sdui-checkbox + label {
+	vertical-align: middle;
+	background-color: #FFF; 
+    border: 1px solid #C1CACA; 
+    /* box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05); */
+   /*  padding: 9px;  */
+    width: 1.2em;
+    height: 1.2em;
+    /* border-radius: 2px; */ 
+    display: inline-block; 
+    position: relative; 
+}
+
+.sdui-checkbox + label:active { 
+    /** box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1); */
+}
+
+.sdui-checkbox:checked + label { 
+    /* background-color: #ECF2F7;*/
+    border: 1px solid #4e9a4c;
+    /** box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05), inset 15px 10px -12px rgba(255, 255, 255, 0.1); */
+    color: #4e9a4c; 
+    text-align: center;
+}
+
+.sdui-checkbox:checked + label:after { 
+    content: '';
+    position: absolute; 
+    top: 15%; 
+    left: 15%; 
+    color: #4e9a4c; 
+    width: 70%;
+    height: 70%;
+    background: #4e9a4c;
+    text-align: center; 
+} 
+/*
+.sdui-checkbox:checked + label:after { 
+    content: '\2714';
+    position: absolute; 
+    top: 0px; 
+    left: 0px; 
+    color: #1E9FFF; 
+    width: 100%;
+    height: 100%;
+    line-height: 100%;
+    text-align: center; 
+    font-size: 1.2em; 
+    vertical-align: text-top; 
+} 
+*/
+/* 禁用的checkbox样式 */
+.sdui-checkbox:disabled + label {
+    background-color: #F2F2F2;
+    cursor: not-allowed;
+    opacity: 1;
+}
+
+.sdui-checkbox:disabled:checked + label {
+    background-color: #F2F2F2;
+}
+
+.sdui-checkbox:disabled:checked + label:after { 
+    color: #92A1AC; 
+}
+
+/*  radio 样式  */
+.sdui-radio {
+	display: none;
+}
+
+.sdui-radio + label {
+	background-color: #FFF; 
+    border: 1px solid #C1CACA; 
+    /* box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05); */
+   	width: 1.2em;
+   	height: 1.2em;
+    border-radius: 0.7em; 
+    display: inline-block; 
+    position: relative; 
+}
+
+.sdui-radio + label:active { 
+    /* box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1); */
+}
+
+.sdui-radio:checked + label { 
+    /* background-color: #ECF2F7; */
+    border: 1px solid #1E9FFF; 
+    /* box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05), inset 15px 10px -12px rgba(255, 255, 255, 0.1); */
+    color: #1E9FFF; 
+}
+.sdui-radio:checked + label:after { 
+		content: "";
+		display: block;
+        position: absolute;
+        top: 15%;
+        left: 15%;
+        width: 70%;
+        height: 70%;
+        background:#1E9FFF;
+        border-radius: 50%;
+}
+
+/* 禁用的radio样式 */
+.sdui-radio:disabled + label {
+    background-color: #F2F2F2;
+    cursor: not-allowed;
+    opacity: 1;
+}
+
+.sdui-radio:disabled:checked + label {
+    background-color: #F2F2F2;
+}
+
+.sdui-radio:disabled:checked + label:after { 
+    background: #92A1AC; 
+}
+
+/*  普通文本框，多行文本框textarea，下拉选择框select 样式  */
+.sdui-input,.sdui-textarea,.sdui-select {
+	font-size: 1em;
+	border: 1px solid #EDEDED;
+	border-radius: 2px;
+	background-color: #fff;
+	text-indent: 5px;
+	padding:0;
+}
+
+.sdui-input:focus,.sdui-textarea:focus,.sdui-select:focus {
+	outline:none;
+	border-color: #44A1EB;
+}
+
+.sdui-input:hover,.sdui-textarea:hover,.sdui-select:hover {
+	/*border-color: #44A1EB;*/
+	border-color: #ddd;
+}
+
+/*外阴影样式*/
+.sdui-input-outside,.sdui-select-outside{
+		box-shadow: 2px 2px 1px #e0deda;
+}
+/*内阴影样式*/
+.sdui-input-inside,.sdui-select-inside{
+		box-shadow: -2px -2px 1px #e0deda;
+}
+/*渐变样式*/
+
+
+.sdui-input-gradient,.sdui-select-gradient{
+	background: -webkit-linear-gradient(#fff , #ebe9e7); /* Safari 5.1 - 6.0 */
+  background: -o-linear-gradient(#fff , #ebe9e7); /* Opera 11.1 - 12.0 */
+  background: -moz-linear-gradient(#fff , #ebe9e7); /* Firefox 3.6 - 15 */
+  background: linear-gradient(#fff , #ebe9e7); /* 标准的语法 */
+}
+  
+
+/* 默认input的高度 */
+.sdui-input {
+	height: 30px;
+	line-height: 30px;
+}
+
+.sdui-textarea {
+	min-height: 120px;
+}
+
+.sdui-select {
+	height: 32px;
+	line-height: 32px;
+}
+
+/* 大号的input及select框 */
+.sdui-input-big,.sdui-select-big {
+	height: 44px;
+	line-height: 44px;
+}
+
+/* 中号的input及select框 */
+.sdui-input-middle,.sdui-select-middle {
+	height: 38px;
+	line-height: 38px;
+}
+
+
+/* 普通输入框、select输入框、textarea输入框    ===>  禁用的样式 */
+.sdui-input:disabled,.sdui-textarea:disabled,.sdui-select:disabled {
+	background-color: #F2F2F2;
+	cursor: not-allowed;
+}
+
+.sdui-input:disabled:hover,.sdui-textarea:disabled:hover,.sdui-select:disabled:hover {
+	border-color: #e6e6e6;
+}
+
+
+
+/*表单样式*/
+
+.sd-form {
+  margin: 20px;
+  background: #fff;
+  color: #595957;
+}
+.sd-form .sd-form-head {
+  display: block;
+  zoom: 1;
+  padding: 0 20px;
+  line-height: 50px;
+  background: #eae9ea;
+}
+.sd-form .sd-form-head:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.sd-form .sd-form-head > .sd-form-title {
+  float: left;
+  font-size: 18px;
+}
+.sd-form .sd-form-head > .sd-form-head-more {
+  float: right;
+  display: inline-block;
+  cursor: pointer;
+  border: 1px solid #4e9a4c;
+  color: #4e9a4c;
+  background-color: transparent;
+  margin-top: 13px;
+  margin-right: 0;
+  height: 24px;
+  line-height: 24px;
+  padding: 0 15px;
+  border-radius: 11px;
+}
+.sd-form .sd-form-head > .sd-form-head-more:focus {
+  color: #4e9a4c;
+  text-decoration: none;
+}
+.sd-form .sd-form-head > .sd-form-head-more:hover {
+  color: #4e9a4c;
+  background-color: transparent;
+  border-color: #509d4e;
+}
+.sd-form .sd-form-head > .sd-form-head-more:hover {
+  color: #fff;
+  background-color: #4e9a4c;
+}
+.sd-form .sd-form-head > .sd-form-head-more:active,
+.sd-form .sd-form-head > .sd-form-head-more.active {
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+.sd-form .content {
+  background-color: #fff;
+  padding: 20px 20px;
+  overflow: auto;
+}
+::-webkit-input-placeholder,
+:-moz-placeholder,
+:-ms-input-placeholder {
+  color: #b5b5b5;
+}
+
+
+/* ----------------------------- sdui form表单样式  end   ------------------------------ */
+
+/* ----------------------------- sdui form表单样式  end   ------------------------------ */
+
+/* ----------------------------- sdui 辅助线  start   ------------------------------ */
+/* 分隔线 */
+hr {
+	height: 1px;
+    margin: 10px 0;
+    border: 0;
+    background-color: #e2e2e2;
+    clear: both;
+}
+
+/* 引用块 */
+.sdui-quote {
+	margin: 10px 0;
+    padding: 15px;
+    line-height: 22px;
+    border-left: 5px solid #2D97DF;
+    border-radius: 0 2px 2px 0;
+    background-color: #F7F7F7;
+}
+
+.sdui-quote-normal {
+    border-left-color: #1E9FFF;
+}
+
+.sdui-quote-warm {
+    border-left-color: #ff9900;
+}
+
+.sdui-quote-danger {
+    border-left-color: #FF5722;
+}
+
+.sdui-quote-danger {
+    border-left-color: #FF5722;
+}
+
+.sdui-quote-grey {
+    border-color: #B4B9BF;
+    border-style: solid;
+    border-width: 1px 1px 1px 5px;
+    background: 0 0;
+}
+
+/* tab页显示 */
+/* 默认风格 */
+.sdui-tab>.sdui-tab-menu {
+	padding-left: 0;
+    overflow: hidden;
+    border-left:1px solid #999;
+    margin: 0;
+}
+
+.sdui-tab>.sdui-tab-menu>li {
+	list-style-type: none;
+    display: inline-block;
+    padding: 0 10px;
+    height: 38px;
+    line-height: 38px;
+    text-align: center;
+    cursor: pointer;
+    margin: 0;
+    float: left;
+    border-radius:0;
+    border: 1px solid #999;
+    background: #e0e0e0;
+    border-left: none;
+}
+
+.sdui-tab>.sdui-tab-menu>li.active {
+	border-bottom: 1px solid #fff;
+	border-radius: 2px 2px 2px 0;
+	background: #fff;
+}
+
+.sdui-tab>.sdui-tab-menu>small {
+	height: 38px;
+    line-height: 38px;
+    padding-left: 10px;
+    color: rgb(215, 215, 215);
+}
+
+.sdui-tab>.sdui-tab-content {
+	margin: 0;
+	margin-top: -1px;
+	padding: 10px;
+	border: 1px solid #999;
+	border-radius: 0px 2px 2px;
+}
+
+/* normal风格 */
+.sdui-tab>.sdui-tab-menu-normal {
+	border-left-color: #0F7ED1;
+}
+
+.sdui-tab>.sdui-tab-menu-normal>li {
+	border-color: #0F7ED1;
+	background: #1E9FFF;
+	color: #fff;
+}
+
+.sdui-tab>.sdui-tab-menu-normal>li.active {
+	color: #0F7ED1;
+}
+
+.sdui-tab>.sdui-tab-content-normal {
+	border-color: #0F7ED1;
+}
+
+/* warm风格 */
+.sdui-tab>.sdui-tab-menu-warm {
+	border-left-color: #FF9900;
+}
+
+.sdui-tab>.sdui-tab-menu-warm>li {
+	border-color: #FF9900;
+	background: #FAA734;
+	color: #fff;
+}
+
+.sdui-tab>.sdui-tab-menu-warm>li.active {
+	color: #FF9900;
+}
+
+.sdui-tab>.sdui-tab-content-warm {
+	border-color: #FF9900;
+}
+
+/* green风格 */
+.sdui-tab>.sdui-tab-menu-green {
+	border-left-color: #2C8946;
+}
+
+.sdui-tab>.sdui-tab-menu-green>li {
+	border-color: #2C8946;
+	background: #5FB878;
+	color: #fff;
+}
+
+.sdui-tab>.sdui-tab-menu-green>li.active {
+	color: #2C8946;
+}
+
+.sdui-tab>.sdui-tab-content-green {
+	border-color: #2C8946;
+}
+
+/* radio风格 tab */
+.sdui-tab>.sdui-tab-menu-radio {
+	border: none;
+}
+
+.sdui-tab>.sdui-tab-menu-radio>li {
+	border: none;
+	background: none;
+}
+
+.sdui-tab>.sdui-tab-menu-radio>li.active {
+	border-bottom: none;
+    border-radius: 0;
+}
+
+.sdui-tab>.sdui-tab-content-radio {
+	 border:none;
+}
+
+.sdui-tab>.sdui-tab-menu-radio>li>label {
+	background-color: #FFF; 
+    border: 1px solid #C1CACA; 
+    /* box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05); */
+   	width: 1em;
+   	height: 1em;
+    border-radius: 0.6em; 
+    display: inline-block; 
+    position: relative; 
+}
+
+.sdui-tab>.sdui-tab-menu-radio>li>*{
+	vertical-align: middle;
+}
+
+.sdui-tab>*.label{
+	height: 38px;
+	line-height: 38px;
+	float: left;
+}
+
+.sdui-tab>.sdui-tab-menu-radio>li.active>label { 
+    /* background-color: #ECF2F7; */
+    border: 1px solid #1E9FFF; 
+    /* box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05), inset 15px 10px -12px rgba(255, 255, 255, 0.1); */
+    color: #1E9FFF; 
+}
+.sdui-tab>.sdui-tab-menu-radio>li.active>label:after { 
+		content: "";
+		display: block;
+        position: absolute;
+        top: 15%;
+        left: 15%;
+        width: 70%;
+        height: 70%;
+        background:#1E9FFF;
+        border-radius: 60%;
+}
+
+/* 禁用的radio tab样式 */
+.sdui-tab>.sdui-tab-menu-radio>li.disabled>label {
+    background-color: #F2F2F2;
+    cursor: not-allowed;
+    opacity: 1;
+}
+
+
+/* 下划线风格的tab */
+/* 简单风格的tab */
+.sdui-tab>.sdui-tab-menu-brief {
+	border: none;
+	border-bottom: 1px solid #e0e0e0;
+}
+
+.sdui-tab>.sdui-tab-menu-brief>li {
+	position:relative;
+	background:none;
+	border: none;
+}
+
+.sdui-tab>.sdui-tab-menu-brief>li.active {
+	color: #999;
+}
+
+.sdui-tab>.sdui-tab-menu-brief>li.active:after {
+	content:'';
+	width: 100%;
+	border: none;
+	border-bottom: 4px solid #999;
+	position:absolute;
+	height:35px;
+	left:0;
+	top:0;
+}
+
+.sdui-tab>.sdui-tab-content-brief {
+	border: none;
+}
+
+/* 简单风格的normal主题 */
+.sdui-tab>.sdui-tab-menu-brief-normal {
+	border-bottom-color: #d0dee5;
+}
+
+.sdui-tab>.sdui-tab-menu-brief-normal>li.active {
+	color: #000;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+.sdui-tab>.sdui-tab-menu-brief-normal>li.active:after {
+	border-bottom-color: #66c9f3;
+}
+
+/* 简单风格的warm主题 */
+.sdui-tab>.sdui-tab-menu-brief-warm {
+	border-bottom-color: #FAA734;
+}
+
+.sdui-tab>.sdui-tab-menu-brief-warm>li.active {
+	color: #FF9900;
+}
+
+.sdui-tab>.sdui-tab-menu-brief-warm>li.active:after {
+	border-bottom-color: #FF9900;
+}
+
+/* 简单风格的green主题 */
+.sdui-tab>.sdui-tab-menu-brief-green {
+	border-bottom-color: #5FB878;
+}
+
+.sdui-tab>.sdui-tab-menu-brief-green>li.active {
+	color: #2C8946;
+}
+
+.sdui-tab>.sdui-tab-menu-brief-green>li.active:after {
+	border-bottom-color: #2C8946;
+}
+
+
+/* ----------------------------- sdui 辅助线  end   ------------------------------ */
+
+/* ----------------------------- sdui文本样式 start  ------------------------------ */
+/* primary文本样式  */
+.sdui-text-primary {
+    color: #555;
+}
+
+/* normal文本样式  */
+.sdui-text-normal {
+	color: #1E9FFF;
+}
+
+/* warm文本样式  */
+.sdui-text-warm {
+	color: #ff9900;
+}
+
+/* danger文本样式  */
+.sdui-text-danger {
+	color: #FF5722;
+}
+
+/* green文本样式  */
+.sdui-text-green {
+	color: #2C8946;
+}
+
+/* red文本样式  */
+.sdui-text-red {
+	color: red;
+}
+/* ----------------------------- sdui文本样式 end  ------------------------------ */
+
+/*----------------------------- sdui 边距样式  start ----------------------------- */
+.sdui-marL15{
+	margin-left: 15px;
+}
+/*----------------------------- sdui 边距样式  end ----------------------------- */
+
+
+
+/* ---------------------------- sdGrid 相关样式       start  -----------------------------*/
+
+.sdGrid .top-area {
+	/* border-bottom: solid 1px #d0dee5'; */
+	margin-bottom: 10px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	height: 33px;
+	line-height: 33px;
+}
+
+.sdGrid table {
+	border-collapse:separate;
+	border-spacing: 0;
+	overflow: hidden;
+	border:solid 1px #E8E8E9;
+	width:100%;
+	
+	-webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    
+    color: #252525;
+}
+
+.sdGrid table tbody tr {
+	background: #fff;
+	/* border-top: 1px solid #DCDEDE !important;  对于table圆角， 此属性设置已经无用 */
+}
+
+.sdGrid table tbody td {
+	border-top: 1px solid #E8E8E9 !important;
+}
+
+
+.sdGrid table tbody tr:nth-child(even){
+	background: #F0F0F2;
+}
+
+.sdGrid table tr:hover {
+	background:#D9DADF !important;
+	/* -webkit-box-shadow:0 0 10px #E8E8E8;  
+	-moz-box-shadow:0 0 10px #E8E8E8;  
+	box-shadow:0 0 10px #E8E8E8; */
+}
+
+.sdGrid table th{
+	font-size: 1.1em;
+	font-weight: bold;
+	background: #353745;
+	color: #fff;
+	
+	height: 50px;
+	line-height: 50px;
+	
+	padding-left: 20px;
+	padding-right: 5px;
+	text-align: left;
+	
+	border-right: 1px solid #353745;
+	border-bottom: 1px solid #353745;
+}
+
+.sdGrid table thead th:last-child{
+	border-right:none;
+}
+
+.sdGrid table td {
+	font-size: 14px;
+	height: 40px;
+	line-height: 2em;
+	
+	padding-left: 20px;
+	padding-right: 10px;
+	border-right: 1px solid #E8E8E9;
+	text-align: left;
+}
+
+.sdGrid table tbody td:last-child{
+	border-right: none;
+}
+
+.sdGrid table td>div{
+	display: block;
+	word-break: break-all;
+	word-wrap: break-word;
+}
+
+.sdGrid input[type="radio"], input[type="checkbox"] {
+    margin: 0;
+    line-height: normal;
+}
+
+
+/* -------------- sdGrid简洁 风格 -----------------*/
+.sdGrid-brief table{
+	border: none !important;
+	border-radius: 0;
+}
+
+.sdGrid-brief table th {
+	background:#F7F8F8;
+	border-right: none;
+	border-bottom: none;
+	color: #686666;
+	filter: none;
+}
+
+.sdGrid-brief table tbody td {
+	border-top: none !important;
+	border-right: none !important;
+	border-bottom: none !important;
+	
+	border-bottom: 1px solid #E1E1E1 !important;
+}
+
+/* .sdGrid-brief-green table tbody tr:last-child td {
+	border-bottom: none !important;
+} */
+
+
+.sdGrid-brief table tbody tr:nth-child(even) {
+	background: none;
+}
+
+.sdGrid-brief table tbody tr:hover {
+	background: none !important;
+}
+
+/* -------------- sdGrid简洁红 风格 -----------------*/
+.sdGrid-brief-red table{
+	border: none !important;
+	
+	-webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+}
+
+.sdGrid-brief-red table th{ 
+	background: #E2E3E8;
+	color: #595757;
+	border-right: 1px solid #E2E3E8;
+	border-bottom: 1px solid #E2E3E8;
+}
+
+.sdGrid-brief-red table tbody td {
+	border-top: none !important;
+	border-right: none !important;
+	/* border-bottom: 1px solid #CDCED0 !important; */
+}
+
+
+.sdGrid-brief-red table tbody tr:hover {
+	background: none !important;
+	color: #DD5A58 !important;
+}
+
+.sdGrid-brief-red table tbody tr:nth-child(even) {
+	background: #ECEDF1 !important;
+}
+
+.sdGrid-brief-red table tbody tr:nth-child(odd) {
+	background: none;
+}
+
+
+
+/*page*/
+.sdgrid-pager{position:relative;margin-top:10px;padding:0;}
+.sdgrid-pager .highlight{color:#056dae;font-style:normal;}
+.sdgrid-pager:after {
+	content:""; 
+	display: block; 
+	clear: both; 
+}
+
+.sdgrid-tr-hover {
+	background:#EFF0F4 !important;
+}
+
+/* sdgrid 分页组件部分  */
+.pagination {margin: 10px 0;}
+
+.pagination ul,.pagination ol {
+    padding: 0;
+    margin: 0 0 10px 25px;
+}
+
+.pagination ul {
+    display: inline-block;
+    margin-bottom: 0;
+    margin-left: 0;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+    -moz-box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+
+.pagination ul>li {
+    display: inline;
+}
+
+.pagination a {
+    color: #08c;
+    text-decoration: none;
+}
+
+.pagination ul>li>a, .pagination ul>li>span {
+    float: left;
+    padding: 4px 12px;
+    line-height: 20px;
+    text-decoration: none;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-left-width: 0;
+}
+
+.pagination ul>li>a:hover, .pagination ul>li>a:focus, .pagination ul>.active>a, .pagination ul>.active>span {
+    background-color: #f5f5f5;
+}
+
+.pagination ul>.active>a, .pagination ul>.active>span {
+    color: #999;
+    cursor: default;
+}
+
+.pagination ul>li:first-child>a, .pagination ul>li:first-child>span {
+    border-left-width: 1px;
+    -webkit-border-bottom-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    -webkit-border-top-left-radius: 4px;
+    border-top-left-radius: 4px;
+    -moz-border-radius-bottomleft: 4px;
+    -moz-border-radius-topleft: 4px;
+}
+
+/* 分页滑动鼠标样式调整  */
+.pagination li {cursor: pointer;}
+/* ---------------------------- sdGrid 相关样式       end  -----------------------------*/
+
+/* ---------------------------- sdSelect 相关样式 start ----------------------------*/
+
+.sdSelect-input {
+	background: #fff url(skin/arrow-select-02.png) no-repeat right;
+}
+
+/* 选中之后样式 */
+.sdSelect-container .selected {
+	background: #4BAFFA;
+	color: #fff;
+}
+
+.sdSelect-container .item-hover {
+	cursor: default;
+	background: #CBE5FA !important;
+}
+
+/* ---------------------------- sdSelect 相关样式 end ----------------------------*/
+
+/* ---------------------------- sdValidation 相关样式 start ----------------------------*/
+/* 验证通过时，样式 */
+.sd-validate .valid {
+	border: 1px #32BC61 solid;
+	background-color: #fff;
+}
+
+/* 验证不通过时，样式 */
+.sd-validate .error {
+	border: 1px #f00 solid;
+	background-color: #FBF9BB;
+}
+/* ---------------------------- sdValidation 相关样式 end ----------------------------*/
+
+
+/* ---------------------------- sdTree 相关样式 start -------------------------------*/
+
+
+
+.sdTree,.sdTree ul,.sdTree ul li{
+	margin:0;padding:0;list-style:none;
+	display: block;
+}
+
+.sdTree {
+	word-break:keep-all;
+	white-space:nowrap;
+	/* position: relative; */
+}
+
+.sdTree .error {
+	border: 1px #f00 solid;
+	background-color: #FBF9BB;
+}
+
+.sdTree li {
+	line-height: 38px;
+	position: relative;
+}
+
+.sdTree li ul {
+	margin-left: 27px;
+}
+
+.sdTree li ul.ul-bg {
+	margin-left: 20px;
+	padding-left: 10px;
+	display: none;
+	/* border-left: 1px dotted #ADAD9C !important; */
+}
+
+.sdTree div.tree-item,.sdTree .tree-icon,.sdTree .tree-title {
+	height: 38px;
+}
+
+.sdTree div.tree-item {
+	position: relative;
+	overflow: hidden;
+	margin-left:24px;
+}
+
+.sdTree div.tree-item.checked {
+	background: #E8F2FE !important;
+}
+
+.sdTree div.tree-item-edit {
+	/* border-bottom: 1px dotted #C6C6C1 !important; */
+}
+
+.sdTree div.tree-item-active {
+	border-bottom: 1px solid #1E9FFF !important;
+}
+
+.sdTree .tree-icon,.sdTree .tree-title {
+	display: inline-block;
+	position: absolute;
+}
+
+.sdTree .tree-check {
+	font-family: "iconfont" !important;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    display: inline-block;
+    color:#C9C9C9;
+    margin-left:5px;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+.sdTree .tree-check:after {
+	/* content: '\e60e'; */
+	content:'\e68c';
+}
+
+.sdTree .tree-check:hover {
+	color: #79CE79 !important;
+}
+
+.sdTree .tree-check.checked {
+	color: #4e9a4c !important;
+}
+
+.sdTree .tree-title {
+	/*top:0;
+	left:27px;*/
+	width:100%;
+	margin-left: 5px;
+}
+
+.sdTree .tree-icon{
+	width: 27px;
+	height: 38px;
+    text-align: center;
+}
+
+.sdTree .tree-icon-default{
+   /* background: #fff url(skin/tree-icon.gif) center; */
+}
+
+.sdTree .tree-icon-close,.sdTree .tree-icon-open {
+	cursor: pointer;
+}
+
+.sdTree .tree-title-hover .tree-check{
+	color: #6CBCFA !important;
+}
+
+.sdTree .tree-title-hover-pointer {
+	cursor: pointer;
+}
+
+.sdTree .tree-title-selected {
+	background: #E8F2FE !important;
+}
+
+.sdTree .tree-title-selected  .tree-check{
+	color: #1E9FFF !important;
+}
+
+
+.sdTree .tree-icon-close {
+	/* background: #fff url(skin/tree-icon-close.gif) no-repeat center; */
+	/*background:url(skin/tree-icon-close-02.png) no-repeat center;*/
+	background:url(skin/tree-icon-close-03.png) no-repeat center;
+}
+
+.sdTree .tree-icon-open {
+	/* background: #fff url(skin/tree-icon-open.gif) no-repeat center;  */
+	/*background:url(skin/tree-icon-open-02.png) no-repeat cente*/r; 
+	background:url(skin/tree-icon-open-03.png) no-repeat center; 
+}
+
+.sdTree input {
+	height: 26px;
+	color: #000 !important;
+}
+
+.sdTree-toolbar {
+	border-radius: 2px;
+	/* background: url(skin/tree_toolbar_bg_01.png) repeat center; */
+	opacity: 1;
+	margin-top: 5px !important;
+	background: #fff;
+	user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+.sdTree-toolbar, .sdTree-toolbar li{
+	margin:0;padding:0;list-style:none;
+}
+
+.sdTree-toolbar li{
+	float: left;
+	margin: 4px 5px;
+	width:19px;
+	height:19px;
+	cursor:pointer;
+}
+
+.sdTree-toolbar .edit,.sdTree-toolbar .save,.sdTree-toolbar .delete,.sdTree-toolbar .insertAfter,.sdTree-toolbar .insertBefore,.sdTree-toolbar .insertChild {
+	width:19px;
+	height:19px;
+	cursor:pointer;
+	margin: 0 2px;
+}
+
+.sdTree-toolbar .edit {
+	/*background: url(skin/tree_editor.png) no-repeat center;*/
+	/*background: url(../../images/add005grey.png) no-repeat center;*/
+	background: url(skin/tree_editor_before.png) no-repeat center;
+}
+
+.sdTree-toolbar .edit:hover {
+	/*background: url(skin/tree_editor.png) no-repeat center;*/
+	background: url(skin/tree_editor_after.png) no-repeat center;
+}
+
+.sdTree-toolbar .save {
+	/*background: url(skin/tree_save.png) no-repeat center;*/
+	background: url(skin/tree_save_before.png) no-repeat center;
+}
+
+.sdTree-toolbar .save:hover {
+	/*background: url(skin/tree_save.png) no-repeat center;*/
+	background: url(skin/tree_save_after.png) no-repeat center;
+}
+
+.sdTree-toolbar .delete {
+	/*background: url(skin/tree_delete.png) no-repeat center;*/
+	background: url(skin/tree_delete_before.png) no-repeat center;
+}
+
+.sdTree-toolbar .delete:hover {
+	/*background: url(skin/tree_delete.png) no-repeat center;*/
+	background: url(skin/tree_delete_after.png) no-repeat center;
+}
+
+.sdTree-toolbar .insertAfter {
+	/*background: url(skin/tree_insert_after.png) no-repeat center;*/
+	background: url(skin/tree_arrowDown_before.png) no-repeat center;
+}
+
+.sdTree-toolbar .insertAfter:hover {
+	/*background: url(skin/tree_insert_after.png) no-repeat center;*/
+	background: url(skin/tree_arrowDown_after.png) no-repeat center;
+}
+.sdTree-toolbar .insertBefore {
+	/*background: url(skin/tree_insert_before.png) no-repeat center;*/
+	background: url(skin/tree_arrowUp_before.png) no-repeat center;
+}
+
+.sdTree-toolbar .insertBefore:hover {
+	/*background: url(skin/tree_insert_before.png) no-repeat center;*/
+	background: url(skin/tree_arrowUp_before.png) no-repeat center;
+}
+.sdTree-toolbar .insertChild {
+	/*background: url(skin/tree_insert_child.png) no-repeat center;*/
+	background: url(skin/tree_add_before.png) no-repeat center;
+}
+
+.sdTree-toolbar .insertChild:hover {
+	/*background: url(skin/tree_insert_child.png) no-repeat center;*/
+	background: url(skin/tree_add_after.png) no-repeat center;
+}
+
+.sdTree-toolbar:after {
+	content:""; 
+	display: block; 
+	clear: both; 
+}
+
+/* ---------------------------- sdTree 相关样式 end -------------------------------*/
+
+/* ---------------------------- sdAutoComplete 相关样式 start -------------------------------*/
+.sdui-autocomplete {
+	position: absolute;
+	display: none;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	max-height: 200px;
+	overflow-y: auto;
+	overflow-x: hidden;
+	text-align: left;
+	background: #FFFFFF;
+	border: 1px solid #E0E0E0;
+}
+
+.sdui-autocomplete li {
+	display: block;
+	height: 2em;
+	line-height: 2em;
+	padding: 0px 5px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-align: left;
+	text-overflow: ellipsis;
+}
+
+
+.sdui-autocomplete li:hover{
+	cursor: pointer;
+	background: #CBE5FA !important;
+}
+
+/* ---------------------------- sdAutoComplete 相关样式 end -------------------------------*/
+
+
+/* ---------------------------- sdui-form 相关样式 start ---------------------------------*/
+.sdui-form {
+	border: 1px solid #DEE0DF;
+	border-radius: 4px;
+	margin: 20px;
+	background: #fff;
+	color: #868688;
+}
+
+.sdui-form .head {
+	border-bottom: 1px solid #DEE0DF;
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+	padding: 10px 10px;
+	line-height: 30px;
+	color: #868686;
+	background: #F9FAFC;
+}
+.sdui-form .head:after {
+	content:""; 
+	display: block; 
+	clear: both; 
+}
+
+.sdui-form .head>.title {
+	font-size: 15px;
+	font-weight: bold;
+	float: left;
+}
+
+.sdui-form .head>.button-area {
+	float:right;
+}
+
+.sdui-form .content {
+	padding: 20px 20px 150px 20px;
+	overflow: auto;
+}
+
+.sdui-form .content>* {
+	margin-bottom: 30px;
+}
+
+/* ---------------------------- sdui-form 相关样式 end ---------------------------------*/
+
+
+/* ---------------------------- sdui-group-button 相关样式 start ---------------------------------*/
+.sdGroupButton {
+	position: relative;
+}
+
+.sdGroupButton .left-button {
+	position:absolute;
+	top:0;
+	left:0;
+	height: 38px;
+	line-height: 38px;
+	width: 22px;
+	background: url(skin/arrow_blue_left.png) no-repeat;
+	cursor: pointer;
+}
+
+.sdGroupButton .left-button-disabled {
+	position:absolute;
+	top:0;
+	left:0;
+	height: 38px;
+	line-height: 38px;
+	width: 22px;
+	background: url(skin/arrow_grey_left.png) no-repeat;
+	cursor: auto;
+}
+
+.sdGroupButton .right-button {
+	position:absolute;
+	top:0;
+	right:0;
+	height: 38px;
+	line-height: 38px;
+	width: 22px;
+	background: url(skin/arrow_blue_right.png) no-repeat;
+	cursor: pointer;
+}
+
+.sdGroupButton .right-button-disabled {
+	position:absolute;
+	top:0;
+	right:0;
+	height: 38px;
+	line-height: 38px;
+	width: 22px;
+	background: url(skin/arrow_grey_right.png) no-repeat;
+	cursor: auto;
+}
+
+.sdGroupButton ul{
+	margin:20px 30px;
+	padding:0;
+	list-style:none;
+	border: 1px solid #D9D9D9;
+	border-radius: 5px;
+	
+	-webkit-box-shadow: 3px 3px 6px #D9D9D9;
+	-moz-box-shadow: 3px 3px 6px #D9D9D9;  
+	box-shadow: 3px 3px 6px #D9D9D9;
+}
+
+.sdGroupButton ul:after {
+	content: "";
+	display: block;
+	clear: both;
+	visibility: hidden;
+}
+
+.sdGroupButton ul li {
+	border: none;
+	float: left;
+	border-right: 1px solid #D9D9D9;
+	text-align: center;
+	height: 2.5em;
+	line-height: 2.5em;
+	font-weight: bold;
+	background: #fff;
+	color: #707070;
+}
+
+.sdGroupButton ul li:first-child {
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+
+.sdGroupButton ul li:last-child {
+	border-right: none;
+	border-top-left-radius: 6px;
+	border-bottom-left-radius: 6px;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+.sdGroupButton ul li.active {
+	background: #2D98EA;
+	color: #fff;
+	-webkit-box-shadow:inset 3px 3px 6px #298CDD;
+	-moz-box-shadow:inset 3px 3px 6px #298CDD;  
+	box-shadow:inset 3px 3px 6px #298CDD;
+}
+
+.sdGroupButton ul li:hover {
+	background: #6CBFFC;
+	color: #fff;
+	cursor: pointer;
+	-webkit-box-shadow:inset 3px 3px 6px #55B2FA;
+	-moz-box-shadow:inset 3px 3px 6px #55B2FA;  
+	box-shadow:inset 3px 3px 6px #55B2FA;
+}
+
+/* ---------------------------- sdui-group-button 相关样式 end ---------------------------------*/
+
+
+.sdui-label {
+	font-weight: bold;
+	color: #727272;
+}
+
+
+.ellipsis{
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+
+
+/* ---------------------------- sdui-scroller 相关样式 start ---------------------------------*/
+
+.sdui-scroller-more {
+	text-align: center;
+	clear: both;
+}
+
+.sdui-scroller-more a {
+	text-decoration: none;
+    cursor: default;
+    color: #333;
+    height: 32px;
+    line-height: 32px;
+}
+
+.sdui-scroller-more a cite{
+	padding: 0 20px;
+    border-radius: 3px;
+    background-color: #eee;
+    color: #333;
+    font-style: normal;
+    display: inline-block;
+    vertical-align: top;
+    margin: 10px 0;
+}
+
+.sdui-scroller-more a cite.loadmore{
+    cursor: pointer;
+}
+
+.sdui-scroller-more a cite.loading {
+	width: 37px;
+    height: 37px;
+    padding: 0px;
+    background: url(skin/loading-2.gif) no-repeat;
+}
+
+.sdui-scroller-more a cite.nomore{
+	background:none;
+	color: #BCBCBC;
+}
+
+.sdui-scroller-more a cite.loadmore:hover{
+	background-color: #fee;
+}
+
+/* ---------------------------- sdui-scroller 相关样式 end ---------------------------------*/}
+
+/* ---------------------------- sdui-uploader 相关样式 start ---------------------------------*/
+
+.sdui-uploader-container {
+}
+
+.sdui-uploader-container .sdui-uploader-action-bar {
+	
+}
+
+.sdui-uploader-container .sdui-uploader-action-bar a {
+	display: inline-block;
+	color: #00C134;
+	text-decoration: underline;
+	margin-right: 10px;
+	font-size: 13px;
+	cursor: pointer;
+}
+
+.sdui-uploader-container .sdui-uploader-action-bar a:hover {
+	color: #e9686b;
+}
+
+.sdui-uploader-container .sdui-uploader-action-bar a i {
+	font-style: normal;
+	font-size: 13px;	
+}
+
+
+.sdui-uploader-container a.sdui-uploader-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-right: 10px;
+    background-color: #e9686b;
+    outline:none;
+    color: #fff;
+    white-space: nowrap;
+    text-align: center;
+    text-decoration: none;
+    font-size: 15px;
+    -moz-user-select:none;/*火狐*/
+    -webkit-user-select:none;/*webkit浏览器*/
+    -ms-user-select:none;/*IE10*/
+    -khtml-user-select:none;/*早期浏览器*/
+    user-select:none;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    opacity: 1;
+    transition: .2s ease-out;
+}
+.sdui-uploader-container a.sdui-uploader-btn:hover {
+	background-color: #E34046;
+	color: #fff;
+	box-shadow: 0px 2px 6px rgba(0,0,0,0.12), 0px 1px 2px rgba(0,0,0,0.24);
+}
+
+.sdui-uploader-container a.sdui-uploader-btn i {
+	font-style: normal;
+	font-size: 13px;
+}
+
+.sdui-uploader-container a.sdui-uploader-btn.sdui-uploader-btn-disabled {
+	background-color: #E2E2E2;
+	cursor: not-allowed;
+}
+
+.sdui-uploader-container a.sdui-uploader-btn.sdui-uploader-btn-disabled:hover {
+	background-color: #E2E2E2;
+}
+
+.sdui-uploader-container .sdui-uploader-tip {
+    color: #A2A2A2;
+}
+
+.sdui-uploader-container .sdui-uploader-message {
+    margin: 10px 0 0 0;
+    background-color: #FCF7AD;
+    display: inline-block;
+    position: relative;
+    padding: 16px 20px;
+    width: 300px;
+    transition: .2s ease-out;
+}
+.sdui-uploader-container .sdui-uploader-message:hover {
+	
+	box-shadow: 0px 2px 6px rgba(0,0,0,0.12);
+}
+
+.sdui-uploader-container .sdui-uploader-message i {
+	position: absolute;
+	font-style: normal;
+	cursor: pointer;
+	top: 2px;
+	right: 10px;	
+}
+.sdui-uploader-container .sdui-uploader-message cite {
+	color: red;
+	font-style:normal;	
+}
+
+.sdui-uploader-container ul {
+	list-style: none;
+	padding: 0;
+}
+
+.sdui-uploader-container li.sdui-uploader-item-thumbnail {
+	float: left;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    margin: 10px 20px 0px 0px;
+    width: 114px;
+    height: 114px;
+    line-height: 114px;
+    overflow: hidden;
+    border: 1px solid #E4E4E4;
+    transition: .2s ease-out;
+}
+
+.sdui-uploader-container li.sdui-uploader-item-thumbnail:hover {
+	box-shadow: 0px 2px 6px rgba(0,0,0,0.25);
+}
+
+.sdui-uploader-container li.sdui-uploader-item-thumbnail  img {
+	/*  width: 100px; */
+    /* height: 100px; */
+    vertical-align: middle;
+}
+
+.sdui-uploader-container ul:after { /* 最后清除浮动 */
+	content:"";
+	display: block;
+	clear: both;
+}
+
+
+.sdui-uploader-container li.sdui-uploader-item-thumbnail  .sdui-uploader-item-title {
+	z-index: 1000;
+    position: absolute;
+    cursor: default;
+    top: -20px;
+    background: #555;
+    color: #fff;
+    opacity: 0.8;
+    height: 20px;
+    line-height: 20px;
+    width: 100%;
+    font-size:12px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: .2s ease-out;
+}
+
+.sdui-uploader-container li.sdui-uploader-item-thumbnail:hover .sdui-uploader-item-title {
+    top: 0px;
+}
+
+.sdui-uploader-container li.sdui-uploader-item-thumbnail .sdui-uploader-actionbar {
+	text-align: right;	
+}
+
+.sdui-uploader-container li.sdui-uploader-item-thumbnail .sdui-uploader-actionbar span {
+	margin-right: 10px;	
+}
+
+.sdui-uploader-container li.sdui-uploader-item-thumbnail .sdui-uploader-actionbar span:hover {
+	font-weight: bold;
+}
+
+.sdui-uploader-container li.sdui-uploader-item-thumbnail .sdui-uploader-actionbar  .sdui-uploader-download {
+	cursor:pointer;	
+}
+.sdui-uploader-container li.sdui-uploader-item-thumbnail  .sdui-uploader-actionbar  .sdui-uploader-delete {
+	cursor:pointer;	
+}
+
+.sdui-uploader-container li.sdui-uploader-item-thumbnail  .sdui-uploader-actionbar a{
+	display: inline;
+	padding: 0;
+    margin-right: 0;
+    font-size: 12px;
+    color: #fff;
+    white-space: nowrap;
+    text-align: center;
+    text-decoration: none;
+	background: none;
+}
+
+.sdui-uploader-container li.sdui-uploader-item-thumbnail  .sdui-uploader-actionbar a:hover {
+	background: none;
+	box-shadow: none;
+}
+
+
+
+/* 上传进度条  */
+.sdui-uploader-container li.sdui-uploader-item-thumbnail  .sdui-uploader-item-progress {
+	z-index: 1000;
+    position: absolute;
+    bottom: -6px;
+    background: #e2e2e2;
+    color: #fff;
+    height: 6px;
+    line-height: 6px;
+    width: 100%;
+    font-size:13px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: 0.2s ease-out;
+}
+
+.sdui-uploader-container li.sdui-uploader-item-thumbnail  .sdui-uploader-item-progress-show {
+	bottom: 0px;
+}
+
+
+.sdui-uploader-container li.sdui-uploader-item-thumbnail  .sdui-uploader-item-progress-hide {
+	bottom: -6px;
+}
+
+.sdui-uploader-container li.sdui-uploader-item-thumbnail  .sdui-uploader-item-progress .sdui-uploader-item-progress-bar{
+	background: #5FB878;
+    height: 6px;
+    transition: .5s ease-out;
+    width:0%;
+}
+
+.sdui-uploader-container li.sdui-uploader-item-thumbnail  .sdui-uploader-item-progress .sdui-uploader-item-progress-bar-failure {
+	background: #F7DB7C;
+}
+
+.sdui-uploader-container li.sdui-uploader-item-thumbnail .sdui-uploader-item-error-hide {
+	z-index: 999;
+    position: absolute;
+    cursor:default;
+    bottom: -22px;
+    background: #FFE895;
+    color: #E9686B;
+    opacity: 0.9;
+    height: 22px;
+    line-height: 22px;
+    width: 100%;
+    font-size:12px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: .5s ease-out;
+}
+
+.sdui-uploader-container li.sdui-uploader-item-thumbnail  .reupload {
+	cursor:pointer;
+	display: none;	
+}
+
+.sdui-uploader-container li.sdui-uploader-item-thumbnail  .sdui-uploader-item-error-hide:hover .reupload{
+	display:inline;
+}
+
+.sdui-uploader-container li.sdui-uploader-item-thumbnail  .sdui-uploader-item-error-hide:hover .uploaderror {
+	display: none;	
+}
+
+.sdui-uploader-container li.sdui-uploader-item-thumbnail  .sdui-uploader-item-error-show {
+    bottom: 6px;
+}
+
+
+.sdui-uploader-container li.sdui-uploader-item-thumbnail  .sdui-uploader-item-success-hide {
+	z-index: 999;
+    position: absolute;
+    cursor:default;
+    bottom: -22px;
+    background: #5FB878;
+    color: #fff;
+    opacity: 0.9;
+    height: 22px;
+    line-height: 22px;
+    width: 100%;
+    font-size:12px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: .5s ease-out;
+}
+
+.sdui-uploader-container li.sdui-uploader-item-thumbnail  .sdui-uploader-item-success-show {
+	bottom: 6px;
+}
+
+/* ----------------------- 文件列表风格  start ----------------------------------- */
+.sdui-uploader-container li.sdui-uploader-item-list {
+	float: left;
+    text-align: left;
+    cursor: default;
+    position: relative;
+    margin: 10px 20px 0px 0px;
+    /* padding-left: 10px; */
+    line-height: 20px;
+    border: 1px solid #fff;
+    transition: .2s ease-out;
+}
+
+.sdui-uploader-container li.sdui-uploader-item-list>div {
+	float: left;
+	margin-right: 10px;
+}
+
+
+.sdui-uploader-container li.sdui-uploader-item-list .sdui-uploader-item-name {
+	width: 190px;
+	overflow: hidden;
+	white-space: nowrap;
+	border-left: 3px solid #E2E2E2;
+	padding-left: 5px;
+	transition: .2s ease-out;
+}
+
+.sdui-uploader-container li.sdui-uploader-item-list:hover .sdui-uploader-item-name {
+	
+	border-left-color: #ff9900;
+}
+/* 上传进度条  */
+.sdui-uploader-container li.sdui-uploader-item-list  .sdui-uploader-item-progress {
+    background: #e2e2e2;
+    color: #fff;
+    height: 6px;
+    line-height: 6px;
+    margin-top: 7px;
+    width: 100px;
+    font-size:13px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: 0.2s ease-out;
+}
+
+.sdui-uploader-container li.sdui-uploader-item-list  .sdui-uploader-item-progress-show {
+	bottom: 0px;
+}
+
+
+.sdui-uploader-container li.sdui-uploader-item-list  .sdui-uploader-item-progress-hide {
+	bottom: -6px;
+}
+
+.sdui-uploader-container li.sdui-uploader-item-list  .sdui-uploader-item-progress .sdui-uploader-item-progress-bar{
+	background: #5FB878;
+    height: 6px;
+    transition: .5s ease-out;
+    width:0%;
+}
+
+.sdui-uploader-container li.sdui-uploader-item-list  .sdui-uploader-item-progress .sdui-uploader-item-progress-bar-failure {
+	background: #F7DB7C;
+}
+
+.sdui-uploader-container li.sdui-uploader-item-list .sdui-uploader-item-progress-error-hide {
+	width: 40px;
+	margin-right: 0px;
+	color: #000000;
+}
+
+.sdui-uploader-container li.sdui-uploader-item-list .sdui-uploader-item-progress-error-hide span:hover {
+	color: #E34046;
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+.sdui-uploader-container li.sdui-uploader-item-list .sdui-uploader-actionbar>span {
+	margin:0 10px 0 0;
+	color: #000000;
+	cursor: pointer;
+}
+
+.sdui-uploader-container li.sdui-uploader-item-list .sdui-uploader-actionbar>span:hover{
+	color: #E34046;
+	text-decoration: underline;
+}
+
+.sdui-uploader-container li.sdui-uploader-item-list .sdui-uploader-actionbar a {
+	color: #000000;
+	cursor: pointer;
+	text-decoration: none;	
+}
+
+.sdui-uploader-container li.sdui-uploader-item-list .sdui-uploader-actionbar a:hover {
+	color: #E34046;
+}
+
+/* ----------------------- 文件列表风格  end ----------------------------------- */
+
+/* ---------------------------- sdui-uploader 相关样式 end ---------------------------------*/
+
+
+/* ---------------------------- sdui-viewer 相关样式 start ---------------------------------*/
+.sdui-viewer-container { /* 最后清除浮动 */
+	position: fixed;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	-moz-user-select:none;/*火狐*/
+    -webkit-user-select:none;/*webkit浏览器*/
+    -ms-user-select:none;/*IE10*/
+    -khtml-user-select:none;/*早期浏览器*/
+    user-select:none;
+}
+
+.sdui-viewer-container .sdui-viewer-close {
+	width: 40px;
+	height: 40px;
+	line-height: 26px;
+	text-align: right;
+	position: fixed;
+	right: 0;
+	top: 0;
+	padding: 0;
+	font-size: 18px;
+	background-color: rgba(0, 0, 0, .3);
+	transition: 0.2s ease-out;
+	border-bottom-left-radius: 100%;
+	cursor: pointer;
+	color: #eee;
+}
+
+.sdui-viewer-container .sdui-viewer-close:hover {
+	background-color: rgba(0, 0, 0, .6);
+	color: #fff;
+}
+
+.sdui-viewer-container .sdui-viewer-close i {
+	margin-right: 8px;
+	font-style: normal;	
+}
+.sdui-viewer-container .sdui-viewer-close i:before {
+	content: '\2718';
+}
+
+
+.sdui-viewer-container .sdui-viewer-review {
+	position:absolute;
+	top: 50%;
+	left: 50%;
+	width: 80%;
+	height: 70%;
+	text-align: center;
+	-webkit-transform: translate(-50%, -60%);
+    -moz-transform: translate(-50%, -60%);
+    -ms-transform: translate(-50%, -60%);
+    -o-transform: translate(-50%, -60%);
+    transform: translate(-50%, -60%);
+	overflow:hidden;
+	display:none;
+}
+
+.sdui-viewer-container .sdui-viewer-review div {
+	position:relative;
+	width: 100%;
+	height: 100%;
+}
+
+.sdui-viewer-container .sdui-viewer-review img {
+	position:absolute;
+	max-width: 100%;
+	max-height: 100%;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.sdui-viewer-container .sdui-viewer-thumbnails {
+	position:fixed;
+	bottom: 20px;
+	left: 10px;
+	overflow:hidden;
+	right:10px;
+	padding:0;
+	background-color: rgba(0, 0, 0, .5);
+	border-radius: 2px;
+	transition: 0.2s ease-out;
+}
+
+
+.sdui-viewer-container .sdui-viewer-thumbnails:after { /* 最后清除浮动 */
+	content:"";
+	display: block;
+	clear: both;
+}
+
+.sdui-viewer-container .sdui-viewer-thumbnails:hover {
+	background-color: rgba(0, 0, 0, .6);
+}
+
+.sdui-viewer-counter {
+	position: fixed;
+    width: 68px;
+    height: 20px;
+    line-height: 20px;
+    bottom: 150px;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+    -moz-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    -o-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+    /* left: 10px; */
+    overflow: hidden;
+    /* right: 10px; */
+    text-align: center;
+    padding: 0;
+    font-size: 13px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    font-style: normal;
+    border-radius: 10px;
+    transition: 0.2s ease-out;
+}
+
+.sdui-viewer-counter i {
+	font-style: normal;	
+}
+
+.sdui-viewer-thumbnails div.center {
+	display: block;
+    overflow: hidden;
+    margin: 0 45px;
+}
+
+.sdui-viewer-thumbnails i {
+	display: inline-block;
+    height: 94px;
+    line-height: 94px;
+    width: 22px;
+    background: #2C2C2C;
+    color: #606060;
+    font-style: normal;
+    text-align: center;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.sdui-viewer-thumbnails i.left {
+	float:left;
+	border-radius: 8px 0px 0px 8px;
+	/* background: #2C2C2C; */
+	background: url(skin/arrow_grey_left.png) no-repeat center 50% #2C2C2C;
+	background-size:50% 60%;
+	transition: 0.2s ease-out;
+}
+
+.sdui-viewer-thumbnails i:hover.left {
+	background: url(skin/arrow_grey_left.png) no-repeat center 50% #0F0F0F;
+	background-size:50% 60%;
+	color: #A2A2A2;
+}
+
+.sdui-viewer-thumbnails i.right {
+	float:right;
+	border-radius: 0px 8px 8px 0px;
+	background: url(skin/arrow_grey_right.png) no-repeat center 50% #2C2C2C;
+	background-size:50% 60%;
+	transition: 0.2s ease-out;
+}
+
+.sdui-viewer-thumbnails i:hover.right {
+	background: url(skin/arrow_grey_right.png) no-repeat center 50% #0F0F0F;
+	background-size:50% 60%;
+	color: #A2A2A2;
+}
+
+.sdui-viewer-thumbnails i:active {
+	background: #2C2C2C;
+    color: #606060;
+}
+
+.sdui-viewer-thumbnails ul {
+	list-style: none;
+    padding: 0;
+    text-align: center;
+    display: block;
+    /* float: left; */
+    height: 88px;
+    white-space: nowrap;
+}
+
+.sdui-viewer-thumbnails ul:after { /* 最后清除浮动 */
+	content:"";
+	display: block;
+	clear: both;
+}
+
+.sdui-viewer-thumbnails li {
+	display: inline-block;
+	width:60px;
+	height:80px;
+	line-height: 80px;
+	margin: 2px 2px;
+	overflow: hidden;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    border: 1px solid #fff;
+    opacity: 0.6;
+    background-color: #fff;
+    transition: 0.2s ease-out;
+}
+
+.sdui-viewer-thumbnails li>img{
+	vertical-align: middle;
+	transition: 0.2s ease-out;
+}
+
+.sdui-viewer-thumbnails li.active{
+	opacity: 1;
+	transform:scale(1.1);
+    -webkit-transform:scale(1.1);
+    -moz-transform:scale(1.1);
+    -o-transform:scale(1.1);
+    -ms-transform:scale(1.1);
+}
+
+.sdui-viewer-thumbnails li:hover{
+	opacity: 1;
+	transform:scale(1.2);
+    -webkit-transform:scale(1.2);
+    -moz-transform:scale(1.2);
+    -o-transform:scale(1.2);
+    -ms-transform:scale(1.2);
+}
+
+/* ---------------------------- sdui-viewer 相关样式 end ---------------------------------*/
+
+
+/* ---------------------------- sdui-calendar 相关样式 start ---------------------------------*/
+.sdui-calendar {
+	border: 1px solid #E8E8E8;
+	border-radius: 3px;
+	font-size: 13px;
+	background-color: #FFFFFF;
+	
+	-moz-user-select:none;/*火狐*/
+    -webkit-user-select:none;/*webkit浏览器*/
+    -ms-user-select:none;/*IE10*/
+    -khtml-user-select:none;/*早期浏览器*/
+    user-select:none;
+    transition: 0.2s ease-out;
+}
+
+.sdui-calendar:hover {
+	box-shadow: 2px 2px 6px rgba(0,0,0,0.12);
+}
+
+.sdui-calendar {
+	width: 350px;
+}
+
+.sdui-calendar .cal-header {
+	height: 38px;
+	line-height: 38px;
+		
+}
+.sdui-calendar .cal-header .today {
+	line-height: 20px;
+    margin-top: 7px;
+}
+
+.sdui-calendar ul.cal-title li {
+	width: 49px;
+	height: 30px;
+    line-height: 30px;
+    font-size: 12px;
+}
+
+.sdui-calendar ul.cal-body li {
+	width: 49px;
+	height: 30px;
+	line-height: 30px;
+	border-radius: 30px;
+	font-size: 12px;
+}
+
+.sdui-calendar .cal-header {
+	text-align: center;	
+	background: #E9E9E9;
+}
+
+.sdui-calendar .cal-header i {
+	font-style: normal;
+	color: #AFAFAF;
+	font-size: 12px;
+	cursor: pointer;
+	transition: 0.2s ease-out;
+}
+
+.sdui-calendar .cal-header i:hover {
+	color: #000000;	
+}
+
+.sdui-calendar .cal-header i.cal-prev {
+	float: left;
+	margin-left: 15px;
+}
+
+.sdui-calendar .cal-header i.cal-prev:before {
+	content: '\25C4';
+}
+
+.sdui-calendar .cal-header i.cal-next {
+	float:right;
+	margin-right: 15px;
+}
+
+.sdui-calendar .cal-header i.cal-next:before {
+	content: '\25BA';
+}
+
+.sdui-calendar .cal-header:after {
+	display: block;
+	content: '';
+	clear: both;
+}
+
+.sdui-calendar .cal-header div {
+	display: inline-block;	
+}
+
+.sdui-calendar .cal-header .today {
+	color: #FFFFFF;
+	float: right;
+	margin-right: 15px;
+	padding: 2px 10px;
+	background-color: rgba(203,45,52, 0.7);
+	border-radius: 3px;
+	cursor: pointer;
+	transition: 0.2s ease-out;
+}
+
+.sdui-calendar .cal-header .cal-header-date {
+	margin-left: 25px;
+	padding-left:25px;
+	background: url("skin/cal_18_18.png") no-repeat left center;
+}
+
+.sdui-calendar .cal-header .today:hover {
+	background-color: rgba(203,45,52, 1);
+}
+
+.sdui-calendar ul.cal-body,.sdui-calendar ul.cal-title {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	text-align: left;
+}
+
+.sdui-calendar ul.cal-title li {
+	display: inline-block;
+	border-color: #fff;
+	background-color: #FFFFFF;
+	text-align: center;
+}
+
+.sdui-calendar  ul.cal-title li:nth-child(-n+5) {
+	color: #CECECE;
+}
+
+.sdui-calendar  ul.cal-title li:nth-child(n+6) {
+	color: rgba(203,45,52, 0.7);
+}
+
+.sdui-calendar ul.cal-body li {
+	display: inline-block;
+	border-color: #FFFFFF;
+	background-color: #FFFFFF;
+	text-align: center;
+	color: #CECECE;
+}
+
+.sdui-calendar ul.cal-body li>div {
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	border-radius: 30px;
+	margin: auto;
+	cursor: pointer;
+	transition: 0.2s ease-out;
+	position:relative;
+}
+
+.sdui-calendar ul.cal-body li.today>div {
+	background-color: #CECECE;
+	color: #D36469 !important;
+}
+
+.sdui-calendar ul.cal-body li.c_month>div {
+	color: #000000;
+}
+
+.sdui-calendar ul.cal-body li.active>div {
+	background-color: #5BAD59 !important;
+	color: #FFFFFF !important;
+}
+
+.sdui-calendar ul.cal-body li:hover>div {
+	background-color: #F5F5F5 !important;
+	color: #000000 !important;
+}
+
+
+.sdui-calendar ul.cal-body li cite{
+	position: absolute;
+	width: 20px;
+	height: 16px;
+	left: 5px;
+	bottom: 5px;
+}
+
+.sdui-calendar ul.cal-body li i {
+	font-style: normal;
+	display: inline;
+	font-size: 15px;
+}
+
+.sdui-calendar ul.cal-body li i:before{
+	content: '\2022';
+}
+
+.sdui-calendar .cal-footer {
+	border-top: 1px solid #eee;
+	margin: 5px 10px;
+	padding: 5px 0;
+}
+
+
+
+/* ---------------------------- sdui-calendar 相关样式 end ---------------------------------*/
+
+
+/* ---------------------------- sdui-cropper 相关样式 start ---------------------------------*/
+.sdui-cropper-container {
+	position: fixed;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	-moz-user-select:none;/*火狐*/
+    -webkit-user-select:none;/*webkit浏览器*/
+    -ms-user-select:none;/*IE10*/
+    -khtml-user-select:none;/*早期浏览器*/
+    user-select:none;
+}
+
+.sdui-cropper-container .sdui-cropper-close {
+	width: 40px;
+	height: 40px;
+	line-height: 26px;
+	text-align: right;
+	position: fixed;
+	right: 0;
+	top: 0;
+	padding: 0;
+	font-size: 18px;
+	background-color: rgba(0, 0, 0, .3);
+	transition: 0.2s ease-out;
+	border-bottom-left-radius: 100%;
+	cursor: pointer;
+	color: #eee;
+}
+
+.sdui-cropper-container .sdui-cropper-close:hover {
+	background-color: rgba(0, 0, 0, .6);
+	color: #fff;
+}
+
+.sdui-cropper-container .sdui-cropper-close i {
+	margin-right: 8px;
+	font-style: normal;	
+}
+.sdui-cropper-container .sdui-cropper-close i:before {
+	content: '\2718';
+}
+
+.sdui-cropper-container .sdui-cropper-box-outer{
+	position: absolute;
+    top:50%;
+    left:50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    height: 400px;
+    width: 400px;
+}
+
+.sdui-cropper-container .sdui-cropper-box
+{
+    position: relative;
+    height: 400px;
+    width: 400px;
+    border:1px solid #aaa;
+    background: #fff;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    cursor:move;
+}
+
+.sdui-cropper-container .sdui-cropper-box .sdui-cropper-thumb-box
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200px;
+    height: 200px;
+    margin-top: -100px;
+    margin-left: -100px;
+    box-sizing: border-box;
+    border: 1px solid rgb(102, 102, 102);
+    box-shadow: 0 0 0 1000px rgba(0, 0, 0, 0.5);
+    background: none repeat scroll 0% 0% transparent;
+}
+
+.sdui-cropper-container .sdui-cropper-box .sdui-cropper-spinner
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    text-align: center;
+    line-height: 400px;
+    background: rgba(0,0,0,0.7);
+}
+
+.sdui-cropper-container .sdui-cropper-box .sdui-cropper-action-bar {
+	position: absolute;
+	height:38px;
+	bottom: -38px;
+	right: 0;
+	text-align: right;
+	background-color: #EEEEEE;
+	width: 100%;
+	padding: 5px;
+	cursor: default;
+	transition: 0.2s ease-out;
+}
+
+.sdui-cropper-container .sdui-cropper-box:hover .sdui-cropper-action-bar {
+	bottom: 0;
+}
+
+.sdui-cropper-container .sdui-cropper-action-bar span {
+	display: inline-block;
+	background-color: #EE5F5B;
+	color: #FFFFFF;
+	padding: 5px 10px;
+	margin-right: 5px;
+	border-radius: 2px;
+	cursor: pointer;
+}
+
+/* ---------------------------- sdui-cropper 相关样式 end ---------------------------------*/
+
+/* ---------------------------- 背景色 相关样式 start ----------------------------*/
+
+/*绿色*/
+
+.sd-bg-green {
+	background-color: #5bad59;
+}
+
+/*黄色*/
+
+.sd-bg-yellow {
+	background-color: #e3bb1b;
+}
+
+/*红色*/
+
+.sd-bg-red {
+	background-color: #e57567;
+}
+
+.sd-bg-blue{
+	background-color: #7dbbc6;
+}
+
+/* ---------------------------- 背景色 相关样式 end ----------------------------*/
+
+/*------------------------------圆角 start ---------------------------------*/
+/*select下拉框圆角*/
+.sd-select-circle{
+	border-radius: 5rem;
+}
+/*input文本输入框圆角*/
+.sd-input-circle{
+	border-radius: 5rem;
+}
+/*------------------------------圆角  end---------------------------------*/
+
+
+
+/*--------------------------------工具栏样式 start--------------------*/
+
+.sdui-sidebar{
+	position: fixed;
+	list-style: none;
+	padding: 0;
+ /*   right:20px;
+    bottom: 20px;*/
+    z-index: 10;
+}
+
+
+
+.sdui-sidebar li{
+	position: relative;
+	display: inline-block;
+    width: 38px;
+    height: 38px;
+    margin: 5px;
+    padding: 0;
+    cursor: pointer;
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.sdui-sidebar li.gotop {
+	background: url(skin/back_top.png)no-repeat center;
+    background-color: #B5B5B5;
+    background-size: 70%;
+}
+
+.sdui-sidebar li.gotop a{
+	background-size: 70%;
+	line-height: 38px;
+}
+.sdui-sidebar li a {
+	display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 12px;
+    font-weight: 700;
+    color: #fff!important;
+    border-radius: 2px;
+    background-color: #3B3B3B !important;
+    text-decoration: none!important;
+    text-align: center;
+    -webkit-transform-origin: -50% 50%;
+    transform-origin: -50% 50%;
+    -webkit-transform: rotate3d(0,0,1,90deg);
+    transform: rotate3d(0,0,1,90deg);
+    -webkit-transition: -webkit-transform .3s ease-in;
+    transition: transform .3s ease-in;
+    background: url(skin/back_top.png) no-repeat center;
+}
+
+.sdui-sidebar li:hover a {
+	-webkit-transform: rotate3d(0,0,1,0deg);
+    transform: rotate3d(0,0,1,0deg);
+}
+
+/*--------------------------------工具栏样式 end--------------------*/

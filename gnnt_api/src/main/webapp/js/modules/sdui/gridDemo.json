@@ -1,0 +1,51 @@
+{
+    "isSuccess": true,
+    "page": {
+        "page": 1,
+        "size": 10,
+        "total": 100,
+        "totalPage": 10
+    },
+    "records": [
+        {
+            "id": "1",
+            "isChecked": true,
+            "pc": "2016年春季",
+            "yjrs": "500",
+            "yaprs": "200",
+            "zt": "未排满"
+        },
+        {
+            "id": "1",
+            "isChecked": true,
+            "pc": "2016年春季",
+            "yjrs": "500",
+            "yaprs": "200",
+            "zt": "未排满"
+        },
+        {
+            "id": "1",
+            "isChecked": true,
+            "pc": "2016年春季",
+            "yjrs": "500",
+            "yaprs": "200",
+            "zt": "未排满"
+        },
+        {
+            "id": "1",
+            "isChecked": true,
+            "pc": "2016年春季",
+            "yjrs": "500",
+            "yaprs": "200",
+            "zt": "未排满"
+        },
+        {
+            "id": "1",
+            "isChecked": true,
+            "pc": "2016年春季",
+            "yjrs": "500",
+            "yaprs": "200",
+            "zt": "未排满"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+.rightLayout {
+    background-color: #fff;
+}
+.sdui-container input,.sdui-container input.Wdate {
+    border: none;
+    background-color: #f5f6f6;
+}
+.marginR20{
+    margin-right:20px
+}

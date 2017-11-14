@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<title></title>
+		<link href="css/fonts/iconfont.css" rel="stylesheet" type="text/css"/>
+		<link href="layer/skin/layer.css" rel="stylesheet" type="text/css"/>
+		<link href="sdui.css" rel="stylesheet" type="text/css"/>
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap-paginator.js"></script>
+		<script type="text/javascript" src="layer/layer.js"></script>
+		<script type="text/javascript" src="sdui.js"></script>
+		<style>
+			
+			/* -------------- sdGrid办公平台 标准风格 -----------------*/
+.sdGrid-brief-norm table{
+	border:  1px solid #d2d2d2;
+	-webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+}
+
+.sdGrid-brief-norm table th{ 
+	background: #e7e5e7;
+	font-weight:normal;
+	color: #000000;
+	border-bottom: 1px solid #F0F0F0;
+	border-right: 1px solid #d2d2d2; 
+}
+
+.sdGrid-brief-norm table tbody td {
+	border-top: none !important;
+	border-right: 1px solid #d5d5d5; 
+}
+
+.sdGrid-brief-norm table tbody tr:nth-child(even) {
+	background: #f9f9f9 !important;
+}
+
+.sdGrid-brief-norm table tbody tr:nth-child(odd) {
+	background: none;
+}
+
+.sdGrid-brief-norm table tbody tr:hover {
+	background: #eeedee !important;
+}
+
+
+		/* -------------- sdGrid办公平台 无线风格 -----------------*/
+.sdGrid-brief-none table{
+	border:  1px solid #F2F2F2;
+	-webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+}
+
+.sdGrid-brief-none table th{ 
+	background: #e7e5e7;
+	font-weight:normal;
+	color: #000000;
+	border-bottom: 1px solid #F0F0F0;
+	border-right: none; 
+}
+
+.sdGrid-brief-none table tbody td {
+	border-top: none !important;
+	border-right: none; 
+}
+
+.sdGrid-brief-none table tbody tr:nth-child(even) {
+	background: #f9f9f9 !important;
+}
+
+.sdGrid-brief-none table tbody tr:nth-child(odd) {
+	background: none;
+}
+
+.sdGrid-brief-none table tbody tr:hover {
+	background: #eeedee !important;
+}
+
+
+
+			
+		</style>
+	</head>
+
+<body >
+	<div id="customtable">
+	
+	</div>
+	
+	<script type="text/javascript">
+	
+	$(function(){
+		
+	var dummyData = {
+		isSuccess: true,
+		page: {
+			page: 1, // 第几页
+			size: 10, //每页10条
+			total: 100, // 总记录数
+			totalPage: 10 // 总页数
+		},
+		records: [{
+			id: '1',
+			isChecked: true,
+			pc: '2016年春季',
+			yjrs: '500',
+			yaprs: '200',
+			zt:'未排满'
+		}, {
+			id: '2',
+			isChecked: false,
+			pc: '2016年春季',
+			yjrs: '500',
+			yaprs: '200',
+			zt:'未排满'
+		}, {
+			id: '3',
+			isChecked: false,
+			pc: '2016年春季',
+			yjrs: '500',
+			yaprs: '200',
+			zt:'未排满'
+		}, {
+			id: '4',
+			isChecked: false,
+			pc: '2016年春季',
+			yjrs: '500',
+			yaprs: '200',
+			zt:'未排满'
+		}, {
+			id: '5',
+			isChecked: false,
+			pc: '2016年春季',
+			yjrs: '500',
+			yaprs: '200',
+			zt:'已排满'
+
+		}]
+	}
+		$('#customtable').sdGrid({
+		url: 'gridDemo.json',
+		type: 'GET',
+		async: true,
+		waitFlag: true, // true：加载数据时显示等待动画， false：不显示加载动画。  默认显示加载动画
+		showTHead:true,	
+		theme:'sdGrid-brief-none',
+		headBtns: {
+			innerHtml: function() {
+//				return '<a class="sdui-btn sdui-btn-add"   onclick="zbap_add()">新增</a>';
+			}
+		},
+		colProperty: [ {
+			colLabel: '批次',
+			style: {
+				textAlign: 'center', // 指定文本对齐方式
+				width: '100px', // 指定列宽，不指定时，采用默认情况
+			},
+			colModel: {
+				style: {
+					textAlign: 'center',
+					fontSize: '16px'
+
+				},
+				innerHtml: function(data) {
+					return '<span title="' + data.pc + '">' + data.pc + '</span>';
+				}
+			}
+		}, {
+			colLabel: '阅卷人数',
+			style: {
+				textAlign: 'center', // 指定文本对齐方式
+				width: '150px', // 指定列宽，不指定时，采用默认情况
+			},
+			colModel: {
+				innerHtml: function(data) {
+					return data.yjrs;
+				}
+			}
+		}, {
+			colLabel: '已安排人数',
+			style: {
+				textAlign: 'center', // 指定文本对齐方式
+				width: '150px' // 指定列宽，不指定时，采用默认情况
+			},
+			colModel: {
+				innerHtml: function(data) {
+					return data.yaprs;
+
+				},
+				style: {
+					textAlign: 'left', // 指定文本对齐方式
+					width: '', // 指定列宽，不指定时，采用默认情况
+					ellipsis: true
+				}
+			}
+		}, 
+		{
+			colLabel: '状态',
+			style: {
+				textAlign: 'center', // 指定文本对齐方式
+				width: '100px' // 指定列宽，不指定时，采用默认情况
+			},
+			colModel: {
+				innerHtml: function(data) {
+					return data.zt;
+
+				},
+				style: {
+					textAlign: 'left', // 指定文本对齐方式
+					width: '', // 指定列宽，不指定时，采用默认情况
+					ellipsis: true
+				}
+			}
+		}, {
+			colLabel: '操作',
+			style: {
+				textAlign: 'center', // 指定文本对齐方式
+				width: '100px', // 指定列宽，不指定时，采用默认情况
+			},
+			colModel: {
+				style: {
+					textAlign: 'center',
+				},
+				innerHtml: function(data) {
+					return '<a href="../gzgl/jwap.html" class="tablelink" >机位安排</a>';
+				}
+			}
+		}]
+	})
+		
+		
+	});
+	
+	
+
+	
+	
+	
+	</script>
+</body>
+
+</html>
